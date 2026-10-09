@@ -1,0 +1,241 @@
+{
+  "recipe_id": "5d54bae2a9114174727c8b20",
+  "name": "鸡翅包饭",
+  "ingredients": [
+    {
+      "name": "鸡翅",
+      "quantity": 3,
+      "unit": "个",
+      "type": "荤菜"
+    },
+    {
+      "name": "胡萝卜",
+      "quantity": 60,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "洋葱",
+      "quantity": 1,
+      "unit": "个",
+      "type": "素菜"
+    },
+    {
+      "name": "火腿肠",
+      "quantity": 1,
+      "unit": "根",
+      "type": "荤菜"
+    },
+    {
+      "name": "米饭",
+      "quantity": 150,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "韩式辣椒酱",
+      "quantity": 20,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "食用油",
+      "quantity": 10,
+      "unit": "毫升",
+      "type": "调味品"
+    },
+    {
+      "name": "料酒",
+      "quantity": 5,
+      "unit": "毫升",
+      "type": "调味品"
+    },
+    {
+      "name": "盐",
+      "quantity": 3,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "胡椒粉",
+      "quantity": 5,
+      "unit": "克",
+      "type": "调味品"
+    }
+  ],
+  "steps": [
+    {
+      "id": 0,
+      "name": "预热烤箱",
+      "duration_min": 5,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 3,
+          "duration": 5,
+          "temp_c": 180,
+          "heat_level": 2,
+          "mode_detail": "上下火"
+        }
+      ],
+      "predecessors": []
+    },
+    {
+      "id": 1,
+      "name": "切洋葱",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 2,
+      "name": "切胡萝卜",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 3,
+      "name": "切火腿肠",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 4,
+      "name": "洗鸡翅",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 5,
+      "name": "去鸡翅骨",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 6,
+      "name": "腌鸡翅",
+      "duration_min": 10,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        5
+      ]
+    },
+    {
+      "id": 7,
+      "name": "炒蔬菜",
+      "duration_min": 3,
+      "needs_human": true,
+      "resources": [
+        {
+          "machine_id": 1,
+          "duration": 3,
+          "temp_c": 0,
+          "heat_level": 2,
+          "mode_detail": "大火"
+        }
+      ],
+      "predecessors": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": 8,
+      "name": "炒饭",
+      "duration_min": 3,
+      "needs_human": true,
+      "resources": [
+        {
+          "machine_id": 1,
+          "duration": 3,
+          "temp_c": 0,
+          "heat_level": 2,
+          "mode_detail": "大火"
+        }
+      ],
+      "predecessors": [
+        7
+      ]
+    },
+    {
+      "id": 9,
+      "name": "拌炒",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        8
+      ]
+    },
+    {
+      "id": 10,
+      "name": "装入鸡翅",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        9
+      ]
+    },
+    {
+      "id": 11,
+      "name": "刷锡纸",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        10
+      ]
+    },
+    {
+      "id": 12,
+      "name": "刷鸡翅",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        11
+      ]
+    },
+    {
+      "id": 13,
+      "name": "放入烤箱",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        12
+      ]
+    },
+    {
+      "id": 14,
+      "name": "烤鸡翅包饭",
+      "duration_min": 15,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 3,
+          "duration": 15,
+          "temp_c": 180,
+          "heat_level": 2,
+          "mode_detail": "上下火"
+        }
+      ],
+      "predecessors": [
+        0,
+        13
+      ]
+    }
+  ]
+}

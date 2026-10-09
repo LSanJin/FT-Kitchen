@@ -1,0 +1,294 @@
+{
+  "recipe_id": "64f5510a255d3b02f695fde1",
+  "name": "腊味蒸素鸡",
+  "ingredients": [
+    {
+      "name": "素鸡",
+      "quantity": 300,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "腊肠",
+      "quantity": 50,
+      "unit": "克",
+      "type": "荤菜"
+    },
+    {
+      "name": "腊肉",
+      "quantity": 50,
+      "unit": "克",
+      "type": "荤菜"
+    },
+    {
+      "name": "盐",
+      "quantity": 3,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "糖",
+      "quantity": 3,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "料酒",
+      "quantity": 10,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "葱",
+      "quantity": 10,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "姜",
+      "quantity": 10,
+      "unit": "克",
+      "type": "调味品"
+    }
+  ],
+  "steps": [
+    {
+      "id": 0,
+      "name": "食材准备",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 1,
+      "name": "腊味切片_准备",
+      "duration_min": 3,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        0
+      ]
+    },
+    {
+      "id": 2,
+      "name": "腊味切片_等待",
+      "duration_min": 0,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 8,
+          "duration": 0,
+          "temp_c": 0,
+          "heat_level": 0,
+          "mode_detail": "none"
+        }
+      ],
+      "predecessors": [
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "name": "素鸡对半切开_准备",
+      "duration_min": 3,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        0
+      ]
+    },
+    {
+      "id": 4,
+      "name": "素鸡对半切开_等待",
+      "duration_min": 0,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 8,
+          "duration": 0,
+          "temp_c": 0,
+          "heat_level": 0,
+          "mode_detail": "none"
+        }
+      ],
+      "predecessors": [
+        3
+      ]
+    },
+    {
+      "id": 5,
+      "name": "素鸡切成5毫米的片_准备",
+      "duration_min": 3,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        0
+      ]
+    },
+    {
+      "id": 6,
+      "name": "素鸡切成5毫米的片_等待",
+      "duration_min": 0,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 8,
+          "duration": 0,
+          "temp_c": 0,
+          "heat_level": 0,
+          "mode_detail": "none"
+        }
+      ],
+      "predecessors": [
+        5
+      ]
+    },
+    {
+      "id": 7,
+      "name": "姜切丝_准备",
+      "duration_min": 3,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        0
+      ]
+    },
+    {
+      "id": 8,
+      "name": "姜切丝_等待",
+      "duration_min": 0,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 8,
+          "duration": 0,
+          "temp_c": 0,
+          "heat_level": 0,
+          "mode_detail": "none"
+        }
+      ],
+      "predecessors": [
+        7
+      ]
+    },
+    {
+      "id": 9,
+      "name": "小葱切成葱花_准备",
+      "duration_min": 3,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        0
+      ]
+    },
+    {
+      "id": 10,
+      "name": "小葱切成葱花_等待",
+      "duration_min": 0,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 8,
+          "duration": 0,
+          "temp_c": 0,
+          "heat_level": 0,
+          "mode_detail": "none"
+        }
+      ],
+      "predecessors": [
+        9
+      ]
+    },
+    {
+      "id": 11,
+      "name": "素鸡在盘底铺圈",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        0
+      ]
+    },
+    {
+      "id": 12,
+      "name": "撒上盐、糖、料酒腌制入味",
+      "duration_min": 10,
+      "needs_human": false,
+      "resources": [],
+      "predecessors": [
+        11
+      ]
+    },
+    {
+      "id": 13,
+      "name": "腊味铺在素鸡上面，加上姜丝",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        12
+      ]
+    },
+    {
+      "id": 14,
+      "name": "放入方太智能烹饪设备第2层",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        13
+      ]
+    },
+    {
+      "id": 15,
+      "name": "开启电源",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        14
+      ]
+    },
+    {
+      "id": 16,
+      "name": "取出水箱加满水",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        15
+      ]
+    },
+    {
+      "id": 17,
+      "name": "选择“开始烹饪”按键",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        16
+      ]
+    },
+    {
+      "id": 18,
+      "name": "按屏幕提示操作",
+      "duration_min": 0,
+      "needs_human": false,
+      "resources": [],
+      "predecessors": [
+        17
+      ]
+    },
+    {
+      "id": 19,
+      "name": "取出后撒上葱花即可食用",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        18
+      ]
+    }
+  ]
+}

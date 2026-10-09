@@ -1,0 +1,207 @@
+{
+  "recipe_id": "5c8647b598d5bc7e184a90c3",
+  "name": "椰香苹果香蕉烤燕麦",
+  "ingredients": [
+    {
+      "name": "燕麦片",
+      "quantity": 50,
+      "unit": "g",
+      "type": "素菜"
+    },
+    {
+      "name": "椰蓉",
+      "quantity": 30,
+      "unit": "g",
+      "type": "调味品"
+    },
+    {
+      "name": "鸡蛋",
+      "quantity": 1,
+      "unit": "个",
+      "type": "荤菜"
+    },
+    {
+      "name": "苹果",
+      "quantity": 1,
+      "unit": "个",
+      "type": "素菜"
+    },
+    {
+      "name": "牛奶",
+      "quantity": 40,
+      "unit": "ml",
+      "type": "调味品"
+    },
+    {
+      "name": "糖浆",
+      "quantity": 20,
+      "unit": "g",
+      "type": "调味品"
+    },
+    {
+      "name": "肉桂粉",
+      "quantity": 0.3,
+      "unit": "g",
+      "type": "调味品"
+    },
+    {
+      "name": "香蕉",
+      "quantity": 1,
+      "unit": "个",
+      "type": "素菜"
+    },
+    {
+      "name": "食盐",
+      "quantity": 1,
+      "unit": "g",
+      "type": "调味品"
+    },
+    {
+      "name": "白砂糖",
+      "quantity": 5,
+      "unit": "g",
+      "type": "调味品"
+    },
+    {
+      "name": "椰子油",
+      "quantity": 5,
+      "unit": "ml",
+      "type": "调味品"
+    }
+  ],
+  "steps": [
+    {
+      "id": 0,
+      "name": "切苹果",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 1,
+      "name": "切香蕉",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 2,
+      "name": "搅拌糊状物",
+      "duration_min": 3,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "name": "准备烤碗",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        2
+      ]
+    },
+    {
+      "id": 4,
+      "name": "铺第一层糊状物",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        3
+      ]
+    },
+    {
+      "id": 5,
+      "name": "放香蕉片",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        4
+      ]
+    },
+    {
+      "id": 6,
+      "name": "铺第二层糊状物",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        5
+      ]
+    },
+    {
+      "id": 7,
+      "name": "放剩余香蕉片",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        6
+      ]
+    },
+    {
+      "id": 8,
+      "name": "刷椰子油",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        7
+      ]
+    },
+    {
+      "id": 9,
+      "name": "撒白砂糖",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        8
+      ]
+    },
+    {
+      "id": 10,
+      "name": "预热烤箱",
+      "duration_min": 5,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 3,
+          "duration": 5,
+          "temp_c": 180,
+          "heat_level": 2,
+          "mode_detail": "上下火"
+        }
+      ],
+      "predecessors": [
+        9
+      ]
+    },
+    {
+      "id": 11,
+      "name": "烤制",
+      "duration_min": 15,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 3,
+          "duration": 15,
+          "temp_c": 180,
+          "heat_level": 2,
+          "mode_detail": "上下火"
+        }
+      ],
+      "predecessors": [
+        10
+      ]
+    }
+  ]
+}

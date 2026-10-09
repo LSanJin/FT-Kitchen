@@ -1,0 +1,162 @@
+{
+  "recipe_id": "61e6c51fec6e1d3d03197733ac5a",
+  "name": "香烤排骨",
+  "ingredients": [
+    {
+      "name": "猪肋排",
+      "quantity": 550,
+      "unit": "克",
+      "type": "荤菜"
+    },
+    {
+      "name": "蒜泥",
+      "quantity": 5,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "盐",
+      "quantity": 2,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "白糖",
+      "quantity": 3,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "五香粉",
+      "quantity": 1,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "孜然粉",
+      "quantity": 3,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "辣椒粉",
+      "quantity": 3,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "食用油",
+      "quantity": 10,
+      "unit": "毫升",
+      "type": "调味品"
+    },
+    {
+      "name": "料酒",
+      "quantity": 10,
+      "unit": "毫升",
+      "type": "调味品"
+    },
+    {
+      "name": "生抽",
+      "quantity": 10,
+      "unit": "毫升",
+      "type": "调味品"
+    },
+    {
+      "name": "蚝油",
+      "quantity": 10,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "老抽",
+      "quantity": 2,
+      "unit": "毫升",
+      "type": "调味品"
+    }
+  ],
+  "steps": [
+    {
+      "id": 0,
+      "name": "剁排骨",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 1,
+      "name": "浸泡排骨_准备",
+      "duration_min": 3,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        0
+      ]
+    },
+    {
+      "id": 2,
+      "name": "浸泡排骨_等待",
+      "duration_min": 30,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 8,
+          "duration": 30,
+          "temp_c": 0,
+          "heat_level": 0,
+          "mode_detail": "none"
+        }
+      ],
+      "predecessors": [
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "name": "腌制排骨",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        2
+      ]
+    },
+    {
+      "id": 4,
+      "name": "预热烤箱",
+      "duration_min": 5,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 3,
+          "duration": 5,
+          "temp_c": 180,
+          "heat_level": 2,
+          "mode_detail": "上下火"
+        }
+      ],
+      "predecessors": [
+        3
+      ]
+    },
+    {
+      "id": 5,
+      "name": "烤排骨",
+      "duration_min": 15,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 3,
+          "duration": 15,
+          "temp_c": 180,
+          "heat_level": 2,
+          "mode_detail": "上下火"
+        }
+      ],
+      "predecessors": [
+        4
+      ]
+    }
+  ]
+}

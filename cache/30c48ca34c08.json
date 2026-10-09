@@ -1,0 +1,184 @@
+{
+  "recipe_id": "5c8622ee98d5bc7e184a908b",
+  "name": "粉蒸藕丁",
+  "ingredients": [
+    {
+      "name": "莲藕",
+      "quantity": 300,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "大米粉",
+      "quantity": 80,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "蚝油",
+      "quantity": 8,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "黄豆酱",
+      "quantity": 10,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "生抽",
+      "quantity": 4,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "蒸鱼豉油",
+      "quantity": 5,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "白糖",
+      "quantity": 4,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "盐",
+      "quantity": 1,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "食用油",
+      "quantity": 20,
+      "unit": "克",
+      "type": "调味品"
+    }
+  ],
+  "steps": [
+    {
+      "id": 0,
+      "name": "清洗莲藕",
+      "duration_min": 5,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 1,
+      "name": "切莲藕丁",
+      "duration_min": 3,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        0
+      ]
+    },
+    {
+      "id": 2,
+      "name": "浸泡莲藕",
+      "duration_min": 15,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 8,
+          "duration": 15,
+          "temp_c": 0,
+          "heat_level": 0,
+          "mode_detail": "none"
+        }
+      ],
+      "predecessors": [
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "name": "沥干莲藕",
+      "duration_min": 2,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        2
+      ]
+    },
+    {
+      "id": 4,
+      "name": "混合B料",
+      "duration_min": 2,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        3
+      ]
+    },
+    {
+      "id": 5,
+      "name": "加入大米粉",
+      "duration_min": 2,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        4
+      ]
+    },
+    {
+      "id": 6,
+      "name": "拌匀藕丁",
+      "duration_min": 3,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        5
+      ]
+    },
+    {
+      "id": 7,
+      "name": "放入盘中",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        6
+      ]
+    },
+    {
+      "id": 8,
+      "name": "预热蒸箱",
+      "duration_min": 4,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 2,
+          "duration": 4,
+          "temp_c": 100,
+          "heat_level": 2,
+          "mode_detail": "普通蒸"
+        }
+      ],
+      "predecessors": [
+        7
+      ]
+    },
+    {
+      "id": 9,
+      "name": "开始烹饪",
+      "duration_min": 30,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 2,
+          "duration": 30,
+          "temp_c": 100,
+          "heat_level": 2,
+          "mode_detail": "普通蒸"
+        }
+      ],
+      "predecessors": [
+        8
+      ]
+    }
+  ]
+}

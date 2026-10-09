@@ -1,0 +1,160 @@
+{
+  "recipe_id": "5c8646fe98d5bc7e184a90bc",
+  "name": "鸡仔饼",
+  "ingredients": [
+    {
+      "name": "猪肥肉",
+      "quantity": 100,
+      "unit": "克",
+      "type": "荤菜"
+    },
+    {
+      "name": "细砂糖",
+      "quantity": 60,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "白酒",
+      "quantity": 20,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "中筋面粉",
+      "quantity": 200,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "酥花生碎",
+      "quantity": 30,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "白芝麻",
+      "quantity": 30,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "盐",
+      "quantity": 3,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "麦芽糖",
+      "quantity": 75,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "五香粉",
+      "quantity": 1,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "白胡椒粉",
+      "quantity": 1,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "南乳汁",
+      "quantity": 12,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "蒜蓉",
+      "quantity": 30,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "鸡蛋",
+      "quantity": 1,
+      "unit": "个",
+      "type": "荤菜"
+    }
+  ],
+  "steps": [
+    {
+      "id": 0,
+      "name": "冷冻冰肉",
+      "duration_min": 1440,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 1,
+      "name": "制作面团",
+      "duration_min": 5,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        0
+      ]
+    },
+    {
+      "id": 2,
+      "name": "搓制饼坯",
+      "duration_min": 3,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "name": "刷蛋黄液",
+      "duration_min": 2,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        2
+      ]
+    },
+    {
+      "id": 4,
+      "name": "预热烤箱",
+      "duration_min": 5,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 3,
+          "duration": 5,
+          "temp_c": 180,
+          "heat_level": 2,
+          "mode_detail": "上下火"
+        }
+      ],
+      "predecessors": [
+        3
+      ]
+    },
+    {
+      "id": 5,
+      "name": "烘烤鸡仔饼",
+      "duration_min": 15,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 3,
+          "duration": 15,
+          "temp_c": 180,
+          "heat_level": 2,
+          "mode_detail": "上下火"
+        }
+      ],
+      "predecessors": [
+        4
+      ]
+    }
+  ]
+}

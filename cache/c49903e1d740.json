@@ -1,0 +1,190 @@
+{
+  "recipe_id": "5caf2e8fe78bfc455f2d5caa",
+  "name": "红豆糯米糕",
+  "ingredients": [
+    {
+      "name": "糯米粉",
+      "quantity": 150,
+      "unit": "g",
+      "type": "素菜"
+    },
+    {
+      "name": "蜜红豆",
+      "quantity": 48,
+      "unit": "g",
+      "type": "素菜"
+    },
+    {
+      "name": "牛奶",
+      "quantity": 130,
+      "unit": "g",
+      "type": "调味品"
+    },
+    {
+      "name": "鸡蛋",
+      "quantity": 1,
+      "unit": "个",
+      "type": "荤菜"
+    },
+    {
+      "name": "细砂糖",
+      "quantity": 30,
+      "unit": "g",
+      "type": "调味品"
+    },
+    {
+      "name": "黄油",
+      "quantity": 30,
+      "unit": "g",
+      "type": "荤菜"
+    },
+    {
+      "name": "干酵母",
+      "quantity": 2,
+      "unit": "g",
+      "type": "调味品"
+    }
+  ],
+  "steps": [
+    {
+      "id": 0,
+      "name": "融化黄油",
+      "duration_min": 5,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 1,
+      "name": "搅拌A料",
+      "duration_min": 3,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        0
+      ]
+    },
+    {
+      "id": 2,
+      "name": "加入糯米粉和干酵母",
+      "duration_min": 2,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "name": "搅拌面糊",
+      "duration_min": 3,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        2
+      ]
+    },
+    {
+      "id": 4,
+      "name": "装入裱花袋",
+      "duration_min": 2,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        3
+      ]
+    },
+    {
+      "id": 5,
+      "name": "挤入模具_准备",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        4
+      ]
+    },
+    {
+      "id": 6,
+      "name": "挤入模具_等待",
+      "duration_min": 15,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 8,
+          "duration": 15,
+          "temp_c": 0,
+          "heat_level": 0,
+          "mode_detail": "none"
+        }
+      ],
+      "predecessors": [
+        5
+      ]
+    },
+    {
+      "id": 7,
+      "name": "静置_准备",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        6
+      ]
+    },
+    {
+      "id": 8,
+      "name": "静置_等待",
+      "duration_min": 30,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 8,
+          "duration": 30,
+          "temp_c": 0,
+          "heat_level": 0,
+          "mode_detail": "none"
+        }
+      ],
+      "predecessors": [
+        7
+      ]
+    },
+    {
+      "id": 9,
+      "name": "预热烤箱",
+      "duration_min": 5,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 3,
+          "duration": 5,
+          "temp_c": 180,
+          "heat_level": 2,
+          "mode_detail": "上下火"
+        }
+      ],
+      "predecessors": [
+        8
+      ]
+    },
+    {
+      "id": 10,
+      "name": "烘烤",
+      "duration_min": 15,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 3,
+          "duration": 15,
+          "temp_c": 180,
+          "heat_level": 2,
+          "mode_detail": "上下火"
+        }
+      ],
+      "predecessors": [
+        9
+      ]
+    }
+  ]
+}

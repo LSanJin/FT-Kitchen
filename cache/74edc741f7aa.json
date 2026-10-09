@@ -1,0 +1,274 @@
+{
+  "recipe_id": "6577d480c458a177d8438637",
+  "name": "三味蒸鳗鱼&香茅烤鳗鱼同烹",
+  "ingredients": [
+    {
+      "name": "鳗鱼",
+      "quantity": 2,
+      "unit": "条",
+      "type": "荤菜"
+    },
+    {
+      "name": "香茅草",
+      "quantity": 150,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "豆豉酱",
+      "quantity": 30,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "蒜蓉酱",
+      "quantity": 30,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "剁椒酱",
+      "quantity": 30,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "姜片",
+      "quantity": 23,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "葱段",
+      "quantity": 15,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "盐",
+      "quantity": 1,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "料酒",
+      "quantity": 10,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "白胡椒粉",
+      "quantity": 3,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "生抽",
+      "quantity": 50,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "照烧汁",
+      "quantity": 150,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "黄酒",
+      "quantity": 200,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "白糖",
+      "quantity": 30,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "葱花",
+      "quantity": 5,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "葱丝",
+      "quantity": 5,
+      "unit": "克",
+      "type": "调味品"
+    }
+  ],
+  "steps": [
+    {
+      "id": 0,
+      "name": "切鳗鱼",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 1,
+      "name": "拍碎香茅草",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 2,
+      "name": "腌制鳗鱼",
+      "duration_min": 10,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        0
+      ]
+    },
+    {
+      "id": 3,
+      "name": "分装鳗鱼",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        2
+      ]
+    },
+    {
+      "id": 4,
+      "name": "调制照烧汁",
+      "duration_min": 3,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 5,
+      "name": "冷却照烧汁",
+      "duration_min": 5,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 4,
+          "duration": 5,
+          "temp_c": 4,
+          "heat_level": 0,
+          "mode_detail": "冷藏"
+        }
+      ],
+      "predecessors": [
+        4
+      ]
+    },
+    {
+      "id": 6,
+      "name": "准备蒸盘",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        3
+      ]
+    },
+    {
+      "id": 7,
+      "name": "放置蒸盘",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        6
+      ]
+    },
+    {
+      "id": 8,
+      "name": "浸泡鳗鱼",
+      "duration_min": 20,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        3
+      ]
+    },
+    {
+      "id": 9,
+      "name": "准备香茅烤盘",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        1
+      ]
+    },
+    {
+      "id": 10,
+      "name": "铺香茅草",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        9
+      ]
+    },
+    {
+      "id": 11,
+      "name": "放置鳗鱼",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        8,
+        10
+      ]
+    },
+    {
+      "id": 12,
+      "name": "预热烹饪设备",
+      "duration_min": 5,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 3,
+          "duration": 5,
+          "temp_c": 180,
+          "heat_level": 2,
+          "mode_detail": "上下火"
+        }
+      ],
+      "predecessors": [
+        7,
+        11
+      ]
+    },
+    {
+      "id": 13,
+      "name": "开始烹饪",
+      "duration_min": 15,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 3,
+          "duration": 15,
+          "temp_c": 180,
+          "heat_level": 2,
+          "mode_detail": "上下火"
+        }
+      ],
+      "predecessors": [
+        12
+      ]
+    },
+    {
+      "id": 14,
+      "name": "装饰鳗鱼",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        13
+      ]
+    }
+  ]
+}

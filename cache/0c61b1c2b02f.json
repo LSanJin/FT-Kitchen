@@ -1,0 +1,303 @@
+{
+  "recipe_id": "6510fb7845256c3ad7c25cd8",
+  "name": "京韵酱香烤鸡",
+  "ingredients": [
+    {
+      "name": "鸡",
+      "quantity": 1,
+      "unit": "只",
+      "type": "荤菜"
+    },
+    {
+      "name": "洋葱",
+      "quantity": 150,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "大蒜",
+      "quantity": 20,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "姜",
+      "quantity": 20,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "生抽",
+      "quantity": 30,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "蚝油",
+      "quantity": 25,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "料酒",
+      "quantity": 30,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "五香粉",
+      "quantity": 10,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "盐",
+      "quantity": 8,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "油",
+      "quantity": 40,
+      "unit": "克",
+      "type": "调味品"
+    }
+  ],
+  "steps": [
+    {
+      "id": 0,
+      "name": "食材准备",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 1,
+      "name": "洋葱切末",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        0
+      ]
+    },
+    {
+      "id": 2,
+      "name": "大蒜切末",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        0
+      ]
+    },
+    {
+      "id": 3,
+      "name": "装入大碗中",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": 4,
+      "name": "加入五香粉",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        3
+      ]
+    },
+    {
+      "id": 5,
+      "name": "加入蚝油",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        4
+      ]
+    },
+    {
+      "id": 6,
+      "name": "加入生抽",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        5
+      ]
+    },
+    {
+      "id": 7,
+      "name": "加入料酒",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        6
+      ]
+    },
+    {
+      "id": 8,
+      "name": "加入油",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        7
+      ]
+    },
+    {
+      "id": 9,
+      "name": "搅拌均匀",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        8
+      ]
+    },
+    {
+      "id": 10,
+      "name": "制成腌料",
+      "duration_min": 1,
+      "needs_human": false,
+      "resources": [],
+      "predecessors": [
+        9
+      ]
+    },
+    {
+      "id": 11,
+      "name": "姜切成姜丝",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        0
+      ]
+    },
+    {
+      "id": 12,
+      "name": "塞入鸡腹",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        11
+      ]
+    },
+    {
+      "id": 13,
+      "name": "腌料一部分填入鸡肚",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        10
+      ]
+    },
+    {
+      "id": 14,
+      "name": "另一部分抹在鸡表面",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        13
+      ]
+    },
+    {
+      "id": 15,
+      "name": "用手给鸡按摩入味",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        14
+      ]
+    },
+    {
+      "id": 16,
+      "name": "鸡表面撒上盐",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        15
+      ]
+    },
+    {
+      "id": 17,
+      "name": "继续按摩入味",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        16
+      ]
+    },
+    {
+      "id": 18,
+      "name": "腌制6小时以上",
+      "duration_min": 360,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 4,
+          "duration": 360,
+          "temp_c": 4,
+          "heat_level": 0,
+          "mode_detail": "冷藏"
+        }
+      ],
+      "predecessors": [
+        17
+      ]
+    },
+    {
+      "id": 19,
+      "name": "预热烤箱",
+      "duration_min": 5,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 3,
+          "duration": 5,
+          "temp_c": 180,
+          "heat_level": 2,
+          "mode_detail": "上下火"
+        }
+      ],
+      "predecessors": [
+        18
+      ]
+    },
+    {
+      "id": 20,
+      "name": "打开方太智能烹饪设备",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        19
+      ]
+    },
+    {
+      "id": 21,
+      "name": "选择开始烹饪按键",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        20
+      ]
+    }
+  ]
+}

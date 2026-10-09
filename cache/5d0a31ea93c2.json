@@ -1,0 +1,204 @@
+{
+  "recipe_id": "5c81cf416dc6e123a037a1f0",
+  "name": "原味墨西哥面包",
+  "ingredients": [
+    {
+      "name": "高筋面粉",
+      "quantity": 150,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "牛奶",
+      "quantity": 75,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "鸡蛋",
+      "quantity": 15,
+      "unit": "克",
+      "type": "荤菜"
+    },
+    {
+      "name": "白糖",
+      "quantity": 25,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "黄油",
+      "quantity": 15,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "酵母",
+      "quantity": 2,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "盐",
+      "quantity": 1,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "糖粉",
+      "quantity": 30,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "低筋面粉",
+      "quantity": 30,
+      "unit": "克",
+      "type": "素菜"
+    }
+  ],
+  "steps": [
+    {
+      "id": 0,
+      "name": "预热烤箱",
+      "duration_min": 5,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 3,
+          "duration": 5,
+          "temp_c": 35,
+          "heat_level": 2,
+          "mode_detail": "发酵"
+        }
+      ],
+      "predecessors": []
+    },
+    {
+      "id": 1,
+      "name": "第一次发酵",
+      "duration_min": 60,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 3,
+          "duration": 60,
+          "temp_c": 35,
+          "heat_level": 2,
+          "mode_detail": "发酵"
+        }
+      ],
+      "predecessors": [
+        0
+      ]
+    },
+    {
+      "id": 2,
+      "name": "预热烤箱",
+      "duration_min": 5,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 3,
+          "duration": 5,
+          "temp_c": 35,
+          "heat_level": 2,
+          "mode_detail": "发酵"
+        }
+      ],
+      "predecessors": []
+    },
+    {
+      "id": 3,
+      "name": "第二次发酵",
+      "duration_min": 60,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 3,
+          "duration": 60,
+          "temp_c": 35,
+          "heat_level": 2,
+          "mode_detail": "发酵"
+        }
+      ],
+      "predecessors": [
+        2
+      ]
+    },
+    {
+      "id": 4,
+      "name": "准备墨西哥酱_准备",
+      "duration_min": 3,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 5,
+      "name": "准备墨西哥酱_等待",
+      "duration_min": 0,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 8,
+          "duration": 0,
+          "temp_c": 0,
+          "heat_level": 0,
+          "mode_detail": "none"
+        }
+      ],
+      "predecessors": [
+        4
+      ]
+    },
+    {
+      "id": 6,
+      "name": "混合低筋面粉",
+      "duration_min": 2,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        5
+      ]
+    },
+    {
+      "id": 7,
+      "name": "装入裱花袋",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        6
+      ]
+    },
+    {
+      "id": 8,
+      "name": "挤墨西哥面糊",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        7
+      ]
+    },
+    {
+      "id": 9,
+      "name": "开始烹饪",
+      "duration_min": 0,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 3,
+          "duration": 0,
+          "temp_c": 0,
+          "heat_level": 0,
+          "mode_detail": "none"
+        }
+      ],
+      "predecessors": [
+        8
+      ]
+    }
+  ]
+}

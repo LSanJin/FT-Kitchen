@@ -1,0 +1,176 @@
+{
+  "recipe_id": "5caf2ba9e78bfc455f2d5c55",
+  "name": "松子枣泥拉糕",
+  "ingredients": [
+    {
+      "name": "干红枣",
+      "quantity": 200,
+      "unit": "g",
+      "type": "素菜"
+    },
+    {
+      "name": "清水",
+      "quantity": 1000,
+      "unit": "g",
+      "type": "调味品"
+    },
+    {
+      "name": "糯米粉",
+      "quantity": 300,
+      "unit": "g",
+      "type": "素菜"
+    },
+    {
+      "name": "粳米粉",
+      "quantity": 200,
+      "unit": "g",
+      "type": "素菜"
+    },
+    {
+      "name": "熟猪油",
+      "quantity": 100,
+      "unit": "g",
+      "type": "荤菜"
+    },
+    {
+      "name": "红豆沙",
+      "quantity": 100,
+      "unit": "g",
+      "type": "素菜"
+    },
+    {
+      "name": "白糖",
+      "quantity": 150,
+      "unit": "g",
+      "type": "调味品"
+    },
+    {
+      "name": "松子",
+      "quantity": 50,
+      "unit": "g",
+      "type": "素菜"
+    }
+  ],
+  "steps": [
+    {
+      "id": 0,
+      "name": "浸泡红枣_准备",
+      "duration_min": 3,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 1,
+      "name": "浸泡红枣_等待",
+      "duration_min": 60,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 8,
+          "duration": 60,
+          "temp_c": 0,
+          "heat_level": 0,
+          "mode_detail": "none"
+        }
+      ],
+      "predecessors": [
+        0
+      ]
+    },
+    {
+      "id": 2,
+      "name": "蒸红枣",
+      "duration_min": 30,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 2,
+          "duration": 30,
+          "temp_c": 100,
+          "heat_level": 2,
+          "mode_detail": "普通蒸"
+        }
+      ],
+      "predecessors": [
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "name": "处理红枣",
+      "duration_min": 5,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        2
+      ]
+    },
+    {
+      "id": 4,
+      "name": "炒制枣泥豆沙糊",
+      "duration_min": 10,
+      "needs_human": true,
+      "resources": [
+        {
+          "machine_id": 1,
+          "duration": 10,
+          "temp_c": 0,
+          "heat_level": 1,
+          "mode_detail": "小火"
+        }
+      ],
+      "predecessors": [
+        3
+      ]
+    },
+    {
+      "id": 5,
+      "name": "混合粉糊",
+      "duration_min": 5,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        4
+      ]
+    },
+    {
+      "id": 6,
+      "name": "蒸拉糕",
+      "duration_min": 40,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 2,
+          "duration": 40,
+          "temp_c": 100,
+          "heat_level": 2,
+          "mode_detail": "普通蒸"
+        }
+      ],
+      "predecessors": [
+        5
+      ]
+    },
+    {
+      "id": 7,
+      "name": "冷却",
+      "duration_min": 10,
+      "needs_human": false,
+      "resources": [],
+      "predecessors": [
+        6
+      ]
+    },
+    {
+      "id": 8,
+      "name": "切块装盘",
+      "duration_min": 5,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        7
+      ]
+    }
+  ]
+}

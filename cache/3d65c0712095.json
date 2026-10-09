@@ -1,0 +1,180 @@
+{
+  "recipe_id": "5c8200d96dc6e123a037a202",
+  "name": "豆豉蒸腐竹",
+  "ingredients": [
+    {
+      "name": "腐竹",
+      "quantity": 150,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "小葱",
+      "quantity": 1,
+      "unit": "根",
+      "type": "素菜"
+    },
+    {
+      "name": "食用油",
+      "quantity": 45,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "豆豉",
+      "quantity": 30,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "蒜",
+      "quantity": 4,
+      "unit": "瓣",
+      "type": "调味品"
+    },
+    {
+      "name": "红剁椒",
+      "quantity": 15,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "鸡汤",
+      "quantity": 100,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "盐",
+      "quantity": 1,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "白糖",
+      "quantity": 3,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "鸡精",
+      "quantity": 1,
+      "unit": "克",
+      "type": "调味品"
+    }
+  ],
+  "steps": [
+    {
+      "id": 0,
+      "name": "泡发腐竹_准备",
+      "duration_min": 3,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 1,
+      "name": "泡发腐竹_等待",
+      "duration_min": 120,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 8,
+          "duration": 120,
+          "temp_c": 0,
+          "heat_level": 0,
+          "mode_detail": "none"
+        }
+      ],
+      "predecessors": [
+        0
+      ]
+    },
+    {
+      "id": 2,
+      "name": "切蒜末",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "name": "切豆豉",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        2
+      ]
+    },
+    {
+      "id": 4,
+      "name": "炒香调料",
+      "duration_min": 3,
+      "needs_human": true,
+      "resources": [
+        {
+          "machine_id": 1,
+          "duration": 3,
+          "temp_c": 0,
+          "heat_level": 1,
+          "mode_detail": "小火"
+        }
+      ],
+      "predecessors": [
+        3
+      ]
+    },
+    {
+      "id": 5,
+      "name": "浇调料",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        4
+      ]
+    },
+    {
+      "id": 6,
+      "name": "调制鸡汤",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        5
+      ]
+    },
+    {
+      "id": 7,
+      "name": "蒸腐竹",
+      "duration_min": 8,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 2,
+          "duration": 8,
+          "temp_c": 100,
+          "heat_level": 2,
+          "mode_detail": "普通蒸"
+        }
+      ],
+      "predecessors": [
+        6
+      ]
+    },
+    {
+      "id": 8,
+      "name": "撒葱花",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        7
+      ]
+    }
+  ]
+}

@@ -1,0 +1,162 @@
+{
+  "recipe_id": "5caf2ec7e78bfc455f2d5cb0",
+  "name": "清蒸带鱼",
+  "ingredients": [
+    {
+      "name": "带鱼",
+      "quantity": 400,
+      "unit": "克",
+      "type": "荤菜"
+    },
+    {
+      "name": "姜丝",
+      "quantity": 5,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "葱丝",
+      "quantity": 5,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "盐",
+      "quantity": 2,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "鸡粉",
+      "quantity": 2,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "料酒",
+      "quantity": 4,
+      "unit": "毫升",
+      "type": "调味品"
+    },
+    {
+      "name": "生抽",
+      "quantity": 5,
+      "unit": "毫升",
+      "type": "调味品"
+    },
+    {
+      "name": "食用油",
+      "quantity": 10,
+      "unit": "毫升",
+      "type": "调味品"
+    }
+  ],
+  "steps": [
+    {
+      "id": 0,
+      "name": "处理带鱼",
+      "duration_min": 3,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 1,
+      "name": "腌渍带鱼",
+      "duration_min": 5,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        0
+      ]
+    },
+    {
+      "id": 2,
+      "name": "码放带鱼",
+      "duration_min": 2,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "name": "注水",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        2
+      ]
+    },
+    {
+      "id": 4,
+      "name": "开始烹饪",
+      "duration_min": 1,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 2,
+          "duration": 1,
+          "temp_c": 100,
+          "heat_level": 2,
+          "mode_detail": "普通蒸"
+        }
+      ],
+      "predecessors": [
+        3
+      ]
+    },
+    {
+      "id": 5,
+      "name": "取出带鱼",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        4
+      ]
+    },
+    {
+      "id": 6,
+      "name": "准备葱丝",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        5
+      ]
+    },
+    {
+      "id": 7,
+      "name": "浇生抽",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        6
+      ]
+    },
+    {
+      "id": 8,
+      "name": "烧热炒锅",
+      "duration_min": 3,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        7
+      ]
+    },
+    {
+      "id": 9,
+      "name": "浇热油",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        8
+      ]
+    }
+  ]
+}

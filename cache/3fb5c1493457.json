@@ -1,0 +1,126 @@
+{
+  "recipe_id": "5dad486b6601a865649f9c15",
+  "name": "香菇烤芦笋",
+  "ingredients": [
+    {
+      "name": "芦笋",
+      "quantity": 130,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "香菇",
+      "quantity": 3,
+      "unit": "朵",
+      "type": "素菜"
+    },
+    {
+      "name": "蒜",
+      "quantity": 5,
+      "unit": "瓣",
+      "type": "调味品"
+    },
+    {
+      "name": "盐",
+      "quantity": 2,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "橄榄油",
+      "quantity": 15,
+      "unit": "毫升",
+      "type": "调味品"
+    },
+    {
+      "name": "黑胡椒",
+      "quantity": 3,
+      "unit": "克",
+      "type": "调味品"
+    }
+  ],
+  "steps": [
+    {
+      "id": 0,
+      "name": "准备食材",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 1,
+      "name": "预热烤箱",
+      "duration_min": 5,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 3,
+          "duration": 5,
+          "temp_c": 190,
+          "heat_level": 2,
+          "mode_detail": "完全烧烤"
+        }
+      ],
+      "predecessors": [
+        0
+      ]
+    },
+    {
+      "id": 2,
+      "name": "烤芦笋",
+      "duration_min": 8,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 3,
+          "duration": 8,
+          "temp_c": 190,
+          "heat_level": 2,
+          "mode_detail": "完全烧烤"
+        }
+      ],
+      "predecessors": [
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "name": "煎香菇",
+      "duration_min": 3,
+      "needs_human": true,
+      "resources": [
+        {
+          "machine_id": 1,
+          "duration": 3,
+          "temp_c": 0,
+          "heat_level": 1,
+          "mode_detail": "小火"
+        }
+      ],
+      "predecessors": [
+        2
+      ]
+    },
+    {
+      "id": 4,
+      "name": "调味",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        3
+      ]
+    },
+    {
+      "id": 5,
+      "name": "摆盘",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        4
+      ]
+    }
+  ]
+}

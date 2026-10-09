@@ -1,0 +1,134 @@
+{
+  "recipe_id": "645c5889614c1208ae1f5a24",
+  "name": "立夏饭",
+  "ingredients": [
+    {
+      "name": "大米",
+      "quantity": 200,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "腊肠",
+      "quantity": 50,
+      "unit": "克",
+      "type": "荤菜"
+    },
+    {
+      "name": "咸肉",
+      "quantity": 40,
+      "unit": "克",
+      "type": "荤菜"
+    },
+    {
+      "name": "胡萝卜",
+      "quantity": 20,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "笋",
+      "quantity": 25,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "香菇",
+      "quantity": 5,
+      "unit": "朵",
+      "type": "素菜"
+    },
+    {
+      "name": "豌豆",
+      "quantity": 5,
+      "unit": "克",
+      "type": "素菜"
+    }
+  ],
+  "steps": [
+    {
+      "id": 0,
+      "name": "食材准备",
+      "duration_min": 5,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 1,
+      "name": "处理成小丁",
+      "duration_min": 3,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        0
+      ]
+    },
+    {
+      "id": 2,
+      "name": "煸炒腊肠和肉丁",
+      "duration_min": 5,
+      "needs_human": true,
+      "resources": [
+        {
+          "machine_id": 1,
+          "duration": 5,
+          "temp_c": 0,
+          "heat_level": 2,
+          "mode_detail": "中火"
+        }
+      ],
+      "predecessors": [
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "name": "下入菜丁",
+      "duration_min": 2,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        2
+      ]
+    },
+    {
+      "id": 4,
+      "name": "加入大米和水",
+      "duration_min": 2,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        3
+      ]
+    },
+    {
+      "id": 5,
+      "name": "开始烹饪",
+      "duration_min": 30,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 2,
+          "duration": 30,
+          "temp_c": 100,
+          "heat_level": 2,
+          "mode_detail": "普通蒸"
+        }
+      ],
+      "predecessors": [
+        4
+      ]
+    },
+    {
+      "id": 6,
+      "name": "拌匀",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        5
+      ]
+    }
+  ]
+}

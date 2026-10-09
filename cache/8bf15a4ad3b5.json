@@ -1,0 +1,58 @@
+{
+  "recipe_id": "662e07388b2aa2265e115477",
+  "name": "法式羊排",
+  "ingredients": [
+    {
+      "name": "调味法式羊排",
+      "quantity": 4,
+      "unit": "块",
+      "type": "荤菜"
+    }
+  ],
+  "steps": [
+    {
+      "id": 0,
+      "name": "预热蒸烤一体机",
+      "duration_min": 5,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 2,
+          "duration": 5,
+          "temp_c": 180,
+          "heat_level": 2,
+          "mode_detail": "上下火"
+        }
+      ],
+      "predecessors": []
+    },
+    {
+      "id": 1,
+      "name": "放入调味法式羊排",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        0
+      ]
+    },
+    {
+      "id": 2,
+      "name": "开始烹饪",
+      "duration_min": 15,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 2,
+          "duration": 15,
+          "temp_c": 180,
+          "heat_level": 2,
+          "mode_detail": "上下火"
+        }
+      ],
+      "predecessors": [
+        1
+      ]
+    }
+  ]
+}

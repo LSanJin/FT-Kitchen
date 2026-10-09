@@ -1,0 +1,152 @@
+{
+  "recipe_id": "647ea23d85ea9528599ccb51",
+  "name": "香辣烤小龙虾",
+  "ingredients": [
+    {
+      "name": "小龙虾",
+      "quantity": 1000,
+      "unit": "克",
+      "type": "荤菜"
+    },
+    {
+      "name": "小龙虾调料",
+      "quantity": 200,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "啤酒",
+      "quantity": 600,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "黄瓜",
+      "quantity": 0.5,
+      "unit": "根",
+      "type": "素菜"
+    },
+    {
+      "name": "青椒",
+      "quantity": 0.5,
+      "unit": "个",
+      "type": "素菜"
+    }
+  ],
+  "steps": [
+    {
+      "id": 0,
+      "name": "清洗小龙虾",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 1,
+      "name": "混合调料和啤酒",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        0
+      ]
+    },
+    {
+      "id": 2,
+      "name": "切黄瓜条",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "name": "切青椒圈",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        2
+      ]
+    },
+    {
+      "id": 4,
+      "name": "铺铝箔纸",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        3
+      ]
+    },
+    {
+      "id": 5,
+      "name": "摆放小龙虾",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        4
+      ]
+    },
+    {
+      "id": 6,
+      "name": "撒黄瓜条和青椒圈",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        5
+      ]
+    },
+    {
+      "id": 7,
+      "name": "倒入啤酒调料",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        6
+      ]
+    },
+    {
+      "id": 8,
+      "name": "预热烤箱",
+      "duration_min": 5,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 3,
+          "duration": 5,
+          "temp_c": 180,
+          "heat_level": 2,
+          "mode_detail": "上下火"
+        }
+      ],
+      "predecessors": [
+        7
+      ]
+    },
+    {
+      "id": 9,
+      "name": "开始烹饪",
+      "duration_min": 15,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 3,
+          "duration": 15,
+          "temp_c": 180,
+          "heat_level": 2,
+          "mode_detail": "上下火"
+        }
+      ],
+      "predecessors": [
+        8
+      ]
+    }
+  ]
+}

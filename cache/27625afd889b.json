@@ -1,0 +1,140 @@
+{
+  "recipe_id": "5fe197255f8f38795ea6fe79",
+  "name": "麻辣对虾",
+  "ingredients": [
+    {
+      "name": "对虾",
+      "quantity": 300,
+      "unit": "克",
+      "type": "荤菜"
+    },
+    {
+      "name": "盐",
+      "quantity": 0.25,
+      "unit": "茶匙",
+      "type": "调味品"
+    },
+    {
+      "name": "料酒",
+      "quantity": 1,
+      "unit": "茶匙",
+      "type": "调味品"
+    },
+    {
+      "name": "食用油",
+      "quantity": 3,
+      "unit": "汤匙",
+      "type": "调味品"
+    },
+    {
+      "name": "朝天椒",
+      "quantity": 4,
+      "unit": "个",
+      "type": "素菜"
+    },
+    {
+      "name": "生姜末",
+      "quantity": 5,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "蒜末",
+      "quantity": 30,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "生抽",
+      "quantity": 1,
+      "unit": "茶匙",
+      "type": "调味品"
+    },
+    {
+      "name": "老抽",
+      "quantity": 0.5,
+      "unit": "茶匙",
+      "type": "调味品"
+    },
+    {
+      "name": "鸡精",
+      "quantity": 0.5,
+      "unit": "茶匙",
+      "type": "调味品"
+    },
+    {
+      "name": "花椒油",
+      "quantity": 0.25,
+      "unit": "茶匙",
+      "type": "调味品"
+    }
+  ],
+  "steps": [
+    {
+      "id": 0,
+      "name": "腌制对虾",
+      "duration_min": 10,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 1,
+      "name": "煸炒香料",
+      "duration_min": 5,
+      "needs_human": true,
+      "resources": [
+        {
+          "machine_id": 1,
+          "duration": 5,
+          "temp_c": 0,
+          "heat_level": 1,
+          "mode_detail": "小火"
+        }
+      ],
+      "predecessors": [
+        0
+      ]
+    },
+    {
+      "id": 2,
+      "name": "混合调料",
+      "duration_min": 2,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "name": "准备蒸制",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        2
+      ]
+    },
+    {
+      "id": 4,
+      "name": "开始烹饪",
+      "duration_min": 0,
+      "needs_human": false,
+      "resources": [],
+      "predecessors": [
+        3
+      ]
+    },
+    {
+      "id": 5,
+      "name": "取出并装盘",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        4
+      ]
+    }
+  ]
+}

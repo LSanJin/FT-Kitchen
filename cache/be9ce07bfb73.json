@@ -1,0 +1,220 @@
+{
+  "recipe_id": "6544c6c245256c3ad7c27455",
+  "name": "本帮白切鸡",
+  "ingredients": [
+    {
+      "name": "鸡",
+      "quantity": 2000,
+      "unit": "克",
+      "type": "荤菜"
+    },
+    {
+      "name": "八角",
+      "quantity": 2,
+      "unit": "个",
+      "type": "调味品"
+    },
+    {
+      "name": "桂皮",
+      "quantity": 5,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "香叶",
+      "quantity": 4,
+      "unit": "片",
+      "type": "调味品"
+    },
+    {
+      "name": "小茴香",
+      "quantity": 3,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "花椒",
+      "quantity": 2,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "沙姜",
+      "quantity": 2,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "姜",
+      "quantity": 30,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "葱",
+      "quantity": 30,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "盐",
+      "quantity": 10,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "糖",
+      "quantity": 25,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "黄酒",
+      "quantity": 20,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "鲜味宝",
+      "quantity": 2,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "生抽",
+      "quantity": 50,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "水",
+      "quantity": 200,
+      "unit": "克",
+      "type": "其他"
+    }
+  ],
+  "steps": [
+    {
+      "id": 0,
+      "name": "按摩腌制",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 1,
+      "name": "腌制",
+      "duration_min": 15,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 8,
+          "duration": 15,
+          "temp_c": 0,
+          "heat_level": 0,
+          "mode_detail": "none"
+        }
+      ],
+      "predecessors": [
+        0
+      ]
+    },
+    {
+      "id": 2,
+      "name": "准备蒸烤盘",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "name": "预热蒸箱",
+      "duration_min": 4,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 2,
+          "duration": 4,
+          "temp_c": 100,
+          "heat_level": 2,
+          "mode_detail": "普通蒸"
+        }
+      ],
+      "predecessors": [
+        2
+      ]
+    },
+    {
+      "id": 4,
+      "name": "蒸鸡",
+      "duration_min": 8,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 2,
+          "duration": 8,
+          "temp_c": 100,
+          "heat_level": 2,
+          "mode_detail": "普通蒸"
+        }
+      ],
+      "predecessors": [
+        3
+      ]
+    },
+    {
+      "id": 5,
+      "name": "煮香料",
+      "duration_min": 30,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        4
+      ]
+    },
+    {
+      "id": 6,
+      "name": "煮调味汁",
+      "duration_min": 10,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        5
+      ]
+    },
+    {
+      "id": 7,
+      "name": "冷却蘸料",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        6
+      ]
+    },
+    {
+      "id": 8,
+      "name": "冰水冷却",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        7
+      ]
+    },
+    {
+      "id": 9,
+      "name": "切块摆盘",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        8
+      ]
+    }
+  ]
+}

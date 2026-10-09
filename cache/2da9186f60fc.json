@@ -1,0 +1,147 @@
+{
+  "recipe_id": "65795251c458a177d8438e01",
+  "name": "虾米豆豉蒸排骨",
+  "ingredients": [
+    {
+      "name": "排骨",
+      "quantity": 300,
+      "unit": "克",
+      "type": "荤菜"
+    },
+    {
+      "name": "油豆腐",
+      "quantity": 20,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "虾米豆豉酱",
+      "quantity": 20,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "生抽",
+      "quantity": 10,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "料酒",
+      "quantity": 10,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "生粉",
+      "quantity": 5,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "砂糖",
+      "quantity": 3,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "麻油",
+      "quantity": 2,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "胡椒粉",
+      "quantity": 2,
+      "unit": "克",
+      "type": "调味品"
+    }
+  ],
+  "steps": [
+    {
+      "id": 0,
+      "name": "食材准备",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 1,
+      "name": "冲洗排骨",
+      "duration_min": 10,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        0
+      ]
+    },
+    {
+      "id": 2,
+      "name": "切油豆腐",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        0
+      ]
+    },
+    {
+      "id": 3,
+      "name": "腌制排骨",
+      "duration_min": 10,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": 4,
+      "name": "摆盘",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        3
+      ]
+    },
+    {
+      "id": 5,
+      "name": "预热蒸箱",
+      "duration_min": 4,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 2,
+          "duration": 4,
+          "temp_c": 100,
+          "heat_level": 2,
+          "mode_detail": "普通蒸"
+        }
+      ],
+      "predecessors": [
+        4
+      ]
+    },
+    {
+      "id": 6,
+      "name": "蒸排骨",
+      "duration_min": 8,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 2,
+          "duration": 8,
+          "temp_c": 100,
+          "heat_level": 2,
+          "mode_detail": "普通蒸"
+        }
+      ],
+      "predecessors": [
+        5
+      ]
+    }
+  ]
+}

@@ -1,0 +1,272 @@
+{
+  "recipe_id": "5d5665cea9114174727c8be4",
+  "name": "培根披萨",
+  "ingredients": [
+    {
+      "name": "高筋面粉",
+      "quantity": 200,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "酵母",
+      "quantity": 3,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "黄油",
+      "quantity": 20,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "水",
+      "quantity": 80,
+      "unit": "毫升",
+      "type": "调味品"
+    },
+    {
+      "name": "盐",
+      "quantity": 1,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "白糖",
+      "quantity": 10,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "鸡蛋",
+      "quantity": 1,
+      "unit": "个",
+      "type": "荤菜"
+    },
+    {
+      "name": "彩椒丁",
+      "quantity": 30,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "玉米粒",
+      "quantity": 30,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "培根片",
+      "quantity": 50,
+      "unit": "克",
+      "type": "荤菜"
+    },
+    {
+      "name": "番茄酱",
+      "quantity": 20,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "芝士碎",
+      "quantity": 40,
+      "unit": "克",
+      "type": "荤菜"
+    }
+  ],
+  "steps": [
+    {
+      "id": 0,
+      "name": "混合酵母和糖",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 1,
+      "name": "溶解酵母糖水",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        0
+      ]
+    },
+    {
+      "id": 2,
+      "name": "加入高筋面粉",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "name": "加入鸡蛋和酵母糖水",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        2
+      ]
+    },
+    {
+      "id": 4,
+      "name": "混合揉面",
+      "duration_min": 3,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        3
+      ]
+    },
+    {
+      "id": 5,
+      "name": "拉平面团",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        4
+      ]
+    },
+    {
+      "id": 6,
+      "name": "卷起揉搓",
+      "duration_min": 3,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        5
+      ]
+    },
+    {
+      "id": 7,
+      "name": "加入黄油和盐",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        6
+      ]
+    },
+    {
+      "id": 8,
+      "name": "包裹黄油和盐",
+      "duration_min": 3,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        7
+      ]
+    },
+    {
+      "id": 9,
+      "name": "发酵准备",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        8
+      ]
+    },
+    {
+      "id": 10,
+      "name": "发酵等待",
+      "duration_min": 30,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 3,
+          "duration": 30,
+          "temp_c": 35,
+          "heat_level": 2,
+          "mode_detail": "发酵"
+        }
+      ],
+      "predecessors": [
+        9
+      ]
+    },
+    {
+      "id": 11,
+      "name": "擀平面团",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        10
+      ]
+    },
+    {
+      "id": 12,
+      "name": "放入披萨盘",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        11
+      ]
+    },
+    {
+      "id": 13,
+      "name": "刷番茄酱",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        12
+      ]
+    },
+    {
+      "id": 14,
+      "name": "添加配料",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        13
+      ]
+    },
+    {
+      "id": 15,
+      "name": "预热烤箱",
+      "duration_min": 5,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 3,
+          "duration": 5,
+          "temp_c": 180,
+          "heat_level": 2,
+          "mode_detail": "上下火"
+        }
+      ],
+      "predecessors": [
+        14
+      ]
+    },
+    {
+      "id": 16,
+      "name": "烘烤披萨",
+      "duration_min": 10,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 3,
+          "duration": 10,
+          "temp_c": 180,
+          "heat_level": 2,
+          "mode_detail": "上下火"
+        }
+      ],
+      "predecessors": [
+        15
+      ]
+    }
+  ]
+}

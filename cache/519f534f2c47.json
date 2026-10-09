@@ -1,0 +1,158 @@
+{
+  "recipe_id": "5ff6ba8163f7535cecbfa247",
+  "name": "碳烤基围虾",
+  "ingredients": [
+    {
+      "name": "基围虾",
+      "quantity": 500,
+      "unit": "克",
+      "type": "荤菜"
+    },
+    {
+      "name": "洋葱",
+      "quantity": 0.5,
+      "unit": "个",
+      "type": "素菜"
+    },
+    {
+      "name": "盐",
+      "quantity": 1,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "料酒",
+      "quantity": 15,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "孜然粒",
+      "quantity": 2,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "粗辣椒粉",
+      "quantity": 5,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "食用油",
+      "quantity": 30,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "黑胡椒汁",
+      "quantity": 15,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "海鲜酱",
+      "quantity": 10,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "蚝油",
+      "quantity": 5,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "生抽",
+      "quantity": 5,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "老抽",
+      "quantity": 5,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "白糖",
+      "quantity": 5,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "鸡粉",
+      "quantity": 5,
+      "unit": "克",
+      "type": "调味品"
+    }
+  ],
+  "steps": [
+    {
+      "id": 0,
+      "name": "制作碳烧汁",
+      "duration_min": 5,
+      "needs_human": true,
+      "resources": [
+        {
+          "machine_id": 1,
+          "duration": 5,
+          "temp_c": 0,
+          "heat_level": 2,
+          "mode_detail": "小火"
+        }
+      ],
+      "predecessors": []
+    },
+    {
+      "id": 1,
+      "name": "腌制基尾虾",
+      "duration_min": 10,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        0
+      ]
+    },
+    {
+      "id": 2,
+      "name": "准备洋葱丝",
+      "duration_min": 2,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "name": "铺硅油纸和洋葱丝",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        2
+      ]
+    },
+    {
+      "id": 4,
+      "name": "拌制基尾虾",
+      "duration_min": 2,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        3
+      ]
+    },
+    {
+      "id": 5,
+      "name": "开始烹饪",
+      "duration_min": 0,
+      "needs_human": false,
+      "resources": [],
+      "predecessors": [
+        4
+      ]
+    }
+  ]
+}

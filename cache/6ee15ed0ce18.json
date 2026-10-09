@@ -1,0 +1,90 @@
+{
+  "recipe_id": "5d54ed01a9114174727c8b5c",
+  "name": "黄油小饼干",
+  "ingredients": [
+    {
+      "name": "低筋面粉",
+      "quantity": 170,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "黄油",
+      "quantity": 100,
+      "unit": "克",
+      "type": "荤菜"
+    },
+    {
+      "name": "蛋黄",
+      "quantity": 20,
+      "unit": "克",
+      "type": "荤菜"
+    },
+    {
+      "name": "糖粉",
+      "quantity": 50,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "盐",
+      "quantity": 2,
+      "unit": "克",
+      "type": "调味品"
+    }
+  ],
+  "steps": [
+    {
+      "id": 0,
+      "name": "预热烤箱",
+      "duration_min": 5,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 3,
+          "duration": 5,
+          "temp_c": 170,
+          "heat_level": 2,
+          "mode_detail": "常规烘焙"
+        }
+      ],
+      "predecessors": []
+    },
+    {
+      "id": 1,
+      "name": "准备面团",
+      "duration_min": 5,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 2,
+      "name": "制作饼干生坯",
+      "duration_min": 3,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "name": "烘烤饼干",
+      "duration_min": 13,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 3,
+          "duration": 13,
+          "temp_c": 170,
+          "heat_level": 2,
+          "mode_detail": "常规烘焙"
+        }
+      ],
+      "predecessors": [
+        2
+      ]
+    }
+  ]
+}

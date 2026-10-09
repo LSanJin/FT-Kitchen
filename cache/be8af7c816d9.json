@@ -1,0 +1,190 @@
+{
+  "recipe_id": "58e70b109f6429675ec805ed",
+  "name": "蒜蓉粉丝蒸扇贝",
+  "ingredients": [
+    {
+      "name": "扇贝",
+      "quantity": 6,
+      "unit": "个",
+      "type": "荤菜"
+    },
+    {
+      "name": "龙口粉丝",
+      "quantity": 40,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "小葱",
+      "quantity": 1,
+      "unit": "根",
+      "type": "调味品"
+    },
+    {
+      "name": "红彩椒",
+      "quantity": 0.25,
+      "unit": "个",
+      "type": "素菜"
+    },
+    {
+      "name": "食用油",
+      "quantity": 75,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "蒜末",
+      "quantity": 50,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "生抽",
+      "quantity": 20,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "料酒",
+      "quantity": 15,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "鸡精",
+      "quantity": 1,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "白胡椒粉",
+      "quantity": 0.1,
+      "unit": "克",
+      "type": "调味品"
+    }
+  ],
+  "steps": [
+    {
+      "id": 0,
+      "name": "清洗扇贝",
+      "duration_min": 5,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 1,
+      "name": "处理扇贝",
+      "duration_min": 3,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        0
+      ]
+    },
+    {
+      "id": 2,
+      "name": "泡粉丝",
+      "duration_min": 10,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 8,
+          "duration": 10,
+          "temp_c": 0,
+          "heat_level": 0,
+          "mode_detail": "none"
+        }
+      ],
+      "predecessors": [
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "name": "切葱花",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        2
+      ]
+    },
+    {
+      "id": 4,
+      "name": "切红彩椒",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        3
+      ]
+    },
+    {
+      "id": 5,
+      "name": "煸蒜末",
+      "duration_min": 3,
+      "needs_human": true,
+      "resources": [
+        {
+          "machine_id": 1,
+          "duration": 3,
+          "temp_c": 0,
+          "heat_level": 1,
+          "mode_detail": "小火"
+        }
+      ],
+      "predecessors": [
+        4
+      ]
+    },
+    {
+      "id": 6,
+      "name": "调制调味汁",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        5
+      ]
+    },
+    {
+      "id": 7,
+      "name": "准备扇贝",
+      "duration_min": 2,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        6
+      ]
+    },
+    {
+      "id": 8,
+      "name": "蒸扇贝",
+      "duration_min": 8,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 2,
+          "duration": 8,
+          "temp_c": 100,
+          "heat_level": 2,
+          "mode_detail": "普通蒸"
+        }
+      ],
+      "predecessors": [
+        7
+      ]
+    },
+    {
+      "id": 9,
+      "name": "撒葱花和红彩椒",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        8
+      ]
+    }
+  ]
+}

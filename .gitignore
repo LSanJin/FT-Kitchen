@@ -1,0 +1,9 @@
+.idea/
+__pycache__/
+*.pyc
+.env
+.env.*
+*.log
+*.pkl
+*.zip
+result/

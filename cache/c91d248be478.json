@@ -1,0 +1,258 @@
+{
+  "recipe_id": "5c875d065587067e1",
+  "name": "低温牛排",
+  "ingredients": [
+    {
+      "name": "牛排",
+      "quantity": 2,
+      "unit": "片",
+      "type": "荤菜"
+    },
+    {
+      "name": "海盐",
+      "quantity": 2,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "黑胡椒碎",
+      "quantity": 0,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "黄油",
+      "quantity": 20,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "蒜瓣",
+      "quantity": 1,
+      "unit": "片",
+      "type": "调味品"
+    },
+    {
+      "name": "洋葱",
+      "quantity": 200,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "黑胡椒汁",
+      "quantity": 0,
+      "unit": "克",
+      "type": "调味品"
+    }
+  ],
+  "steps": [
+    {
+      "id": 0,
+      "name": "牛排解冻_准备",
+      "duration_min": 3,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 1,
+      "name": "牛排解冻_等待",
+      "duration_min": 30,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 8,
+          "duration": 30,
+          "temp_c": 0,
+          "heat_level": 0,
+          "mode_detail": "none"
+        }
+      ],
+      "predecessors": [
+        0
+      ]
+    },
+    {
+      "id": 2,
+      "name": "清洗牛排",
+      "duration_min": 2,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "name": "吸干血水",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        2
+      ]
+    },
+    {
+      "id": 4,
+      "name": "撒海盐和黑胡椒",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        3
+      ]
+    },
+    {
+      "id": 5,
+      "name": "装入密封袋",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        4
+      ]
+    },
+    {
+      "id": 6,
+      "name": "抽真空",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        5
+      ]
+    },
+    {
+      "id": 7,
+      "name": "预热蒸烤箱",
+      "duration_min": 5,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 2,
+          "duration": 5,
+          "temp_c": 100,
+          "heat_level": 2,
+          "mode_detail": "普通蒸"
+        }
+      ],
+      "predecessors": [
+        6
+      ]
+    },
+    {
+      "id": 8,
+      "name": "放入蒸烤箱",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        7
+      ]
+    },
+    {
+      "id": 9,
+      "name": "加水箱水",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        8
+      ]
+    },
+    {
+      "id": 10,
+      "name": "蒸烤箱操作",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        9
+      ]
+    },
+    {
+      "id": 11,
+      "name": "切蒜片",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 12,
+      "name": "切洋葱条",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        11
+      ]
+    },
+    {
+      "id": 13,
+      "name": "沥干牛排水分",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        10
+      ]
+    },
+    {
+      "id": 14,
+      "name": "平底锅加热黄油",
+      "duration_min": 2,
+      "needs_human": true,
+      "resources": [
+        {
+          "machine_id": 1,
+          "duration": 2,
+          "temp_c": 180,
+          "heat_level": 2,
+          "mode_detail": "中火"
+        }
+      ],
+      "predecessors": [
+        13
+      ]
+    },
+    {
+      "id": 15,
+      "name": "煎牛排",
+      "duration_min": 2,
+      "needs_human": true,
+      "resources": [
+        {
+          "machine_id": 1,
+          "duration": 2,
+          "temp_c": 180,
+          "heat_level": 2,
+          "mode_detail": "中火"
+        }
+      ],
+      "predecessors": [
+        14
+      ]
+    },
+    {
+      "id": 16,
+      "name": "浇黑胡椒汁",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        15
+      ]
+    },
+    {
+      "id": 17,
+      "name": "摆盘",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        16
+      ]
+    }
+  ]
+}

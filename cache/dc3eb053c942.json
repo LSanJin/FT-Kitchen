@@ -1,0 +1,318 @@
+{
+  "recipe_id": "5c82027a6dc6e123a037a209",
+  "name": "荷叶蒸蟹饭",
+  "ingredients": [
+    {
+      "name": "青蟹",
+      "quantity": 1,
+      "unit": "只",
+      "type": "荤菜"
+    },
+    {
+      "name": "荷叶",
+      "quantity": 1,
+      "unit": "张",
+      "type": "素菜"
+    },
+    {
+      "name": "糯米",
+      "quantity": 200,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "猪肉",
+      "quantity": 50,
+      "unit": "克",
+      "type": "荤菜"
+    },
+    {
+      "name": "盐",
+      "quantity": 0.17,
+      "unit": "茶匙",
+      "type": "调味品"
+    },
+    {
+      "name": "料酒",
+      "quantity": 1,
+      "unit": "茶匙",
+      "type": "调味品"
+    },
+    {
+      "name": "生抽",
+      "quantity": 0.5,
+      "unit": "茶匙",
+      "type": "调味品"
+    },
+    {
+      "name": "姜",
+      "quantity": 2,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "葱",
+      "quantity": 1,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "食用油",
+      "quantity": 1.5,
+      "unit": "汤匙",
+      "type": "调味品"
+    },
+    {
+      "name": "干香菇",
+      "quantity": 15,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "胡萝卜",
+      "quantity": 50,
+      "unit": "克",
+      "type": "素菜"
+    }
+  ],
+  "steps": [
+    {
+      "id": 0,
+      "name": "浸泡糯米_准备",
+      "duration_min": 3,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 1,
+      "name": "浸泡糯米_等待",
+      "duration_min": 120,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 8,
+          "duration": 120,
+          "temp_c": 0,
+          "heat_level": 0,
+          "mode_detail": "none"
+        }
+      ],
+      "predecessors": [
+        0
+      ]
+    },
+    {
+      "id": 2,
+      "name": "沥干糯米",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "name": "平铺糯米",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        2
+      ]
+    },
+    {
+      "id": 4,
+      "name": "预热蒸箱",
+      "duration_min": 4,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 2,
+          "duration": 4,
+          "temp_c": 100,
+          "heat_level": 2,
+          "mode_detail": "普通蒸"
+        }
+      ],
+      "predecessors": [
+        3
+      ]
+    },
+    {
+      "id": 5,
+      "name": "蒸糯米",
+      "duration_min": 35,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 2,
+          "duration": 35,
+          "temp_c": 100,
+          "heat_level": 2,
+          "mode_detail": "普通蒸"
+        }
+      ],
+      "predecessors": [
+        4
+      ]
+    },
+    {
+      "id": 6,
+      "name": "切肉丁",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 7,
+      "name": "腌制猪肉",
+      "duration_min": 15,
+      "needs_human": false,
+      "resources": [],
+      "predecessors": [
+        6
+      ]
+    },
+    {
+      "id": 8,
+      "name": "刷洗青蟹",
+      "duration_min": 2,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 9,
+      "name": "剁开青蟹",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        8
+      ]
+    },
+    {
+      "id": 10,
+      "name": "泡发干香菇",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 11,
+      "name": "切干香菇丁",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        10
+      ]
+    },
+    {
+      "id": 12,
+      "name": "切胡萝卜丁",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 13,
+      "name": "切姜末",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 14,
+      "name": "切葱花",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 15,
+      "name": "炒C料",
+      "duration_min": 3,
+      "needs_human": true,
+      "resources": [
+        {
+          "machine_id": 1,
+          "duration": 3,
+          "temp_c": 0,
+          "heat_level": 2,
+          "mode_detail": "中火"
+        }
+      ],
+      "predecessors": [
+        11,
+        12,
+        13,
+        14
+      ]
+    },
+    {
+      "id": 16,
+      "name": "盛饭在荷叶上",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        5
+      ]
+    },
+    {
+      "id": 17,
+      "name": "摆放蟹块",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        9
+      ]
+    },
+    {
+      "id": 18,
+      "name": "预热蒸箱",
+      "duration_min": 4,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 2,
+          "duration": 4,
+          "temp_c": 100,
+          "heat_level": 2,
+          "mode_detail": "普通蒸"
+        }
+      ],
+      "predecessors": [
+        16,
+        17
+      ]
+    },
+    {
+      "id": 19,
+      "name": "蒸荷叶蟹饭",
+      "duration_min": 18,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 2,
+          "duration": 18,
+          "temp_c": 100,
+          "heat_level": 2,
+          "mode_detail": "普通蒸"
+        }
+      ],
+      "predecessors": [
+        18
+      ]
+    }
+  ]
+}

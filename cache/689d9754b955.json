@@ -1,0 +1,178 @@
+{
+  "recipe_id": "5cc7e58a4a21a4301960aefc",
+  "name": "温州鱼饼",
+  "ingredients": [
+    {
+      "name": "鮸鱼净鱼肉",
+      "quantity": 300,
+      "unit": "g",
+      "type": "荤菜"
+    },
+    {
+      "name": "猪肥膘",
+      "quantity": 60,
+      "unit": "g",
+      "type": "荤菜"
+    },
+    {
+      "name": "粗洋芋淀粉",
+      "quantity": 100,
+      "unit": "g",
+      "type": "调味品"
+    },
+    {
+      "name": "葱白碎",
+      "quantity": 5,
+      "unit": "g",
+      "type": "调味品"
+    },
+    {
+      "name": "蛋清",
+      "quantity": 10,
+      "unit": "g",
+      "type": "荤菜"
+    },
+    {
+      "name": "水",
+      "quantity": 20,
+      "unit": "g",
+      "type": "调味品"
+    },
+    {
+      "name": "生姜",
+      "quantity": 10,
+      "unit": "g",
+      "type": "调味品"
+    },
+    {
+      "name": "白糖",
+      "quantity": 2.5,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "盐",
+      "quantity": 3,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "鸡精",
+      "quantity": 2,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "料酒",
+      "quantity": 14,
+      "unit": "克",
+      "type": "调味品"
+    }
+  ],
+  "steps": [
+    {
+      "id": 0,
+      "name": "处理鱼肉",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 1,
+      "name": "剁碎鱼肉",
+      "duration_min": 3,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        0
+      ]
+    },
+    {
+      "id": 2,
+      "name": "准备姜水",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "name": "制作鱼肉馅",
+      "duration_min": 2,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        2
+      ]
+    },
+    {
+      "id": 4,
+      "name": "拌匀鱼肉馅",
+      "duration_min": 2,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        3
+      ]
+    },
+    {
+      "id": 5,
+      "name": "摔打鱼肉馅",
+      "duration_min": 2,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        4
+      ]
+    },
+    {
+      "id": 6,
+      "name": "整形鱼饼",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        5
+      ]
+    },
+    {
+      "id": 7,
+      "name": "煎鱼饼",
+      "duration_min": 5,
+      "needs_human": true,
+      "resources": [
+        {
+          "machine_id": 1,
+          "duration": 5,
+          "temp_c": 0,
+          "heat_level": 2,
+          "mode_detail": "中火"
+        }
+      ],
+      "predecessors": [
+        6
+      ]
+    },
+    {
+      "id": 8,
+      "name": "蒸鱼饼",
+      "duration_min": 8,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 2,
+          "duration": 8,
+          "temp_c": 100,
+          "heat_level": 2,
+          "mode_detail": "普通蒸"
+        }
+      ],
+      "predecessors": [
+        7
+      ]
+    }
+  ]
+}

@@ -1,0 +1,184 @@
+{
+  "recipe_id": "5f5ecdaadad9417a1b793a9f",
+  "name": "广式月饼（台式）",
+  "ingredients": [
+    {
+      "name": "转化糖浆",
+      "quantity": 105,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "中筋粉",
+      "quantity": 153,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "花生油",
+      "quantity": 22,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "枧水",
+      "quantity": 3,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "豆沙馅",
+      "quantity": 630,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "蛋黄",
+      "quantity": 1,
+      "unit": "个",
+      "type": "荤菜"
+    }
+  ],
+  "steps": [
+    {
+      "id": 0,
+      "name": "混合A料",
+      "duration_min": 3,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 1,
+      "name": "静置面团_准备",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        0
+      ]
+    },
+    {
+      "id": 2,
+      "name": "静置面团_等待",
+      "duration_min": 60,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 8,
+          "duration": 60,
+          "temp_c": 0,
+          "heat_level": 0,
+          "mode_detail": "none"
+        }
+      ],
+      "predecessors": [
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "name": "分割面团和馅料",
+      "duration_min": 2,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        2
+      ]
+    },
+    {
+      "id": 4,
+      "name": "包月饼",
+      "duration_min": 2,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        3
+      ]
+    },
+    {
+      "id": 5,
+      "name": "滚粉成型",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        4
+      ]
+    },
+    {
+      "id": 6,
+      "name": "刷蛋液",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        5
+      ]
+    },
+    {
+      "id": 7,
+      "name": "预热烤箱",
+      "duration_min": 5,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 3,
+          "duration": 5,
+          "temp_c": 180,
+          "heat_level": 2,
+          "mode_detail": "上下火"
+        }
+      ],
+      "predecessors": [
+        6
+      ]
+    },
+    {
+      "id": 8,
+      "name": "烘烤月饼",
+      "duration_min": 15,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 3,
+          "duration": 15,
+          "temp_c": 180,
+          "heat_level": 2,
+          "mode_detail": "上下火"
+        }
+      ],
+      "predecessors": [
+        7
+      ]
+    },
+    {
+      "id": 9,
+      "name": "冷却回油_准备",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        8
+      ]
+    },
+    {
+      "id": 10,
+      "name": "冷却回油_等待",
+      "duration_min": 1440,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 8,
+          "duration": 1440,
+          "temp_c": 0,
+          "heat_level": 0,
+          "mode_detail": "none"
+        }
+      ],
+      "predecessors": [
+        9
+      ]
+    }
+  ]
+}

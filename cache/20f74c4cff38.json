@@ -1,0 +1,108 @@
+{
+  "recipe_id": "6889acfbf5dd4d1e1f228e84",
+  "name": "沙参老鸭麦冬汤",
+  "ingredients": [
+    {
+      "name": "老鸭",
+      "quantity": 1500,
+      "unit": "克",
+      "type": "荤菜"
+    },
+    {
+      "name": "沙参",
+      "quantity": 30,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "麦冬",
+      "quantity": 10,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "盐",
+      "quantity": 10,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "姜片",
+      "quantity": 15,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "大葱段",
+      "quantity": 20,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "黄酒",
+      "quantity": 20,
+      "unit": "毫升",
+      "type": "调味品"
+    },
+    {
+      "name": "纯净水",
+      "quantity": 2000,
+      "unit": "毫升",
+      "type": "其他"
+    }
+  ],
+  "steps": [
+    {
+      "id": 0,
+      "name": "焯水",
+      "duration_min": 5,
+      "needs_human": true,
+      "resources": [
+        {
+          "machine_id": 1,
+          "duration": 5,
+          "temp_c": 0,
+          "heat_level": 2,
+          "mode_detail": "大火"
+        }
+      ],
+      "predecessors": []
+    },
+    {
+      "id": 1,
+      "name": "煸炒",
+      "duration_min": 3,
+      "needs_human": true,
+      "resources": [
+        {
+          "machine_id": 1,
+          "duration": 3,
+          "temp_c": 0,
+          "heat_level": 2,
+          "mode_detail": "中火"
+        }
+      ],
+      "predecessors": [
+        0
+      ]
+    },
+    {
+      "id": 2,
+      "name": "蒸煮",
+      "duration_min": 120,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 2,
+          "duration": 120,
+          "temp_c": 100,
+          "heat_level": 2,
+          "mode_detail": "普通蒸"
+        }
+      ],
+      "predecessors": [
+        1
+      ]
+    }
+  ]
+}

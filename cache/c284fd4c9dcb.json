@@ -1,0 +1,237 @@
+{
+  "recipe_id": "5dad41646601a865649f9c06",
+  "name": "蔬菜塔",
+  "ingredients": [
+    {
+      "name": "薄切土豆片",
+      "quantity": 150,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "西葫芦",
+      "quantity": 150,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "胡萝卜",
+      "quantity": 150,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "红彩椒",
+      "quantity": 50,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "盐",
+      "quantity": 2,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "黑胡椒",
+      "quantity": 3,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "橄榄油",
+      "quantity": 10,
+      "unit": "毫升",
+      "type": "调味品"
+    },
+    {
+      "name": "黄油",
+      "quantity": 20,
+      "unit": "克",
+      "type": "调味品"
+    }
+  ],
+  "steps": [
+    {
+      "id": 0,
+      "name": "预热烤箱",
+      "duration_min": 5,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 3,
+          "duration": 5,
+          "temp_c": 200,
+          "heat_level": 2,
+          "mode_detail": "鼓风烤"
+        }
+      ],
+      "predecessors": []
+    },
+    {
+      "id": 1,
+      "name": "刷油",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 2,
+      "name": "铺土豆片",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "name": "撒调料",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        2
+      ]
+    },
+    {
+      "id": 4,
+      "name": "淋油",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        3
+      ]
+    },
+    {
+      "id": 5,
+      "name": "放入烤箱",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        4
+      ]
+    },
+    {
+      "id": 6,
+      "name": "烤土豆片",
+      "duration_min": 25,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 3,
+          "duration": 25,
+          "temp_c": 200,
+          "heat_level": 2,
+          "mode_detail": "鼓风烤"
+        }
+      ],
+      "predecessors": [
+        5
+      ]
+    },
+    {
+      "id": 7,
+      "name": "切丁",
+      "duration_min": 3,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 8,
+      "name": "焯水",
+      "duration_min": 2,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 1,
+          "duration": 2,
+          "temp_c": 100,
+          "heat_level": 2,
+          "mode_detail": "大火"
+        }
+      ],
+      "predecessors": [
+        7
+      ]
+    },
+    {
+      "id": 9,
+      "name": "沥干",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        8
+      ]
+    },
+    {
+      "id": 10,
+      "name": "烧热平底锅",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [
+        {
+          "machine_id": 1,
+          "duration": 1,
+          "temp_c": 100,
+          "heat_level": 2,
+          "mode_detail": "大火"
+        }
+      ],
+      "predecessors": []
+    },
+    {
+      "id": 11,
+      "name": "融化黄油",
+      "duration_min": 1,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 1,
+          "duration": 1,
+          "temp_c": 100,
+          "heat_level": 2,
+          "mode_detail": "小火"
+        }
+      ],
+      "predecessors": [
+        10
+      ]
+    },
+    {
+      "id": 12,
+      "name": "炒蔬菜",
+      "duration_min": 3,
+      "needs_human": true,
+      "resources": [
+        {
+          "machine_id": 1,
+          "duration": 3,
+          "temp_c": 100,
+          "heat_level": 2,
+          "mode_detail": "中火"
+        }
+      ],
+      "predecessors": [
+        11
+      ]
+    },
+    {
+      "id": 13,
+      "name": "装入土豆塔",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        6,
+        12
+      ]
+    }
+  ]
+}

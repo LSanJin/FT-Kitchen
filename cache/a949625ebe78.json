@@ -1,0 +1,154 @@
+{
+  "recipe_id": "5d56689fa9114174727c8bfb",
+  "name": "鸡蛋黄油饼干",
+  "ingredients": [
+    {
+      "name": "低筋面粉",
+      "quantity": 100,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "黄油",
+      "quantity": 45,
+      "unit": "克",
+      "type": "荤菜"
+    },
+    {
+      "name": "抹茶粉",
+      "quantity": 3,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "糖粉",
+      "quantity": 20,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "蛋白",
+      "quantity": 20,
+      "unit": "克",
+      "type": "荤菜"
+    },
+    {
+      "name": "盐",
+      "quantity": 2,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "白芝麻",
+      "quantity": 10,
+      "unit": "克",
+      "type": "素菜"
+    }
+  ],
+  "steps": [
+    {
+      "id": 0,
+      "name": "预热烤箱",
+      "duration_min": 5,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 3,
+          "duration": 5,
+          "temp_c": 180,
+          "heat_level": 2,
+          "mode_detail": "上下火"
+        }
+      ],
+      "predecessors": []
+    },
+    {
+      "id": 1,
+      "name": "混合A料",
+      "duration_min": 3,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        0
+      ]
+    },
+    {
+      "id": 2,
+      "name": "混合B料",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "name": "揉面",
+      "duration_min": 3,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        2
+      ]
+    },
+    {
+      "id": 4,
+      "name": "擀面皮",
+      "duration_min": 2,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        3
+      ]
+    },
+    {
+      "id": 5,
+      "name": "撒白芝麻",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        4
+      ]
+    },
+    {
+      "id": 6,
+      "name": "压饼干生坯",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        5
+      ]
+    },
+    {
+      "id": 7,
+      "name": "摆放饼干",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        6
+      ]
+    },
+    {
+      "id": 8,
+      "name": "烘烤饼干",
+      "duration_min": 12,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 3,
+          "duration": 12,
+          "temp_c": 180,
+          "heat_level": 2,
+          "mode_detail": "常规烘焙"
+        }
+      ],
+      "predecessors": [
+        7
+      ]
+    }
+  ]
+}

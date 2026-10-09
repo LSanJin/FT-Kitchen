@@ -1,0 +1,280 @@
+{
+  "recipe_id": "6510fb3545256c3ad7c25c9c",
+  "name": "苹果芒果派",
+  "ingredients": [
+    {
+      "name": "中筋面粉",
+      "quantity": 170,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "细砂糖",
+      "quantity": 5,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "盐",
+      "quantity": 0.5,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "无盐黄油",
+      "quantity": 115,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "蛋液",
+      "quantity": 20,
+      "unit": "克",
+      "type": "荤菜"
+    },
+    {
+      "name": "芒果",
+      "quantity": 200,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "苹果",
+      "quantity": 200,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "香草精",
+      "quantity": 2,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "玉米淀粉",
+      "quantity": 5,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "细砂糖",
+      "quantity": 8,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "蛋液",
+      "quantity": 20,
+      "unit": "克",
+      "type": "荤菜"
+    },
+    {
+      "name": "粗糖",
+      "quantity": 8,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "蜂蜜",
+      "quantity": 50,
+      "unit": "克",
+      "type": "调味品"
+    }
+  ],
+  "steps": [
+    {
+      "id": 0,
+      "name": "食材准备",
+      "duration_min": 5,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 1,
+      "name": "混合主料",
+      "duration_min": 2,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        0
+      ]
+    },
+    {
+      "id": 2,
+      "name": "加入黄油丁",
+      "duration_min": 2,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "name": "加入水",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        2
+      ]
+    },
+    {
+      "id": 4,
+      "name": "搓成面包屑状",
+      "duration_min": 3,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        3
+      ]
+    },
+    {
+      "id": 5,
+      "name": "加入蛋液",
+      "duration_min": 2,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        4
+      ]
+    },
+    {
+      "id": 6,
+      "name": "揉面形成面团",
+      "duration_min": 2,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        5
+      ]
+    },
+    {
+      "id": 7,
+      "name": "分面团冷藏",
+      "duration_min": 60,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 4,
+          "duration": 60,
+          "temp_c": 4,
+          "heat_level": 0,
+          "mode_detail": "冷藏"
+        }
+      ],
+      "predecessors": [
+        6
+      ]
+    },
+    {
+      "id": 8,
+      "name": "处理水果",
+      "duration_min": 5,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        7
+      ]
+    },
+    {
+      "id": 9,
+      "name": "混合淀粉与糖",
+      "duration_min": 2,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        8
+      ]
+    },
+    {
+      "id": 10,
+      "name": "擀开面团",
+      "duration_min": 3,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        9
+      ]
+    },
+    {
+      "id": 11,
+      "name": "放置水果",
+      "duration_min": 2,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        10
+      ]
+    },
+    {
+      "id": 12,
+      "name": "折起派皮",
+      "duration_min": 2,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        11
+      ]
+    },
+    {
+      "id": 13,
+      "name": "刷蛋液",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        12
+      ]
+    },
+    {
+      "id": 14,
+      "name": "撒粗糖",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        13
+      ]
+    },
+    {
+      "id": 15,
+      "name": "预热烤箱",
+      "duration_min": 5,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 3,
+          "duration": 5,
+          "temp_c": 180,
+          "heat_level": 2,
+          "mode_detail": "上下火"
+        }
+      ],
+      "predecessors": [
+        14
+      ]
+    },
+    {
+      "id": 16,
+      "name": "开始烹饪",
+      "duration_min": 0,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        15
+      ]
+    },
+    {
+      "id": 17,
+      "name": "刷蜂蜜",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        16
+      ]
+    }
+  ]
+}

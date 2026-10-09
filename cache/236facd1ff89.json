@@ -1,0 +1,129 @@
+{
+  "recipe_id": "58e70b139f6429675ec8060c",
+  "name": "葱香土豆泥",
+  "ingredients": [
+    {
+      "name": "土豆",
+      "quantity": 400,
+      "unit": "g",
+      "type": "素菜"
+    },
+    {
+      "name": "小葱",
+      "quantity": 2,
+      "unit": "根",
+      "type": "调味品"
+    },
+    {
+      "name": "大葱",
+      "quantity": 0.5,
+      "unit": "根",
+      "type": "调味品"
+    },
+    {
+      "name": "食用油",
+      "quantity": 2,
+      "unit": "汤匙",
+      "type": "调味品"
+    },
+    {
+      "name": "盐",
+      "quantity": 0.5,
+      "unit": "茶匙",
+      "type": "调味品"
+    },
+    {
+      "name": "黑胡椒粉",
+      "quantity": 0.25,
+      "unit": "茶匙",
+      "type": "调味品"
+    },
+    {
+      "name": "鸡精",
+      "quantity": 0.5,
+      "unit": "茶匙",
+      "type": "调味品"
+    }
+  ],
+  "steps": [
+    {
+      "id": 0,
+      "name": "准备土豆",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 1,
+      "name": "预热蒸箱",
+      "duration_min": 4,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 2,
+          "duration": 4,
+          "temp_c": 100,
+          "heat_level": 2,
+          "mode_detail": "普通蒸"
+        }
+      ],
+      "predecessors": []
+    },
+    {
+      "id": 2,
+      "name": "蒸土豆",
+      "duration_min": 8,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 2,
+          "duration": 8,
+          "temp_c": 100,
+          "heat_level": 2,
+          "mode_detail": "普通蒸"
+        }
+      ],
+      "predecessors": [
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "name": "冷却土豆",
+      "duration_min": 10,
+      "needs_human": false,
+      "resources": [],
+      "predecessors": [
+        2
+      ]
+    },
+    {
+      "id": 4,
+      "name": "制作葱花",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 5,
+      "name": "炒制",
+      "duration_min": 3,
+      "needs_human": true,
+      "resources": [
+        {
+          "machine_id": 1,
+          "duration": 3,
+          "temp_c": 0,
+          "heat_level": 3,
+          "mode_detail": "大火"
+        }
+      ],
+      "predecessors": [
+        3,
+        4
+      ]
+    }
+  ]
+}

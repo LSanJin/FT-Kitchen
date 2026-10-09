@@ -1,0 +1,164 @@
+{
+  "recipe_id": "68eefee6f5dd4d1e1f228fee",
+  "name": "茯苓饼干",
+  "ingredients": [
+    {
+      "name": "低筋面粉",
+      "quantity": 80,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "玉米淀粉",
+      "quantity": 20,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "茯苓粉",
+      "quantity": 50,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "黄油",
+      "quantity": 30,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "鸡蛋",
+      "quantity": 1,
+      "unit": "个",
+      "type": "荤菜"
+    },
+    {
+      "name": "白砂糖",
+      "quantity": 20,
+      "unit": "克",
+      "type": "调味品"
+    }
+  ],
+  "steps": [
+    {
+      "id": 0,
+      "name": "软化黄油",
+      "duration_min": 5,
+      "needs_human": true,
+      "resources": [
+        {
+          "machine_id": 4,
+          "duration": 5,
+          "temp_c": 4,
+          "heat_level": 0,
+          "mode_detail": "冷藏"
+        }
+      ],
+      "predecessors": []
+    },
+    {
+      "id": 1,
+      "name": "混合黄油和鸡蛋液",
+      "duration_min": 2,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        0
+      ]
+    },
+    {
+      "id": 2,
+      "name": "混合材料",
+      "duration_min": 3,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "name": "静置_准备",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        2
+      ]
+    },
+    {
+      "id": 4,
+      "name": "静置_等待",
+      "duration_min": 15,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 8,
+          "duration": 15,
+          "temp_c": 0,
+          "heat_level": 0,
+          "mode_detail": "none"
+        }
+      ],
+      "predecessors": [
+        3
+      ]
+    },
+    {
+      "id": 5,
+      "name": "压成薄片",
+      "duration_min": 2,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        4
+      ]
+    },
+    {
+      "id": 6,
+      "name": "刻形",
+      "duration_min": 2,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        5
+      ]
+    },
+    {
+      "id": 7,
+      "name": "预热烤箱",
+      "duration_min": 5,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 3,
+          "duration": 5,
+          "temp_c": 150,
+          "heat_level": 2,
+          "mode_detail": "全开烤"
+        }
+      ],
+      "predecessors": [
+        6
+      ]
+    },
+    {
+      "id": 8,
+      "name": "烘烤",
+      "duration_min": 30,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 3,
+          "duration": 30,
+          "temp_c": 150,
+          "heat_level": 2,
+          "mode_detail": "全开烤"
+        }
+      ],
+      "predecessors": [
+        7
+      ]
+    }
+  ]
+}

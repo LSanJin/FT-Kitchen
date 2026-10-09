@@ -1,0 +1,138 @@
+{
+  "recipe_id": "64706f256f734220a4e24b47",
+  "name": "祛寒羊肉汤",
+  "ingredients": [
+    {
+      "name": "羊肋排",
+      "quantity": 500,
+      "unit": "克",
+      "type": "荤菜"
+    },
+    {
+      "name": "红枣",
+      "quantity": 80,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "桂圆",
+      "quantity": 80,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "陈皮",
+      "quantity": 5,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "枸杞",
+      "quantity": 15,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "淮山",
+      "quantity": 20,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "清水",
+      "quantity": 1.5,
+      "unit": "L",
+      "type": "调味品"
+    },
+    {
+      "name": "生姜",
+      "quantity": 100,
+      "unit": "克",
+      "type": "调味品"
+    }
+  ],
+  "steps": [
+    {
+      "id": 0,
+      "name": "焯水",
+      "duration_min": 3,
+      "needs_human": true,
+      "resources": [
+        {
+          "machine_id": 1,
+          "duration": 3,
+          "temp_c": 100,
+          "heat_level": 2,
+          "mode_detail": "大火"
+        }
+      ],
+      "predecessors": []
+    },
+    {
+      "id": 1,
+      "name": "准备砂锅",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        0
+      ]
+    },
+    {
+      "id": 2,
+      "name": "加入清水",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "name": "预热蒸箱",
+      "duration_min": 4,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 2,
+          "duration": 4,
+          "temp_c": 100,
+          "heat_level": 2,
+          "mode_detail": "普通蒸"
+        }
+      ],
+      "predecessors": [
+        2
+      ]
+    },
+    {
+      "id": 4,
+      "name": "开始烹饪",
+      "duration_min": 30,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 2,
+          "duration": 30,
+          "temp_c": 100,
+          "heat_level": 2,
+          "mode_detail": "普通蒸"
+        }
+      ],
+      "predecessors": [
+        3
+      ]
+    },
+    {
+      "id": 5,
+      "name": "调味",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        4
+      ]
+    }
+  ]
+}

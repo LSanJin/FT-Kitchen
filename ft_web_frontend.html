@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>FT Kitchen · 智能烹饪调度</title>
+<style>
+:root{font-family:Inter,"Microsoft YaHei","PingFang SC","Segoe UI",sans-serif;color:#243047;background:#f5f7fb;--ink:#243047;--muted:#8490a3;--line:#e7ebf2;--primary:#437be8;--mint:#1a967f;--card:#fff;--dark:#111e37}*{box-sizing:border-box}body{margin:0;min-height:100vh}button,input{font:inherit}button{cursor:pointer}button:disabled{cursor:not-allowed;opacity:.48}button:focus-visible,input:focus-visible{outline:3px solid #b0c7ff;outline-offset:2px}svg{display:block}.layout{display:grid;grid-template-columns:282px minmax(0,1fr);min-height:100vh}.sidebar{background:var(--dark);color:#fff;padding:27px 20px;position:sticky;top:0;height:100vh;display:flex;flex-direction:column;overflow:auto}.brand{display:flex;align-items:center;gap:12px;margin-bottom:39px;padding:0 7px}.brand-icon{width:41px;height:41px;border-radius:13px;background:linear-gradient(140deg,#749ffb,#4574e7 65%,#3564d1);display:grid;place-items:center;box-shadow:0 8px 22px #0003}.brand-icon svg{width:24px}.brand h1{font-size:17px;letter-spacing:.2px;margin:0;font-weight:750}.brand small{font-size:10px;color:#8896b0;letter-spacing:2.1px;display:block;margin-top:3px}.nav-caption{font-size:11px;letter-spacing:1.4px;color:#6f809e;text-transform:uppercase;padding:0 13px;margin:0 0 13px}.nav-item{display:flex;align-items:center;gap:12px;padding:13px;border-radius:11px;font-size:13px;margin:2px 0;color:#aab6cd;border:1px solid transparent}.nav-item.active{background:#24365a;color:#fff;border-color:#33486f}.nav-item svg{width:18px;height:18px}.nav-item .nav-dot{margin-left:auto;background:#4f85ef;border-radius:99px;width:6px;height:6px}.side-bottom{margin-top:auto;padding:22px 4px 4px}.side-note{border:1px solid #344560;border-radius:14px;padding:15px;background:#1a2b49}.side-note b{font-size:13px;display:block}.side-note p{color:#97a8c3;font-size:12px;line-height:1.9;margin:6px 0 0}.system-ok{display:flex;align-items:center;gap:8px;color:#90a1be;font-size:11px;margin:20px 5px 0}.system-ok:before{content:"";width:8px;height:8px;background:#53c4a2;border-radius:50%;box-shadow:0 0 0 4px #53c4a220}.main{min-width:0;padding:28px 34px 45px;max-width:1680px;width:100%;margin:0 auto}.topbar{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:27px}.crumb{font-size:12px;color:#99a4b5;display:flex;align-items:center;gap:9px}.crumb b{color:#6b788c;font-weight:550}.top-actions{display:flex;gap:10px;align-items:center}.today{font-size:12px;color:#788599;background:#fff;padding:10px 14px;border-radius:11px;border:1px solid var(--line)}.iconbtn{width:40px;height:40px;border:1px solid var(--line);border-radius:11px;background:#fff;color:#52617a;display:grid;place-items:center;position:relative}.iconbtn svg{width:18px;height:18px}.notification-dot{position:absolute;right:8px;top:7px;width:7px;height:7px;background:#ef8659;border:1px solid #fff;border-radius:100%}.eyebrow{font-size:12px;color:#4878e0;letter-spacing:2px;font-weight:760;margin-bottom:10px}.hero{display:flex;justify-content:space-between;align-items:end;margin-bottom:25px;gap:12px}.hero h2{font-size:29px;letter-spacing:-.7px;margin:0 0 8px;color:#1e2a40;line-height:1.35}.hero p{margin:0;color:#8591a3;font-size:13px;line-height:1.7}.hero-side{font-size:11px;color:#73829b;background:#eaf0fc;border:1px solid #dce7fb;padding:9px 12px;border-radius:9px;white-space:nowrap}.workspace{display:grid;grid-template-columns:minmax(305px,360px) minmax(0,1fr);gap:19px;align-items:start}.panel{background:var(--card);border:1px solid var(--line);border-radius:17px;box-shadow:0 3px 16px #26344d07}.pad{padding:23px}.panelhead{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:18px}.panel-title{font-size:15px;font-weight:780;color:#2b3548;display:flex;align-items:center;gap:9px}.tiny-num{background:#eef3ff;color:#4c7de1;border-radius:7px;padding:3px 7px;font-size:11px;font-weight:800}.help{font-size:11px;color:#a0aabc}.input-wrap{display:flex;align-items:center;gap:9px;border:1px solid #e0e6f0;border-radius:10px;background:#fafcff;padding:0 12px}.input-wrap svg{width:17px;height:17px;color:#8d9caf;flex-shrink:0}.input-wrap:focus-within{border-color:#90aff2;box-shadow:0 0 0 3px #447fe810}.input-wrap input{min-width:0;width:100%;border:none;outline:none!important;background:transparent;font-size:13px;padding:14px 0;color:#2e3b51}.section-hint{font-size:11px;color:#a3adbd;margin:10px 2px 13px}.results{display:grid;gap:7px;max-height:291px;overflow:auto;padding-right:3px}.dish-row{padding:11px 12px;border-radius:10px;border:1px solid #edf0f6;display:flex;justify-content:space-between;gap:8px;align-items:center;transition:.15s}.dish-row:hover{background:#f7faff;border-color:#cddbf7}.dish-row h4{font-size:13px;margin:0 0 5px;color:#324055;font-weight:680}.dish-row small{font-size:10px;color:#9ca8b8;word-break:break-all}.addbtn{background:#edf4ff;border:1px solid #dce8ff;color:#4278db;border-radius:8px;min-width:30px;height:30px;font-size:19px;line-height:1;font-weight:450}.addbtn.added{background:#eef8f3;border-color:#d9eee2;color:#419973;font-size:14px}.queue-area{margin-top:17px;padding-top:17px;border-top:1px dashed #e8edf5}.queue-head{display:flex;align-items:center;justify-content:space-between;font-size:12px;font-weight:760;color:#46556c;margin-bottom:10px}.queue-head small{font-size:11px;color:#a2adba;font-weight:450}.queue-list{display:grid;gap:8px;max-height:190px;overflow:auto}.queue-item{display:flex;align-items:center;gap:10px;background:#f8faff;border:1px solid #eef2fa;border-radius:9px;padding:9px 10px}.queue-num{width:21px;height:21px;border-radius:6px;background:#e8effe;color:#5b81c8;display:grid;place-items:center;font-size:10px;flex-shrink:0;font-weight:800}.queue-item b{font-size:12px;font-weight:650;min-width:0;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.queue-item button{border:0;background:transparent;color:#a1afc3;font-size:18px;padding:0 3px}.queue-empty{font-size:12px;color:#a8b3c3;padding:17px 10px;text-align:center;border:1px dashed #e2e9f3;border-radius:10px}.primary{border:0;background:linear-gradient(110deg,#457fe9,#3f70d7);box-shadow:0 7px 16px #3678e225;color:#fff;border-radius:10px;padding:12px 15px;font-size:13px;font-weight:760;display:flex;align-items:center;justify-content:center;gap:8px;transition:.18s}.primary:hover:not(:disabled){filter:brightness(1.05);transform:translateY(-1px)}.primary svg{width:16px}.full{width:100%}.run-section{margin-top:15px}.run-note{text-align:center;font-size:11px;color:#a1acb9;margin-top:10px}.rightcol{display:grid;gap:18px;min-width:0}.summary-card{padding:22px 23px}.summary-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}.state-label{font-size:11px;padding:6px 10px;border:1px solid #d8efdf;border-radius:50px;background:#f0faf3;color:#338e70;font-weight:700}.state-label.idle{background:#f6f7fa;border-color:#e8ecf1;color:#8b98a9}.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:0;row-gap:22px}.stat{padding:0 15px;border-left:1px solid #edf0f4}.stat:nth-child(3n+1){border-left:none;padding-left:0}.stat span{display:block;color:#9ca8b9;font-size:11px;margin-bottom:13px}.stat strong{font-size:25px;font-weight:780;line-height:1;color:#28384f;letter-spacing:-.6px}.stat small{font-size:11px;color:#a8b2c1;margin-left:5px}.stat .green{color:#239780}.task-foot{border-top:1px solid #f0f2f7;padding-top:15px;margin-top:20px;display:flex;justify-content:space-between;align-items:center;gap:10px;color:#9da8b8;font-size:11px}.task-foot code{background:#f3f6fb;color:#607391;padding:5px 7px;border-radius:6px;font-size:10px;word-break:break-all}.schedule-panel{padding:0}.schedule-head{padding:20px 24px 17px;border-bottom:1px solid #edf0f6;display:flex;align-items:center;justify-content:space-between;gap:10px}.schedule-head .sub{font-size:11px;color:#9aa6b6;margin-top:5px}.actionline{display:flex;align-items:center;gap:8px}.secondary{background:#fff;border:1px solid #dce4ef;color:#62738c;padding:9px 11px;font-size:11px;border-radius:8px;display:flex;align-items:center;gap:6px;font-weight:660}.secondary svg{width:14px}.chart-shell{padding:15px 20px 17px}.legend{display:flex;flex-wrap:wrap;gap:13px;margin-bottom:13px;align-items:center}.legend span{display:flex;align-items:center;gap:6px;color:#748398;font-size:10px}.swatch{width:12px;height:12px;border-radius:3px;display:inline-block}.swatch.hatched{background:repeating-linear-gradient(130deg,#dceafd 0 5px,#5488dc 5px 7px)}.timeline-scroll{overflow:auto;border:1px solid #edf1f6;border-radius:11px;background:#fcfdff;scrollbar-color:#c8d6eb transparent}.time-head{position:relative;height:38px;border-bottom:1px solid #e8edf5;background:#f8faff}.axis-tick{position:absolute;bottom:11px;font-size:10px;color:#9aa8b8;transform:translateX(-50%);white-space:nowrap}.machine-line{display:flex;position:relative;border-bottom:1px solid #eef1f7;min-height:63px}.machine-line:last-child{border-bottom:0}.machine-name{position:sticky;left:0;z-index:5;background:#fff;border-right:1px solid #e9eef5;flex:0 0 90px;width:90px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:4px;padding:8px 10px;font-size:12px;color:#55647b;font-weight:670;box-shadow:3px 0 8px #fff9}.machine-name small{font-size:9px;color:#a8b2c1;font-weight:500}.track{position:relative;flex:1;min-width:0;background:repeating-linear-gradient(to right,transparent 0 calc(var(--grid-step) - 1px),#edf1f7 calc(var(--grid-step) - 1px) var(--grid-step));}.bar{position:absolute;display:flex;align-items:center;overflow:hidden;justify-content:center;text-align:center;border-radius:5px;border:1px solid #ffffffa8;color:#fff;padding:0 4px;font-size:10px;font-weight:700;white-space:nowrap;text-overflow:ellipsis;box-shadow:0 2px 6px #28395711;min-width:2px;cursor:pointer;transition:box-shadow .1s,filter .1s}.bar:hover{z-index:7!important;filter:saturate(1.18);box-shadow:0 2px 9px #1d325041}.bar.shared{background:repeating-linear-gradient(135deg,#dceafd 0 6px,#9fc3f7 6px 9px);color:#2c65b6;border:1px solid #6999e0}.nowmarker{position:absolute;top:0;bottom:0;width:2px;background:#f07b57;z-index:4;pointer-events:none}.time-current{position:absolute;z-index:5;top:1px;font-size:9px;color:#e77650;background:#fff1e9;padding:2px 4px;border-radius:4px;transform:translateX(-50%)}.empty-chart{min-height:235px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:9px;color:#a3b0c1;text-align:center}.empty-chart svg{width:55px;height:55px;color:#bdcee7}.empty-chart b{color:#75849b;font-size:13px}.empty-chart p{font-size:11px;margin:0}.schedule-bottom{display:flex;justify-content:space-between;padding:12px 23px 17px;border-top:1px solid #edf0f6;font-size:11px;color:#93a1b2;gap:12px}.bottomgrid{display:grid;grid-template-columns:1.15fr 1fr;gap:18px;margin-top:18px}.timebox{padding:21px 23px}.rowflex{display:flex;justify-content:space-between;align-items:center;gap:10px}.time-controls{display:flex;align-items:center;gap:8px;margin:19px 0 12px;flex-wrap:wrap}.minute-field{display:flex;align-items:center;border:1px solid #dfe7f2;border-radius:9px;padding:8px 11px;gap:5px;background:#f9fbff}.minute-field input{width:64px;border:0;background:transparent;outline:none;font-weight:800;font-size:18px;color:#384b65;text-align:center}.minute-field span{font-size:11px;color:#9aa7b9}.roundbtn{border:1px solid #e2e8f3;background:#fff;border-radius:8px;padding:10px 11px;font-size:12px;color:#637898;font-weight:700}.play{border:0;background:#eaf1ff;border-radius:8px;padding:10px 12px;color:#416fd0;font-size:12px;font-weight:700}.minute-track{width:100%;accent-color:#447ce5;cursor:pointer}.time-help{display:flex;align-items:center;justify-content:space-between;color:#a2afbf;font-size:11px}.smallhint{font-size:11px;color:#a5b2bf;margin-top:12px;line-height:1.65}.upcoming{padding:21px 23px}.notice-items{display:grid;gap:9px;max-height:187px;overflow:auto;margin-top:17px}.notice-item{display:flex;align-items:start;gap:10px;background:#fafcff;border:1px solid #eff2f7;border-radius:9px;padding:10px 11px}.notice-time{font-size:11px;font-weight:800;color:#6181b4;white-space:nowrap;margin-top:1px}.notice-body b{display:block;color:#445269;font-size:12px;font-weight:680}.notice-body span{display:block;font-size:11px;color:#9aa6b5;margin-top:4px;line-height:1.5}.empty-small{font-size:12px;color:#a4aebe;padding:22px 0;text-align:center}.modal-back{position:fixed;inset:0;background:#0d1c36a8;display:none;align-items:center;justify-content:center;z-index:30;padding:16px;backdrop-filter:blur(3px)}.modal-back.open{display:flex}.modal{max-width:470px;width:100%;border-radius:19px;background:#fff;box-shadow:0 25px 75px #05132f52;padding:27px}.modal-icon{width:49px;height:49px;border-radius:14px;display:grid;place-items:center;background:#eaf2ff;color:#457bdc;margin-bottom:15px}.modal-icon svg{width:24px}.modal h3{margin:0 0 8px;font-size:19px;color:#273650}.modal p{color:#7c899d;line-height:1.8;font-size:13px;margin:0 0 15px}.modal ul{margin:0 0 20px;padding:13px 13px 13px 30px;border-radius:10px;background:#f7f9fd;color:#56647b;font-size:12px;line-height:2}.modal .btns{display:flex;justify-content:flex-end;gap:9px}.floating-toast{position:fixed;bottom:24px;right:24px;z-index:60;max-width:min(420px,calc(100% - 40px));padding:13px 17px;background:#253752;color:#fff;box-shadow:0 10px 35px #192a4866;border-radius:11px;opacity:0;transform:translateY(12px);pointer-events:none;transition:.25s;font-size:12px;line-height:1.7}.floating-toast.show{opacity:1;transform:translateY(0)}.floating-toast.error{background:#9e4349}.overlay-loading{position:fixed;inset:0;z-index:40;background:#14213a80;display:none;align-items:center;justify-content:center;backdrop-filter:blur(3px)}.overlay-loading.active{display:flex}.loader-card{padding:30px 40px;background:#fff;box-shadow:0 24px 60px #14213a40;border-radius:16px;display:flex;align-items:center;flex-direction:column;gap:11px;text-align:center}.spinner{border-radius:50%;width:33px;height:33px;border:3px solid #e0eaff;border-top-color:#427ce5;animation:spin .8s linear infinite}.loader-card b{font-size:15px;color:#334563}.loader-card small{color:#96a5bb;font-size:12px}@keyframes spin{to{transform:rotate(360deg)}}@media(max-width:1150px){.workspace{grid-template-columns:300px minmax(0,1fr)}.main{padding:26px 22px}.bottomgrid{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr);row-gap:22px}.stat:nth-child(3n+1){border-left:1px solid #edf0f4;padding-left:15px}.stat:nth-child(odd){padding-left:0;border-left:none}}@media(max-width:860px){.layout{grid-template-columns:1fr}.sidebar{position:static;height:auto;padding:16px 18px;display:block}.brand{margin:0}.sidebar nav,.sidebar .side-bottom,.nav-caption{display:none}.main{padding:21px 15px 38px}.workspace{grid-template-columns:1fr}.hero h2{font-size:24px}.hero-side{display:none}.results{max-height:185px}.bottomgrid{grid-template-columns:1fr}.today{display:none}}@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* v2: 任务重置操作 + 完整甘特图响应式布局 */
+.queue-tools{display:flex;align-items:center;gap:10px;min-width:0}
+.clear-btn{border:0;background:transparent;color:#4d79ce;font-size:11px;font-weight:750;padding:4px 1px;white-space:nowrap}
+.clear-btn:hover:not(:disabled){text-decoration:underline}
+.clear-btn:disabled{color:#b9c3d1}
+.end-session{color:#ba5361;border-color:#f0cbd2;background:#fff9fa;white-space:nowrap}
+.end-session:hover:not(:disabled){background:#fff0f2;border-color:#e8a6b2}
+.rightcol,.schedule-panel,.schedule-head,.chart-shell{min-width:0}
+.schedule-head{flex-wrap:wrap}
+.actionline{flex-wrap:wrap}
+.chart-shell{width:100%}
+.timeline-scroll{display:block;width:100%;max-width:100%;overflow-x:auto;overflow-y:auto;overscroll-behavior:contain;scrollbar-gutter:stable;scrollbar-width:thin}
+.time-head,.machine-line{box-sizing:border-box}
+.machine-name{box-sizing:border-box;min-width:0;overflow:hidden;word-break:break-all}
+.machine-name span{max-width:100%;line-height:1.35}
+.axis-tick.axis-first{transform:none}
+.axis-tick.axis-last{transform:translateX(-100%)}
+.track{min-width:0;flex:none}
+.chart-endspace{flex:none;background:#fcfdff;border-left:0}
+.chart-backdrop{position:fixed;inset:0;background:#0d1c3699;z-index:69;display:none;backdrop-filter:blur(2px)}
+.chart-backdrop.active{display:block}
+.schedule-panel.expanded{position:fixed;inset:18px;z-index:70;display:flex;flex-direction:column;min-width:0;max-width:none;border-radius:16px;box-shadow:0 30px 100px #0a193a66}
+.schedule-panel.expanded .chart-shell{flex:1;display:flex;flex-direction:column;min-height:0}
+.schedule-panel.expanded .timeline-scroll{flex:1;min-height:0;overflow:auto}
+.schedule-panel.expanded .schedule-head{flex:none}
+.schedule-panel.expanded .schedule-bottom{flex:none}
+@media(max-width:650px){.schedule-head{padding:16px}.chart-shell{padding:12px}.schedule-bottom{flex-wrap:wrap}.top-actions{gap:7px}.end-session{font-size:11px;padding:8px}.schedule-panel.expanded{inset:5px}.actionline{gap:5px}}
+
+/* 调度概览：第七项为程序总耗时，区别于烹饪 makespan */
+.stat.stat-runtime{grid-column:1/-1;display:flex;align-items:center;gap:13px;border-left:0;border-top:1px solid #edf0f4;padding:14px 0 0;min-width:0}
+.stat.stat-runtime > span:first-child{margin:0;white-space:nowrap}
+.stat-runtime .runtime-value{display:flex;align-items:baseline;margin-left:auto;white-space:nowrap}
+.stat-runtime .runtime-value strong{font-size:23px;color:#4679d6}
+.stat-runtime .runtime-value small{margin-left:5px}
+.stat-runtime .runtime-note{margin:0;color:#96a6b8;font-size:10px;white-space:nowrap}
+@media(max-width:580px){.stat.stat-runtime{flex-wrap:wrap;gap:6px}.stat-runtime .runtime-note{flex-basis:100%;text-align:right}}
+</style>
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar">
+    <div class="brand"><div class="brand-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><path d="M6 3v8m3-8v8m-6-8v5a4.5 4.5 0 0 0 4.5 4.5H8V21m10-18c-4.7 3.2-5 9.3 0 11V21"/></svg></div><div><h1>FT Kitchen</h1><small>SMART COOKING</small></div></div>
+    <p class="nav-caption">WORKSPACE</p>
+    <nav>
+      <div class="nav-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg> 烹饪调度总览 <span class="nav-dot"></span></div>
+      <div class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M3 5h18M7 5v14M3 12h18M13 12v7M3 19h18"/></svg> 多菜任务管理</div>
+      <div class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M4 19V5m5 14V9m5 10V4m5 15v-7"/></svg> 设备时间排程</div>
+      <div class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M12 3a5 5 0 0 1 5 5v3c0 2 1 3 3 5H4c2-2 3-3 3-5V8a5 5 0 0 1 5-5ZM10 20h4"/></svg> 实时烹饪提醒</div>
+    </nav>
+    <div class="side-bottom"><div class="side-note"><b>更高效的厨房协作</b><p>双目标分层调度 · 智能共享设备 · 动态插菜重排 · 步骤提醒</p></div><div class="system-ok">本地调度服务 <span id="serviceLabel">检测中</span></div></div>
+  </aside>
+  <main class="main">
+    <header class="topbar"><div class="crumb"><span>工作台</span><span>›</span><b>烹饪调度中心</b></div><div class="top-actions"><button class="secondary end-session" id="finishButton" disabled title="结束当前制作，清空排程并重新选菜">结束本次制作</button><div class="today" id="dateLabel"></div><button class="iconbtn" id="bellButton" title="打开提醒窗口"><svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.8"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></svg><span class="notification-dot"></span></button></div></header>
+    <div class="hero"><div><div class="eyebrow">SMART SCHEDULING</div><h2>智能烹饪调度中心 <span style="font-size:21px">✳</span></h2><p>搜索菜谱，组合制作任务，自动优化烹饪顺序与共享设备资源。</p></div><div class="hero-side">双目标优化 · Makespan / 同步出锅</div></div>
+    <section class="workspace">
+      <div class="panel pad">
+        <div class="panelhead"><div class="panel-title">菜品查询 <span class="tiny-num">01</span></div><span class="help">100 道菜谱库</span></div>
+        <label class="input-wrap"><svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m16 16 5 5"/></svg><input id="searchInput" autocomplete="off" placeholder="输入菜名或菜品 ID 搜索" /></label>
+        <div class="section-hint">点击 + 添加到制作清单，支持模糊搜索</div>
+        <div class="results" id="searchResults"><div class="queue-empty">正在加载菜谱...</div></div>
+        <div class="queue-area"><div class="queue-head"><span id="queueTitle">制作清单</span><div class="queue-tools"><small id="queueCounter">0 / 5 道菜</small><button class="clear-btn" id="clearButton" type="button" disabled>清空清单</button></div></div><div class="queue-list" id="queueList"><div class="queue-empty">还没有添加菜品</div></div></div>
+        <div class="run-section"><button class="primary full" id="startButton"> <svg viewBox="0 0 24 24" fill="currentColor"><path d="m8 5 11 7-11 7V5Z"/></svg><span id="startText">生成智能烹饪计划</span></button><div class="run-note" id="runNote">支持 1–5 道菜，同时优化总时间和出锅时间差</div></div>
+      </div>
+      <div class="rightcol">
+        <section class="panel summary-card"><div class="summary-head"><div class="panel-title">调度概览 <span class="tiny-num">02</span></div><span class="state-label idle" id="statusBadge">等待创建任务</span></div><div class="stats"><div class="stat"><span>参与菜品</span><strong id="metricRecipes">0</strong><small>道</small></div><div class="stat"><span>制作总耗时</span><strong id="metricMakespan" title="从正式调度0分钟开始，至最后一道菜完成的 makespan">—</strong><small>分钟</small></div><div class="stat"><span>最大出锅时间差</span><strong id="metricGap" class="green">—</strong><small>分钟</small></div><div class="stat"><span>共享设备批次</span><strong id="metricShared">—</strong><small>批</small></div><div class="stat" title="当前全部菜品分别制作的总耗时减去多菜并行总完成时间"><span>比串行节约时间</span><strong id="metricSaved" class="green">—</strong><small>分钟</small></div><div class="stat" title="基于实际人工资源占用记录，连续两次工作间隔不足5分钟时计为同一工作段"><span>最长连续人工工作</span><strong id="metricHuman">—</strong><small>分钟</small></div><div class="stat stat-runtime" title="包含本次任务初始调度及全部动态重排的后端计算累计耗时（不含页面停留与烹饪执行时间）"><span>调度总耗时</span><div class="runtime-value"><strong id="metricRuntime">—</strong><small>秒</small></div><span class="runtime-note" id="runtimeNote">生成排程后显示</span></div></div><div class="task-foot"><span id="roundLabel">尚未创建制作任务</span><code id="taskIdLabel">Task ID · —</code></div></section>
+        <section class="panel schedule-panel"><div class="schedule-head"><div><div class="panel-title">设备排程甘特图 <span class="tiny-num">03</span></div><div class="sub">按设备展示开始时间、结束时间与兼容共享批次</div></div><div class="actionline"><button class="secondary" id="expandButton" title="展开甘特图全屏查看">全屏</button><button class="secondary" id="downloadButton" title="导出当前甘特图 SVG"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3v13m-5-5 5 5 5-5M4 17v4h16v-4"/></svg>导出</button><button class="secondary" id="zoomButton" title="放大后横向滚动浏览全部工序">放大查看</button></div></div><div class="chart-shell"><div class="legend" id="chartLegend"><span><i class="swatch hatched"></i>共享批次将以斜纹显示</span></div><div class="timeline-scroll" id="timelineScroll"><div class="empty-chart"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2"><rect x="8" y="12" width="48" height="40" rx="6"/><path d="M18 24h29M18 34h18M18 44h25"/></svg><b>制作计划生成后，甘特图将在这里展示</b><p>可查看不同设备的并行任务，以及相同工况下的共享批次</p></div></div></div><div class="schedule-bottom"><span>提示：点击时间块可查看步骤详情；斜纹表示多道菜同批共享</span><span id="chartCaption">尚无调度结果</span></div></section>
+      </div>
+    </section>
+    <section class="bottomgrid">
+      <div class="panel timebox"><div class="rowflex"><div class="panel-title">执行时间控制 <span class="tiny-num">04</span></div><span style="font-size:11px;color:#98a5b5">仿真分钟，不代表真实计时</span></div><div class="time-controls"><div class="minute-field"><input id="minuteInput" type="number" min="0" step="1" value="0" aria-label="当前仿真分钟"/><span>min</span></div><button class="roundbtn" id="backButton">− 5 分钟</button><button class="roundbtn" id="nextButton">+ 5 分钟</button><button class="play" id="playButton">▶ 模拟执行</button><button class="secondary" id="replanButton">按当前时间重排</button></div><input class="minute-track" type="range" id="minuteSlider" min="0" max="360" step="1" value="0"/><div class="time-help"><span>开始 0min</span><span id="timeEnd">360min</span></div><div class="smallhint">调节时间可预览提醒；任务启动后可以追加新菜并按此刻时间重排，已执行工序保持冻结。</div></div>
+      <div class="panel upcoming"><div class="rowflex"><div class="panel-title">下一步烹饪提醒 <span class="tiny-num">05</span></div><button class="secondary" id="allNoticesButton">查看全部提醒 →</button></div><div class="notice-items" id="upcomingItems"><div class="empty-small">创建计划后，将展示即将开始的步骤</div></div></div>
+    </section>
+  </main>
+</div>
+<div class="chart-backdrop" id="chartBackdrop" aria-hidden="true"></div>
+<div class="modal-back" id="modalBackdrop" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal"><div class="modal-icon"><svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2"><path d="M12 3a5 5 0 0 1 5 5v3c0 2 1 3 3 5H4c2-2 3-3 3-5V8a5 5 0 0 1 5-5ZM10 21h4"/></svg></div><h3 id="modalTitle">烹饪提醒</h3><p id="modalMessage"></p><ul id="modalList"></ul><div class="btns"><button class="secondary" id="modalClose">知道了</button><button class="primary" id="modalAction">查看时间轴</button></div></div></div>
+<div class="overlay-loading" id="loadingOverlay"><div class="loader-card"><div class="spinner"></div><b id="loadingTitle">正在规划最佳烹饪方案</b><small id="loadingSub">正在调用双目标分层求解器，请稍候…</small></div></div>
+<div class="floating-toast" id="toast"></div>
+<script>
+(function(){
+'use strict';
+const $=id=>document.getElementById(id);
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const state={catalog:[],known:{},selected:[],pending:[],task:null,now:0,playing:false,timer:null,zoomed:false,busy:false,lastNoticeKeys:new Set(),saveTick:null};
+let toastTimeout=null,searchDelay=null;
+function toast(message,error=false){const el=$('toast');el.textContent=message;el.classList.toggle('error',error);el.classList.add('show');clearTimeout(toastTimeout);toastTimeout=setTimeout(()=>el.classList.remove('show'),4100)}
+function loading(on,title){state.busy=on;$('loadingOverlay').classList.toggle('active',on);$('loadingTitle').textContent=title||'正在处理...';$('startButton').disabled=on;$('replanButton').disabled=on;$('finishButton').disabled=on||!state.task;$('clearButton').disabled=on||!selectedIds().length}
+async function api(url,options){let r;try{r=await fetch(url,{headers:{'Content-Type':'application/json'},...options})}catch(e){throw Error('无法连接本地服务，请确认已运行 uvicorn ft_web_server:app --reload')}let data;try{data=await r.json()}catch{throw Error('服务器返回格式错误')}if(!r.ok)throw Error(typeof data.detail==='string'?data.detail:`服务器错误 ${r.status}`);return data}
+function selectedIds(){return state.task?state.pending:state.selected}
+function canAdd(id){if((state.task?.recipes||[]).some(x=>x.id===id))return false;return !selectedIds().includes(id)}
+async function search(){try{let q=$('searchInput').value.trim();const data=await api('/api/recipes?q='+encodeURIComponent(q)+'&limit=50');state.catalog=data.items;for(const item of data.items)state.known[item.id]=item.name;renderCatalog()}catch(e){$('searchResults').innerHTML='<div class="queue-empty">'+esc(e.message)+'</div>';}}
+function renderCatalog(){const selected=selectedIds();$('searchResults').innerHTML=state.catalog.length?state.catalog.map(r=>{let existing=state.task?.recipes.some(x=>x.id===r.id);let has=selected.includes(r.id);return `<div class="dish-row"><div style="min-width:0"><h4>${esc(r.name)}</h4><small>ID：${esc(r.id)}</small></div><button class="addbtn ${existing||has?'added':''}" data-add="${esc(r.id)}" ${existing||has?'disabled':''} title="${existing?'已在任务中':has?'已加入':'加入制作窗口'}">${existing||has?'✓':'+'}</button></div>`}).join(''):'<div class="queue-empty">未找到匹配菜品，请尝试其他名称或 ID</div>';$('searchResults').querySelectorAll('[data-add]').forEach(el=>el.addEventListener('click',()=>add(el.dataset.add)))}
+function add(id){const selected=selectedIds();const max=5-(state.task?.recipes.length||0);if(selected.length>=max){toast('当前制作任务最多支持5道菜',true);return}if(!canAdd(id))return;selected.push(id);renderQueue();renderCatalog()}
+function remove(id){const target=selectedIds(),i=target.indexOf(id);if(i>=0)target.splice(i,1);renderQueue();renderCatalog()}
+function renderQueue(){const selected=selectedIds();$('queueTitle').textContent=state.task?'待追加菜品':'制作清单';$('queueCounter').textContent=state.task?`${selected.length} 待追加 · 总数 ${state.task.recipes.length+selected.length}/5`:`${selected.length} / 5 道菜`;$('queueList').innerHTML=selected.length?selected.map((id,i)=>{const d={name:state.known[id]||id};return `<div class="queue-item"><span class="queue-num">${i+1}</span><b title="${esc(d?.name||id)}">${esc(d?.name||id)}</b><button data-remove="${esc(id)}" aria-label="移除">×</button></div>`}).join(''):'<div class="queue-empty">'+(state.task?'可继续搜索并添加新的菜品':'还没有添加菜品')+'</div>';$('queueList').querySelectorAll('[data-remove]').forEach(el=>el.onclick=()=>remove(el.dataset.remove));$('startText').textContent=state.task?'追加菜品并动态重排':'生成智能烹饪计划';$('runNote').textContent=state.task?'追加后将以当前执行分钟重排，已执行步骤保持冻结':'支持 1–5 道菜，同时优化总时间和出锅时间差';$('startButton').disabled=state.busy||!selected.length;$('clearButton').disabled=state.busy||!selected.length;$('finishButton').disabled=state.busy||!state.task}
+async function start(){if(state.busy||!selectedIds().length)return;stop();loading(true,state.task?'正在插入新菜并动态重排':'正在生成双目标烹饪计划');try{let data;if(state.task){data=await api('/api/tasks/'+encodeURIComponent(state.task.task_id)+'/reschedule',{method:'POST',body:JSON.stringify({now:state.now,add_recipe_ids:state.pending})});state.pending=[]}else{data=await api('/api/tasks',{method:'POST',body:JSON.stringify({recipe_ids:state.selected})});state.selected=[];state.now=0;}applyTask(data);try{localStorage.setItem('ft_kitchen_task_id',data.task_id)}catch{}toast(`调度成功 · 共 ${data.metrics.recipes} 道菜 · ${data.metrics.makespan} 分钟`)}catch(e){toast(e.message,true)}finally{loading(false);renderQueue();renderCatalog()}}
+function applyTask(task){state.task=task;state.lastNoticeKeys.clear();$('statusBadge').textContent=task.round?'动态重排已完成':'优化完成';$('statusBadge').classList.remove('idle');$('metricRecipes').textContent=task.metrics.recipes;$('metricMakespan').textContent=task.metrics.makespan;$('metricGap').textContent=task.metrics.finish_gap;$('metricShared').textContent=task.metrics.shared_batches;const saved=task.metrics.time_saved;const human=task.metrics.human_longest_work;$('metricSaved').textContent=saved==null?'—':Number(saved).toFixed(1).replace(/\.0$/,'');$('metricHuman').textContent=human==null?'—':Number(human).toFixed(1).replace(/\.0$/,'');const totalRuntime=task.metrics.total_elapsed_seconds;const lastRuntime=task.metrics.last_elapsed_seconds;$('metricRuntime').textContent=totalRuntime==null?'—':Number(totalRuntime).toFixed(2);$('runtimeNote').textContent=totalRuntime==null?'暂无计时记录':(task.round?`累计 ${task.round+1} 轮，最近一次 ${Number(lastRuntime??0).toFixed(2)} 秒`:'包含菜谱解析、优化及校验');$('metricSaved').classList.toggle('green',saved!=null&&saved>=0);$('metricSaved').title=saved==null?'串行基线尚未计算':`串行合计 ${task.metrics.serial_makespan} 分钟 - 并行 ${task.metrics.makespan} 分钟`;$('metricHuman').title=`有效休息间隔 ${task.metrics.human_rest_minutes??5} 分钟，根据实际人工占用记录计算`;$('roundLabel').textContent=`第 ${task.round} 轮排程 · 共 ${task.metrics.steps} 个工序`;$('taskIdLabel').textContent=task.task_id;state.now=Math.max(state.now,task.now);$('minuteSlider').max=Math.ceil(task.metrics.makespan);$('timeEnd').textContent=task.metrics.makespan+'min';renderGantt();renderTime();renderQueue();renderNotices();}
+function chartRows(){if(!state.task)return[];const t=state.task;const rows=[];for(const m of t.machines){const items=t.batches.filter(x=>x.machine===m.id).sort((a,b)=>a.start-b.start);if(!items.length)continue;let lanes=[];for(const b of items){let slot=lanes.findIndex(end=>end<=b.start+1e-6);if(slot<0){slot=lanes.length;lanes.push(b.end)}else lanes[slot]=b.end;b._lane=slot}rows.push({machine:m,items,lanes:Math.max(1,lanes.length)})}return rows}
+function renderGantt(){
+  const t=state.task;
+  if(!t)return;
+  const rows=chartRows(), max=Math.max(1,Number(t.metrics.makespan)||1);
+  const scroller=$('timelineScroll');
+  const viewport=Math.max(320,scroller.clientWidth||scroller.parentElement.clientWidth||750);
+  const labelWidth=112, rightSpace=38;
+  // 默认完整适应窗口；只有用户主动“放大”才扩展画布并允许水平滚动。
+  const fullWidth=state.zoomed?Math.max(viewport-2,1600,max*5.5):Math.max(310,viewport-2);
+  const plotWidth=Math.max(150,fullWidth-labelWidth-rightSpace);
+  const contentWidth=labelWidth+plotWidth+rightSpace;
+  const originalLeft=scroller.scrollLeft,originalTop=scroller.scrollTop;
+  $('zoomButton').textContent=state.zoomed?'适应宽度':'放大查看';
+  const legend=t.recipes.map(r=>`<span><i class="swatch" style="background:${esc(r.color)}"></i>${esc(r.name)}</span>`).join('')+'<span><i class="swatch hatched"></i>同批共享</span>';
+  $('chartLegend').innerHTML=legend;
+  // 无论时间是否为整十分钟，都展示实际 makespan 终点。
+  const step=Math.max(10,Math.ceil(max/5/10)*10);
+  const tickValues=[0];
+  for(let x=step;x<max-step*0.65;x+=step)tickValues.push(x);
+  if(max>0)tickValues.push(max);
+  const renderTick=x=>{
+    const klass=x===0?' axis-first':x===max?' axis-last':'';
+    return `<div class="axis-tick${klass}" style="left:${(labelWidth+x/max*plotWidth).toFixed(2)}px">${Number(x.toFixed(2))} min</div>`;
+  };
+  let html=`<div class="time-head" style="width:${contentWidth}px"><div style="position:sticky;left:0;background:#f8faff;border-right:1px solid #e6ecf3;height:100%;width:${labelWidth}px;z-index:5"></div>${tickValues.map(renderTick).join('')}</div>`;
+  for(const row of rows){
+    const h=Math.max(57,row.lanes*36+16);
+    const slots=row.items.map(b=>{
+      const begin=Math.max(0,Math.min(max,Number(b.start)||0));
+      const finish=Math.max(begin,Math.min(max,Number(b.end)||begin));
+      const left=(begin/max*100).toFixed(6),w=((finish-begin)/max*100).toFixed(6);
+      const dish=t.recipes[b.rids[0]], parts=b.members.map(id=>t.steps[id]);
+      const label=b.auto_preheat?'设备自动预热':b.shared?`共享 ×${b.rids.length}`:parts[0]?.name||'步骤';
+      const title=b.auto_preheat?`设备自动预热 ${b.temperature}℃\n${b.start} – ${b.end} 分钟\n设备：${row.machine.name}`:`${b.shared?'同批共享\n':''}${parts.map(p=>p.recipe+' · '+p.name).join('\n')}\n${b.start} – ${b.end} 分钟\n设备：${row.machine.name}`;
+      const barWidth=Math.max(1.5,(finish-begin)/max*plotWidth);
+      return `<div class="bar ${b.shared?'shared':''}" style="left:${left}%;width:${w}%;min-width:${Math.min(barWidth,2)}px;top:${8+b._lane*36}px;height:29px;z-index:2;${b.auto_preheat?'background:#EFB960;color:#563800;':b.shared?'':`background:${esc(dish?.color||'#617fb1')}`}" data-batch="${esc(b.id)}" title="${esc(title)}">${barWidth>50?esc(label):''}</div>`;
+    }).join('');
+    const grid=(step/max*plotWidth).toFixed(2);
+    html+=`<div class="machine-line" style="width:${contentWidth}px;height:${h}px"><div class="machine-name" style="flex:0 0 ${labelWidth}px;width:${labelWidth}px"><span>${esc(row.machine.name)}</span><small>${row.items.length} 个批次</small></div><div class="track" style="--grid-step:${grid}px;flex:0 0 ${plotWidth}px;width:${plotWidth}px;height:${h}px">${slots}<div class="nowmarker" style="left:${Math.min(100,state.now/max*100)}%"></div></div><div class="chart-endspace" style="flex:0 0 ${rightSpace}px;width:${rightSpace}px"></div></div>`;
+  }
+  scroller.innerHTML=html;
+  scroller.scrollLeft=state.zoomed?Math.min(originalLeft,scroller.scrollWidth-scroller.clientWidth):0;
+  scroller.scrollTop=originalTop;
+  $('chartCaption').textContent=`${rows.length} 类设备 · ${t.batches.length} 个批次 · ${state.zoomed?'可横向滚动':'已显示完整时间范围'}`;
+  scroller.querySelectorAll('[data-batch]').forEach(el=>el.addEventListener('click',()=>showBatch(el.dataset.batch)));
+  renderNowMarker();
+}
+function renderNowMarker(){if(!state.task)return;let max=Math.max(1,state.task.metrics.makespan);document.querySelectorAll('.nowmarker').forEach(e=>e.style.left=(Math.min(100,state.now/max*100))+'%')}
+function showBatch(id){const t=state.task,b=t?.batches.find(x=>x.id===id);if(!b)return;const machine=t.machines.find(m=>m.id===b.machine);const desc=b.auto_preheat?[`设备自动预热 ${b.temperature}℃`]:b.members.map(nid=>{let st=t.steps[nid];return `${st.recipe}｜${st.name}（${st.start}–${st.end} 分钟）`});showModal(b.shared?'兼容工况 · 共享设备批次':'设备工序详情',`${machine?.name||''} · ${b.start}–${b.end} 分钟${b.temperature?' · '+b.temperature+'℃':''}`,desc)}
+function renderTime(){const v=Math.max(0,Math.round(state.now));$('minuteInput').value=v;$('minuteSlider').value=Math.min(v,Number($('minuteSlider').max));renderNowMarker();renderNotices()}
+function setMinute(v,live=false){const max=state.task?.metrics.makespan||360;const prev=state.now;state.now=Math.max(0,Math.min(max,Math.round(Number(v)||0)));renderTime();if(live&&state.task&&state.now>prev){const due=state.task.notices.filter(x=>x.at>prev+1e-7&&x.at<=state.now+1e-7&&!state.lastNoticeKeys.has(x.key));due.forEach(x=>state.lastNoticeKeys.add(x.key));if(due.length){let chosen=due.filter(x=>x.level==='action').slice(0,3);if(!chosen.length)chosen=due.slice(0,2);showModal('新的烹饪提醒',`执行时间已到 ${state.now} 分钟，请关注以下步骤。`,chosen.map(x=>x.message));if(state.playing)stop();}}}
+function stop(){state.playing=false;clearInterval(state.timer);state.timer=null;$('playButton').textContent='▶ 模拟执行'}
+function togglePlay(){if(!state.task){toast('请先生成制作计划');return}if(state.playing){stop();return}state.playing=true;$('playButton').textContent='Ⅱ 暂停模拟';state.timer=setInterval(()=>{if(state.now>=state.task.metrics.makespan){stop();toast('仿真完成，所有菜品计划已结束');return}setMinute(state.now+1,true)},1000)}
+function renderNotices(){const t=state.task;if(!t){$('upcomingItems').innerHTML='<div class="empty-small">创建计划后，将展示即将开始的步骤</div>';return}const next=t.notices.filter(n=>n.at>=state.now-1e-6).slice(0,4);$('upcomingItems').innerHTML=next.map(n=>`<div class="notice-item"><div class="notice-time">${n.at}m</div><div class="notice-body"><b>${esc(n.title)}</b><span>${esc(n.message)}</span></div></div>`).join('')||'<div class="empty-small">当前时间之后暂无提醒</div>'}
+function showModal(title,message,details=[]){$('modalTitle').textContent=title;$('modalMessage').textContent=message;$('modalList').innerHTML=details.map(x=>`<li>${esc(x)}</li>`).join('');$('modalList').style.display=details.length?'block':'none';$('modalBackdrop').classList.add('open')}
+function closeModal(){$('modalBackdrop').classList.remove('open')}
+async function replan(){if(!state.task){toast('请先生成制作计划');return}if(state.pending.length){toast('已添加待插入菜品，请点击“追加菜品并动态重排”');return}if(state.busy)return;stop();loading(true,'正在根据当前时间重新排程');try{const data=await api('/api/tasks/'+encodeURIComponent(state.task.task_id)+'/reschedule',{method:'POST',body:JSON.stringify({now:state.now,add_recipe_ids:[]})});applyTask(data);toast('第 '+data.round+' 轮动态重排已完成')}catch(e){toast(e.message,true)}finally{loading(false)}}
+function download(){const t=state.task;if(!t){toast('请先生成甘特图');return}const rows=chartRows(),max=t.metrics.makespan||1,W=1400,left=120,plot=W-left-30;let y=75,rects=[],labels=[];for(const row of rows){const h=Math.max(62,row.lanes*37+15);rects.push(`<rect x="0" y="${y}" width="${W}" height="${h}" fill="${(y/62)%2<1?'#fff':'#fafcff'}"/><text x="17" y="${y+24}" fill="#50627b" font-size="16">${esc(row.machine.name)}</text>`);for(const b of row.items){const x=left+(b.start/max)*plot,w=Math.max(1,(b.end-b.start)/max*plot),yy=y+9+b._lane*37;let color=b.auto_preheat?'#EFB960':b.shared?'url(#hatched)':t.recipes[b.rids[0]]?.color||'#738ba9';rects.push(`<rect x="${x}" y="${yy}" width="${w}" height="29" rx="4" fill="${color}" stroke="#d5dfe9"/>`);if(w>65)labels.push(`<text x="${x+6}" y="${yy+19}" fill="${b.shared?'#255b99':'white'}" font-size="11">${esc(b.auto_preheat?'自动预热':b.shared?'共享×'+b.rids.length:b.label.slice(0,9))}</text>`)}y+=h}let svg=`<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${y+25}" viewBox="0 0 ${W} ${y+25}"><defs><pattern id="hatched" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="9" height="9" fill="#e2efff"/><path d="M0 0V9" stroke="#6295d8" stroke-width="3"/></pattern></defs><rect width="100%" height="100%" fill="#fff"/><text x="18" y="35" font-size="22" font-weight="700" fill="#293850">FT Kitchen 甘特图 · ${max}分钟</text>${rects.join('')}${labels.join('')}</svg>`;const blob=new Blob([svg],{type:'image/svg+xml;charset=utf-8'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=`FT_Gantt_${t.task_id}_r${t.round}.svg`;a.click();URL.revokeObjectURL(url);toast('甘特图 SVG 已导出')}
+function clearQueue(){
+  if(state.busy)return;
+  const items=selectedIds();
+  if(!items.length){toast('当前没有待清除的菜品');return;}
+  items.length=0;
+  renderQueue();renderCatalog();
+  toast(state.task?'已清除待追加菜品，当前任务保持不变':'已清空制作清单，可以重新选择菜品');
+}
+function closeExpandedChart(){
+  const panel=document.querySelector('.schedule-panel');
+  if(!panel.classList.contains('expanded'))return;
+  panel.classList.remove('expanded');
+  $('chartBackdrop').classList.remove('active');
+  $('expandButton').textContent='全屏';
+  document.body.style.overflow='';
+  if(state.task)renderGantt();
+}
+function toggleExpandedChart(){
+  if(!state.task){toast('请先生成甘特图');return;}
+  const panel=document.querySelector('.schedule-panel');
+  const opened=panel.classList.toggle('expanded');
+  $('chartBackdrop').classList.toggle('active',opened);
+  $('expandButton').textContent=opened?'退出全屏':'全屏';
+  document.body.style.overflow=opened?'hidden':'';
+  renderGantt();
+}
+function resetToSelection(){
+  stop();closeModal();closeExpandedChart();
+  clearTimeout(searchDelay);
+  state.task=null;state.selected=[];state.pending=[];state.now=0;
+  state.zoomed=false;state.lastNoticeKeys.clear();
+  try{localStorage.removeItem('ft_kitchen_task_id')}catch{}
+  $('searchInput').value='';
+  $('statusBadge').textContent='等待创建任务';$('statusBadge').classList.add('idle');
+  $('metricRecipes').textContent='0';$('metricMakespan').textContent='—';
+  $('metricGap').textContent='—';$('metricShared').textContent='—';$('metricSaved').textContent='—';$('metricHuman').textContent='—';$('metricRuntime').textContent='—';$('runtimeNote').textContent='生成排程后显示';
+  $('roundLabel').textContent='尚未创建制作任务';$('taskIdLabel').textContent='Task ID · —';
+  $('minuteSlider').max=360;$('minuteSlider').value=0;
+  $('minuteInput').value=0;$('timeEnd').textContent='360min';
+  $('chartLegend').innerHTML='<span><i class="swatch hatched"></i>共享批次将以斜纹显示</span>';
+  $('timelineScroll').innerHTML='<div class="empty-chart"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2"><rect x="8" y="12" width="48" height="40" rx="6"/><path d="M18 24h29M18 34h18M18 44h25"/></svg><b>请选择菜品并生成新计划</b><p>甘特图将完整显示总时间范围，也支持放大及全屏查看</p></div>';
+  $('timelineScroll').scrollLeft=0;$('timelineScroll').scrollTop=0;
+  $('chartCaption').textContent='尚无调度结果';
+  $('zoomButton').textContent='放大查看';
+  renderQueue();renderNotices();renderCatalog();
+  window.scrollTo({top:0,behavior:'auto'});
+  search();
+}
+async function finishTask(){
+  if(state.busy)return;
+  if(!state.task){
+    if(state.selected.length){
+      if(!window.confirm('清空当前选择并重新开始吗？'))return;
+    }
+    resetToSelection();return;
+  }
+  const taskId=state.task.task_id;
+  if(!window.confirm('确认结束本次制作吗？\n当前甘特图、提醒和制作清单将从页面清除；历史任务将在后端保留为已结束状态。'))return;
+  stop();loading(true,'正在结束本次制作');
+  try{
+    await api('/api/tasks/'+encodeURIComponent(taskId)+'/finish',{method:'POST'});
+    resetToSelection();toast('本次制作已结束，可以重新选择菜品');
+  }catch(e){
+    toast('结束任务失败：'+e.message,true);
+  }finally{loading(false);renderQueue()}
+}
+function wire(){document.getElementById('dateLabel').textContent=new Date().toLocaleDateString('zh-CN',{year:'numeric',month:'long',day:'numeric',weekday:'long'});$('searchInput').addEventListener('input',()=>{clearTimeout(searchDelay);searchDelay=setTimeout(search,180)});$('searchInput').addEventListener('keydown',e=>{if(e.key==='Enter'&&state.catalog.length){add(state.catalog[0].id);e.preventDefault()}});$('startButton').onclick=start;$('replanButton').onclick=replan;$('bellButton').onclick=()=>{const t=state.task;showModal('烹饪提醒中心',t?`当前：${state.now} 分钟 · 共有 ${t.notices.length} 条排程提醒`:'请先生成烹饪排程',t?t.notices.filter(x=>x.at>=state.now).slice(0,12).map(x=>`${x.at}分钟：${x.message}`):[])};$('allNoticesButton').onclick=()=>{$('bellButton').click()};$('modalClose').onclick=closeModal;$('modalAction').onclick=()=>{closeModal();document.querySelector('.schedule-panel').scrollIntoView({behavior:'smooth'})};$('modalBackdrop').onclick=e=>{if(e.target===$('modalBackdrop'))closeModal()};document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeModal();closeExpandedChart()}});$('minuteInput').onchange=e=>setMinute(e.target.value);$('minuteSlider').oninput=e=>setMinute(e.target.value);$('backButton').onclick=()=>setMinute(state.now-5);$('nextButton').onclick=()=>setMinute(state.now+5);$('playButton').onclick=togglePlay;$('zoomButton').onclick=()=>{state.zoomed=!state.zoomed;renderGantt()};$('expandButton').onclick=toggleExpandedChart;$('chartBackdrop').onclick=closeExpandedChart;$('clearButton').onclick=clearQueue;$('finishButton').onclick=finishTask;$('downloadButton').onclick=download;window.addEventListener('resize',()=>{if(state.task)renderGantt()});}
+async function restore(){let taskId=null;try{taskId=localStorage.getItem('ft_kitchen_task_id')}catch{}if(!taskId)return;try{const data=await api('/api/tasks/'+encodeURIComponent(taskId));applyTask(data);toast('已恢复上次创建的制作任务')}catch(e){try{localStorage.removeItem('ft_kitchen_task_id')}catch{}}}
+async function init(){wire();try{const health=await api('/health');$('serviceLabel').textContent=health.ok?'已连接':'异常'}catch(e){$('serviceLabel').textContent='未连接';toast('本地服务未启动，请先运行后端',true)}await search();await restore();renderQueue()}
+init();
+})();
+</script>
+</body>
+</html>

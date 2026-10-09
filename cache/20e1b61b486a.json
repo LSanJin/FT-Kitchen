@@ -1,0 +1,248 @@
+{
+  "recipe_id": "65795250c458a177d8438dea",
+  "name": "南瓜鸡腿煲",
+  "ingredients": [
+    {
+      "name": "小南瓜",
+      "quantity": 1,
+      "unit": "个",
+      "type": "素菜"
+    },
+    {
+      "name": "鸡腿",
+      "quantity": 1,
+      "unit": "只",
+      "type": "荤菜"
+    },
+    {
+      "name": "青豆",
+      "quantity": 50,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "大蒜",
+      "quantity": 5,
+      "unit": "瓣",
+      "type": "调味品"
+    },
+    {
+      "name": "生姜",
+      "quantity": 10,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "小葱",
+      "quantity": 2,
+      "unit": "根",
+      "type": "调味品"
+    },
+    {
+      "name": "食盐",
+      "quantity": 5,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "黑胡椒粉",
+      "quantity": 2,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "干淀粉",
+      "quantity": 10,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "蚝油",
+      "quantity": 10,
+      "unit": "毫升",
+      "type": "调味品"
+    },
+    {
+      "name": "番茄酱",
+      "quantity": 10,
+      "unit": "毫升",
+      "type": "调味品"
+    },
+    {
+      "name": "花生油",
+      "quantity": 15,
+      "unit": "毫升",
+      "type": "调味品"
+    }
+  ],
+  "steps": [
+    {
+      "id": 0,
+      "name": "食材准备",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 1,
+      "name": "鸡腿去骨切块",
+      "duration_min": 3,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        0
+      ]
+    },
+    {
+      "id": 2,
+      "name": "烧开水",
+      "duration_min": 2,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 1,
+          "duration": 2,
+          "temp_c": 100,
+          "heat_level": 4,
+          "mode_detail": "大火"
+        }
+      ],
+      "predecessors": [
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "name": "焯水鸡腿",
+      "duration_min": 2,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 1,
+          "duration": 2,
+          "temp_c": 100,
+          "heat_level": 4,
+          "mode_detail": "大火"
+        }
+      ],
+      "predecessors": [
+        2
+      ]
+    },
+    {
+      "id": 4,
+      "name": "焯水青豆",
+      "duration_min": 2,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 1,
+          "duration": 2,
+          "temp_c": 100,
+          "heat_level": 4,
+          "mode_detail": "大火"
+        }
+      ],
+      "predecessors": [
+        3
+      ]
+    },
+    {
+      "id": 5,
+      "name": "冲洗食材",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        4
+      ]
+    },
+    {
+      "id": 6,
+      "name": "处理蒜姜葱",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        5
+      ]
+    },
+    {
+      "id": 7,
+      "name": "混合腌料",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        6
+      ]
+    },
+    {
+      "id": 8,
+      "name": "腌制鸡肉",
+      "duration_min": 30,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 4,
+          "duration": 30,
+          "temp_c": 4,
+          "heat_level": 0,
+          "mode_detail": "冷藏"
+        }
+      ],
+      "predecessors": [
+        7
+      ]
+    },
+    {
+      "id": 9,
+      "name": "处理南瓜",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        8
+      ]
+    },
+    {
+      "id": 10,
+      "name": "装入南瓜盅",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        9
+      ]
+    },
+    {
+      "id": 11,
+      "name": "开始烹饪",
+      "duration_min": 30,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 100,
+          "duration": 30,
+          "temp_c": 0,
+          "heat_level": 0,
+          "mode_detail": "none"
+        }
+      ],
+      "predecessors": [
+        10
+      ]
+    },
+    {
+      "id": 12,
+      "name": "撒葱花",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        11
+      ]
+    }
+  ]
+}

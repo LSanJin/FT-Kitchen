@@ -1,0 +1,303 @@
+{
+  "recipe_id": "5c86417e98d5bc7e184a90a8",
+  "name": "抹茶红豆白玉卷",
+  "ingredients": [
+    {
+      "name": "糯米粉",
+      "quantity": 100,
+      "unit": "g",
+      "type": "素菜"
+    },
+    {
+      "name": "粘米粉",
+      "quantity": 25,
+      "unit": "g",
+      "type": "素菜"
+    },
+    {
+      "name": "牛奶",
+      "quantity": 150,
+      "unit": "ml",
+      "type": "调味品"
+    },
+    {
+      "name": "黄油",
+      "quantity": 15,
+      "unit": "g",
+      "type": "调味品"
+    },
+    {
+      "name": "白砂糖",
+      "quantity": 25,
+      "unit": "g",
+      "type": "调味品"
+    },
+    {
+      "name": "鸡蛋",
+      "quantity": 4,
+      "unit": "个",
+      "type": "荤菜"
+    },
+    {
+      "name": "水",
+      "quantity": 60,
+      "unit": "ml",
+      "type": "调味品"
+    },
+    {
+      "name": "植物油",
+      "quantity": 25,
+      "unit": "g",
+      "type": "调味品"
+    },
+    {
+      "name": "抹茶粉",
+      "quantity": 10,
+      "unit": "g",
+      "type": "调味品"
+    },
+    {
+      "name": "低筋面粉",
+      "quantity": 60,
+      "unit": "g",
+      "type": "素菜"
+    },
+    {
+      "name": "红豆沙",
+      "quantity": 55,
+      "unit": "g",
+      "type": "素菜"
+    },
+    {
+      "name": "吉利丁",
+      "quantity": 5,
+      "unit": "g",
+      "type": "调味品"
+    },
+    {
+      "name": "淡奶油",
+      "quantity": 65,
+      "unit": "g",
+      "type": "荤菜"
+    },
+    {
+      "name": "淡奶油",
+      "quantity": 300,
+      "unit": "g",
+      "type": "荤菜"
+    },
+    {
+      "name": "白砂糖",
+      "quantity": 25,
+      "unit": "g",
+      "type": "调味品"
+    }
+  ],
+  "steps": [
+    {
+      "id": 0,
+      "name": "预热蒸箱",
+      "duration_min": 4,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 2,
+          "duration": 4,
+          "temp_c": 100,
+          "heat_level": 2,
+          "mode_detail": "普通蒸"
+        }
+      ],
+      "predecessors": []
+    },
+    {
+      "id": 1,
+      "name": "蒸红豆糊",
+      "duration_min": 3,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 2,
+          "duration": 3,
+          "temp_c": 100,
+          "heat_level": 2,
+          "mode_detail": "普通蒸"
+        }
+      ],
+      "predecessors": [
+        0
+      ]
+    },
+    {
+      "id": 2,
+      "name": "打发淡奶油",
+      "duration_min": 3,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 3,
+      "name": "混合红豆糊",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        2
+      ]
+    },
+    {
+      "id": 4,
+      "name": "冷冻红豆奶冻",
+      "duration_min": 180,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 4,
+          "duration": 180,
+          "temp_c": 0,
+          "heat_level": 0,
+          "mode_detail": "冷冻"
+        }
+      ],
+      "predecessors": [
+        3
+      ]
+    },
+    {
+      "id": 5,
+      "name": "混合糯米皮面糊",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 6,
+      "name": "预热蒸箱",
+      "duration_min": 4,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 2,
+          "duration": 4,
+          "temp_c": 100,
+          "heat_level": 2,
+          "mode_detail": "普通蒸"
+        }
+      ],
+      "predecessors": []
+    },
+    {
+      "id": 7,
+      "name": "蒸糯米皮",
+      "duration_min": 20,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 2,
+          "duration": 20,
+          "temp_c": 100,
+          "heat_level": 2,
+          "mode_detail": "普通蒸"
+        }
+      ],
+      "predecessors": [
+        6
+      ]
+    },
+    {
+      "id": 8,
+      "name": "打发蛋白",
+      "duration_min": 5,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 9,
+      "name": "混合抹茶蛋黄糊",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 10,
+      "name": "混合抹茶蛋糕糊",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        8,
+        9
+      ]
+    },
+    {
+      "id": 11,
+      "name": "烘烤抹茶蛋糕",
+      "duration_min": 20,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 3,
+          "duration": 20,
+          "temp_c": 180,
+          "heat_level": 2,
+          "mode_detail": "上下火"
+        }
+      ],
+      "predecessors": [
+        10
+      ]
+    },
+    {
+      "id": 12,
+      "name": "准备糯米皮",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        11
+      ]
+    },
+    {
+      "id": 13,
+      "name": "打发淡奶油",
+      "duration_min": 3,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 14,
+      "name": "制作抹茶红豆白玉卷",
+      "duration_min": 5,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        12,
+        13,
+        4
+      ]
+    },
+    {
+      "id": 15,
+      "name": "冷冻定型",
+      "duration_min": 120,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 4,
+          "duration": 120,
+          "temp_c": 0,
+          "heat_level": 0,
+          "mode_detail": "冷冻"
+        }
+      ],
+      "predecessors": [
+        14
+      ]
+    }
+  ]
+}

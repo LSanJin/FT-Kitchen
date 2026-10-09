@@ -1,0 +1,144 @@
+{
+  "recipe_id": "5fe1972d5f8f38795ea6fe7b",
+  "name": "秘制叉烧",
+  "ingredients": [
+    {
+      "name": "梅花肉",
+      "quantity": 400,
+      "unit": "克",
+      "type": "荤菜"
+    },
+    {
+      "name": "老抽",
+      "quantity": 10,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "生抽",
+      "quantity": 15,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "红腐乳",
+      "quantity": 40,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "细砂糖",
+      "quantity": 45,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "五香粉",
+      "quantity": 1,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "蒜蓉",
+      "quantity": 5,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "蚝油",
+      "quantity": 25,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "红糟",
+      "quantity": 18,
+      "unit": "克",
+      "type": "调味品"
+    }
+  ],
+  "steps": [
+    {
+      "id": 0,
+      "name": "准备肉块",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 1,
+      "name": "腌制猪肉_准备",
+      "duration_min": 3,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        0
+      ]
+    },
+    {
+      "id": 2,
+      "name": "腌制猪肉_等待",
+      "duration_min": 900,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 4,
+          "duration": 900,
+          "temp_c": 4,
+          "heat_level": 0,
+          "mode_detail": "冷藏"
+        }
+      ],
+      "predecessors": [
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "name": "取出肉块",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        2
+      ]
+    },
+    {
+      "id": 4,
+      "name": "预热烤箱",
+      "duration_min": 5,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 3,
+          "duration": 5,
+          "temp_c": 180,
+          "heat_level": 2,
+          "mode_detail": "上下火"
+        }
+      ],
+      "predecessors": [
+        3
+      ]
+    },
+    {
+      "id": 5,
+      "name": "开始烹饪",
+      "duration_min": 15,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 3,
+          "duration": 15,
+          "temp_c": 180,
+          "heat_level": 2,
+          "mode_detail": "上下火"
+        }
+      ],
+      "predecessors": [
+        4
+      ]
+    }
+  ]
+}

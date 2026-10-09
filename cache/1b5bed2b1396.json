@@ -1,0 +1,153 @@
+{
+  "recipe_id": "5e6f131cd8dcd921c6736129",
+  "name": "蒸咸蛋酿苦瓜",
+  "ingredients": [
+    {
+      "name": "苦瓜",
+      "quantity": 260,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "熟咸蛋黄",
+      "quantity": 50,
+      "unit": "克",
+      "type": "荤菜"
+    },
+    {
+      "name": "咖喱膏",
+      "quantity": 8,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "盐",
+      "quantity": 2,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "白糖",
+      "quantity": 2,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "鸡粉",
+      "quantity": 1,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "水淀粉",
+      "quantity": 10,
+      "unit": "毫升",
+      "type": "调味品"
+    },
+    {
+      "name": "料酒",
+      "quantity": 10,
+      "unit": "毫升",
+      "type": "调味品"
+    },
+    {
+      "name": "食用油",
+      "quantity": 10,
+      "unit": "毫升",
+      "type": "调味品"
+    }
+  ],
+  "steps": [
+    {
+      "id": 0,
+      "name": "切苦瓜",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 1,
+      "name": "处理咸蛋黄",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 2,
+      "name": "填入蛋黄末",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "name": "准备蒸箱",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        2
+      ]
+    },
+    {
+      "id": 4,
+      "name": "预热蒸箱",
+      "duration_min": 4,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 2,
+          "duration": 4,
+          "temp_c": 100,
+          "heat_level": 2,
+          "mode_detail": "普通蒸"
+        }
+      ],
+      "predecessors": [
+        3
+      ]
+    },
+    {
+      "id": 5,
+      "name": "蒸苦瓜",
+      "duration_min": 5,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 2,
+          "duration": 5,
+          "temp_c": 100,
+          "heat_level": 2,
+          "mode_detail": "普通蒸"
+        }
+      ],
+      "predecessors": [
+        4
+      ]
+    },
+    {
+      "id": 6,
+      "name": "炒制味汁",
+      "duration_min": 3,
+      "needs_human": true,
+      "resources": [
+        {
+          "machine_id": 1,
+          "duration": 3,
+          "temp_c": 0,
+          "heat_level": 4,
+          "mode_detail": "大火"
+        }
+      ],
+      "predecessors": [
+        5
+      ]
+    }
+  ]
+}

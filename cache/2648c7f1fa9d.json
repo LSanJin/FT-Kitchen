@@ -1,0 +1,148 @@
+{
+  "recipe_id": "5c871bef98d5bc7e184a90dd",
+  "name": "香烤鲫鱼",
+  "ingredients": [
+    {
+      "name": "鲫鱼",
+      "quantity": 220,
+      "unit": "克",
+      "type": "荤菜"
+    },
+    {
+      "name": "姜片",
+      "quantity": 20,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "干辣椒",
+      "quantity": 10,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "葱花",
+      "quantity": 5,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "盐",
+      "quantity": 1,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "胡椒粉",
+      "quantity": 4,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "料酒",
+      "quantity": 5,
+      "unit": "毫升",
+      "type": "调味品"
+    },
+    {
+      "name": "食用油",
+      "quantity": 15,
+      "unit": "毫升",
+      "type": "调味品"
+    }
+  ],
+  "steps": [
+    {
+      "id": 0,
+      "name": "预热烤箱",
+      "duration_min": 6,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 3,
+          "duration": 6,
+          "temp_c": 200,
+          "heat_level": 2,
+          "mode_detail": "完全烧烤"
+        }
+      ],
+      "predecessors": []
+    },
+    {
+      "id": 1,
+      "name": "洗净鲫鱼",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 2,
+      "name": "准备腌渍",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "name": "腌渍鲫鱼",
+      "duration_min": 10,
+      "needs_human": false,
+      "resources": [],
+      "predecessors": [
+        2
+      ]
+    },
+    {
+      "id": 4,
+      "name": "准备烤盘",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        3
+      ]
+    },
+    {
+      "id": 5,
+      "name": "刷食用油",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        4
+      ]
+    },
+    {
+      "id": 6,
+      "name": "烤制鲫鱼",
+      "duration_min": 20,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 3,
+          "duration": 20,
+          "temp_c": 200,
+          "heat_level": 2,
+          "mode_detail": "完全烧烤"
+        }
+      ],
+      "predecessors": [
+        5
+      ]
+    },
+    {
+      "id": 7,
+      "name": "装盘",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        6
+      ]
+    }
+  ]
+}

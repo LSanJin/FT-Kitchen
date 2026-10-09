@@ -1,0 +1,148 @@
+{
+  "recipe_id": "65433a5545256c3ad7c26a5b",
+  "name": "莲藕虾肉饼",
+  "ingredients": [
+    {
+      "name": "猪肉糜",
+      "quantity": 100,
+      "unit": "克",
+      "type": "荤菜"
+    },
+    {
+      "name": "咸鸭蛋蛋清",
+      "quantity": 1,
+      "unit": "个",
+      "type": "荤菜"
+    },
+    {
+      "name": "虾仁",
+      "quantity": 8,
+      "unit": "个",
+      "type": "荤菜"
+    },
+    {
+      "name": "莲藕",
+      "quantity": 150,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "香菜",
+      "quantity": 2,
+      "unit": "棵",
+      "type": "素菜"
+    },
+    {
+      "name": "香葱",
+      "quantity": 5,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "咸蛋黄",
+      "quantity": 4,
+      "unit": "个",
+      "type": "荤菜"
+    },
+    {
+      "name": "白砂糖",
+      "quantity": 2,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "料酒",
+      "quantity": 10,
+      "unit": "毫升",
+      "type": "调味品"
+    },
+    {
+      "name": "白胡椒",
+      "quantity": 1,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "盐",
+      "quantity": 3,
+      "unit": "克",
+      "type": "调味品"
+    }
+  ],
+  "steps": [
+    {
+      "id": 0,
+      "name": "食材准备_准备",
+      "duration_min": 3,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 1,
+      "name": "食材准备_等待",
+      "duration_min": 0,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 8,
+          "duration": 0,
+          "temp_c": 0,
+          "heat_level": 0,
+          "mode_detail": "none"
+        }
+      ],
+      "predecessors": [
+        0
+      ]
+    },
+    {
+      "id": 2,
+      "name": "莲藕切丝、芫荽切碎、虾肉切丁备用",
+      "duration_min": 5,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "name": "搅拌肉馅",
+      "duration_min": 10,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        2
+      ]
+    },
+    {
+      "id": 4,
+      "name": "放置咸蛋黄",
+      "duration_min": 2,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        3
+      ]
+    },
+    {
+      "id": 5,
+      "name": "开始烹饪",
+      "duration_min": 30,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 1,
+          "duration": 30,
+          "temp_c": 0,
+          "heat_level": 0,
+          "mode_detail": "none"
+        }
+      ],
+      "predecessors": [
+        4
+      ]
+    }
+  ]
+}

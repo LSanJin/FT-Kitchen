@@ -1,0 +1,297 @@
+{
+  "recipe_id": "5c80d49c6dc6e123a037a1c5",
+  "name": "珍珠爆浆蛋糕",
+  "ingredients": [
+    {
+      "name": "鸡蛋",
+      "quantity": 4,
+      "unit": "个",
+      "type": "荤菜"
+    },
+    {
+      "name": "细砂糖",
+      "quantity": 50,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "柠檬汁",
+      "quantity": 10,
+      "unit": "滴",
+      "type": "调味品"
+    },
+    {
+      "name": "牛奶",
+      "quantity": 80,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "红茶包",
+      "quantity": 3,
+      "unit": "包",
+      "type": "调味品"
+    },
+    {
+      "name": "食用油",
+      "quantity": 30,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "低筋面粉",
+      "quantity": 80,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "玉米淀粉",
+      "quantity": 15,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "盐",
+      "quantity": 0.5,
+      "unit": "g",
+      "type": "调味品"
+    },
+    {
+      "name": "黑珍珠",
+      "quantity": 120,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "红糖",
+      "quantity": 50,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "水",
+      "quantity": 0,
+      "unit": "适量",
+      "type": "调味品"
+    },
+    {
+      "name": "淡奶油",
+      "quantity": 400,
+      "unit": "克",
+      "type": "荤菜"
+    },
+    {
+      "name": "细砂糖",
+      "quantity": 20,
+      "unit": "克",
+      "type": "调味品"
+    }
+  ],
+  "steps": [
+    {
+      "id": 0,
+      "name": "煮茶香",
+      "duration_min": 5,
+      "needs_human": true,
+      "resources": [
+        {
+          "machine_id": 1,
+          "duration": 5,
+          "temp_c": 100,
+          "heat_level": 2,
+          "mode_detail": "大火"
+        }
+      ],
+      "predecessors": []
+    },
+    {
+      "id": 1,
+      "name": "分离蛋黄和蛋清",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 2,
+      "name": "混合A料",
+      "duration_min": 5,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "name": "打发蛋白",
+      "duration_min": 5,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        1
+      ]
+    },
+    {
+      "id": 4,
+      "name": "混合面糊",
+      "duration_min": 3,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": 5,
+      "name": "预热烤箱",
+      "duration_min": 5,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 3,
+          "duration": 5,
+          "temp_c": 170,
+          "heat_level": 2,
+          "mode_detail": "上下火"
+        }
+      ],
+      "predecessors": [
+        4
+      ]
+    },
+    {
+      "id": 6,
+      "name": "烘烤蛋糕",
+      "duration_min": 30,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 3,
+          "duration": 30,
+          "temp_c": 170,
+          "heat_level": 2,
+          "mode_detail": "上下火"
+        }
+      ],
+      "predecessors": [
+        5
+      ]
+    },
+    {
+      "id": 7,
+      "name": "冷却蛋糕",
+      "duration_min": 15,
+      "needs_human": false,
+      "resources": [],
+      "predecessors": [
+        6
+      ]
+    },
+    {
+      "id": 8,
+      "name": "煮黑珍珠_准备",
+      "duration_min": 3,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        7
+      ]
+    },
+    {
+      "id": 9,
+      "name": "煮黑珍珠_等待",
+      "duration_min": 8,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 8,
+          "duration": 8,
+          "temp_c": 0,
+          "heat_level": 0,
+          "mode_detail": "none"
+        }
+      ],
+      "predecessors": [
+        8
+      ]
+    },
+    {
+      "id": 10,
+      "name": "融化红糖_准备",
+      "duration_min": 3,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        9
+      ]
+    },
+    {
+      "id": 11,
+      "name": "融化红糖_等待",
+      "duration_min": 1,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 8,
+          "duration": 1,
+          "temp_c": 0,
+          "heat_level": 0,
+          "mode_detail": "none"
+        }
+      ],
+      "predecessors": [
+        10
+      ]
+    },
+    {
+      "id": 12,
+      "name": "浸泡黑珍珠",
+      "duration_min": 20,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 8,
+          "duration": 20,
+          "temp_c": 0,
+          "heat_level": 0,
+          "mode_detail": "none"
+        }
+      ],
+      "predecessors": [
+        11
+      ]
+    },
+    {
+      "id": 13,
+      "name": "打发淡奶油",
+      "duration_min": 3,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        12
+      ]
+    },
+    {
+      "id": 14,
+      "name": "挖坑并填充",
+      "duration_min": 5,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        13
+      ]
+    },
+    {
+      "id": 15,
+      "name": "切块食用",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        14
+      ]
+    }
+  ]
+}

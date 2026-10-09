@@ -1,0 +1,136 @@
+{
+  "recipe_id": "657951cac458a177d84387a1",
+  "name": "五味乌鸡煲",
+  "ingredients": [
+    {
+      "name": "乌鸡",
+      "quantity": 1,
+      "unit": "只",
+      "type": "荤菜"
+    },
+    {
+      "name": "桑葚",
+      "quantity": 30,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "熟地黄",
+      "quantity": 30,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "紫草",
+      "quantity": 10,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "侧柏叶",
+      "quantity": 10,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "牡丹皮",
+      "quantity": 5,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "盐",
+      "quantity": 4,
+      "unit": "克",
+      "type": "调味品"
+    }
+  ],
+  "steps": [
+    {
+      "id": 0,
+      "name": "食材准备",
+      "duration_min": 5,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 1,
+      "name": "处理乌鸡",
+      "duration_min": 5,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        0
+      ]
+    },
+    {
+      "id": 2,
+      "name": "清洗辅料",
+      "duration_min": 5,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "name": "包好药材",
+      "duration_min": 3,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        2
+      ]
+    },
+    {
+      "id": 4,
+      "name": "填充乌鸡",
+      "duration_min": 3,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        3
+      ]
+    },
+    {
+      "id": 5,
+      "name": "准备烹饪",
+      "duration_min": 3,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        4
+      ]
+    },
+    {
+      "id": 6,
+      "name": "蒸制乌鸡",
+      "duration_min": 60,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 2,
+          "duration": 60,
+          "temp_c": 100,
+          "heat_level": 2,
+          "mode_detail": "普通蒸"
+        }
+      ],
+      "predecessors": [
+        5
+      ]
+    },
+    {
+      "id": 7,
+      "name": "撒盐调味",
+      "duration_min": 2,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        6
+      ]
+    }
+  ]
+}

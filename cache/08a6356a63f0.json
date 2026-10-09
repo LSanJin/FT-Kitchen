@@ -1,0 +1,464 @@
+{
+  "recipe_id": "5caf2f00e78bfc455f2d5cb7",
+  "name": "拿破仑酥",
+  "ingredients": [
+    {
+      "name": "低筋面粉",
+      "quantity": 110,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "高筋面粉",
+      "quantity": 15,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "黄油",
+      "quantity": 20,
+      "unit": "克",
+      "type": "荤菜"
+    },
+    {
+      "name": "盐",
+      "quantity": 1,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "水",
+      "quantity": 63,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "酥皮油",
+      "quantity": 80,
+      "unit": "克",
+      "type": "荤菜"
+    },
+    {
+      "name": "全脂牛奶",
+      "quantity": 240,
+      "unit": "毫升",
+      "type": "荤菜"
+    },
+    {
+      "name": "细砂糖",
+      "quantity": 30,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "香草荚",
+      "quantity": 0.5,
+      "unit": "条",
+      "type": "调味品"
+    },
+    {
+      "name": "淀粉",
+      "quantity": 30,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "蛋黄",
+      "quantity": 64,
+      "unit": "个",
+      "type": "荤菜"
+    },
+    {
+      "name": "黄油",
+      "quantity": 20,
+      "unit": "克",
+      "type": "荤菜"
+    }
+  ],
+  "steps": [
+    {
+      "id": 0,
+      "name": "制作卡仕达酱_准备",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 1,
+      "name": "制作卡仕达酱_等待",
+      "duration_min": 30,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 4,
+          "duration": 30,
+          "temp_c": 4,
+          "heat_level": 0,
+          "mode_detail": "冷藏"
+        }
+      ],
+      "predecessors": [
+        0
+      ]
+    },
+    {
+      "id": 2,
+      "name": "混合A料",
+      "duration_min": 3,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 3,
+      "name": "冷藏面团_准备",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        2
+      ]
+    },
+    {
+      "id": 4,
+      "name": "冷藏面团_等待",
+      "duration_min": 30,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 4,
+          "duration": 30,
+          "temp_c": 4,
+          "heat_level": 0,
+          "mode_detail": "冷藏"
+        }
+      ],
+      "predecessors": [
+        3
+      ]
+    },
+    {
+      "id": 5,
+      "name": "擀制酥皮油",
+      "duration_min": 2,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 6,
+      "name": "冷藏酥皮油_准备",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        5
+      ]
+    },
+    {
+      "id": 7,
+      "name": "冷藏酥皮油_等待",
+      "duration_min": 30,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 4,
+          "duration": 30,
+          "temp_c": 4,
+          "heat_level": 0,
+          "mode_detail": "冷藏"
+        }
+      ],
+      "predecessors": [
+        6
+      ]
+    },
+    {
+      "id": 8,
+      "name": "擀制面团",
+      "duration_min": 2,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        4
+      ]
+    },
+    {
+      "id": 9,
+      "name": "包裹酥皮油",
+      "duration_min": 2,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        8
+      ]
+    },
+    {
+      "id": 10,
+      "name": "冷藏面团_准备",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        9
+      ]
+    },
+    {
+      "id": 11,
+      "name": "冷藏面团_等待",
+      "duration_min": 30,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 4,
+          "duration": 30,
+          "temp_c": 4,
+          "heat_level": 0,
+          "mode_detail": "冷藏"
+        }
+      ],
+      "predecessors": [
+        10
+      ]
+    },
+    {
+      "id": 12,
+      "name": "擀制面团",
+      "duration_min": 2,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        11
+      ]
+    },
+    {
+      "id": 13,
+      "name": "三折面团",
+      "duration_min": 2,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        12
+      ]
+    },
+    {
+      "id": 14,
+      "name": "冷藏面团_准备",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        13
+      ]
+    },
+    {
+      "id": 15,
+      "name": "冷藏面团_等待",
+      "duration_min": 30,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 4,
+          "duration": 30,
+          "temp_c": 4,
+          "heat_level": 0,
+          "mode_detail": "冷藏"
+        }
+      ],
+      "predecessors": [
+        14
+      ]
+    },
+    {
+      "id": 16,
+      "name": "擀制面团",
+      "duration_min": 2,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        15
+      ]
+    },
+    {
+      "id": 17,
+      "name": "三折面团",
+      "duration_min": 2,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        16
+      ]
+    },
+    {
+      "id": 18,
+      "name": "冷藏面团_准备",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        17
+      ]
+    },
+    {
+      "id": 19,
+      "name": "冷藏面团_等待",
+      "duration_min": 30,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 4,
+          "duration": 30,
+          "temp_c": 4,
+          "heat_level": 0,
+          "mode_detail": "冷藏"
+        }
+      ],
+      "predecessors": [
+        18
+      ]
+    },
+    {
+      "id": 20,
+      "name": "擀制面团",
+      "duration_min": 2,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        19
+      ]
+    },
+    {
+      "id": 21,
+      "name": "三折面团",
+      "duration_min": 2,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        20
+      ]
+    },
+    {
+      "id": 22,
+      "name": "冷藏面团_准备",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        21
+      ]
+    },
+    {
+      "id": 23,
+      "name": "冷藏面团_等待",
+      "duration_min": 30,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 4,
+          "duration": 30,
+          "temp_c": 4,
+          "heat_level": 0,
+          "mode_detail": "冷藏"
+        }
+      ],
+      "predecessors": [
+        22
+      ]
+    },
+    {
+      "id": 24,
+      "name": "冷冻面团",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        23
+      ]
+    },
+    {
+      "id": 25,
+      "name": "冷冻面团_等待",
+      "duration_min": 60,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 4,
+          "duration": 60,
+          "temp_c": -18,
+          "heat_level": 0,
+          "mode_detail": "冷冻"
+        }
+      ],
+      "predecessors": [
+        24
+      ]
+    },
+    {
+      "id": 26,
+      "name": "预热烤箱",
+      "duration_min": 5,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 3,
+          "duration": 5,
+          "temp_c": 180,
+          "heat_level": 2,
+          "mode_detail": "上下火"
+        }
+      ],
+      "predecessors": [
+        25
+      ]
+    },
+    {
+      "id": 27,
+      "name": "烘烤",
+      "duration_min": 15,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 3,
+          "duration": 15,
+          "temp_c": 180,
+          "heat_level": 2,
+          "mode_detail": "上下火"
+        }
+      ],
+      "predecessors": [
+        26
+      ]
+    },
+    {
+      "id": 28,
+      "name": "冷却",
+      "duration_min": 10,
+      "needs_human": false,
+      "resources": [],
+      "predecessors": [
+        27
+      ]
+    },
+    {
+      "id": 29,
+      "name": "切片",
+      "duration_min": 2,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        28
+      ]
+    },
+    {
+      "id": 30,
+      "name": "组装",
+      "duration_min": 3,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        29
+      ]
+    }
+  ]
+}

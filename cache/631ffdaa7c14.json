@@ -1,0 +1,184 @@
+{
+  "recipe_id": "5d565e87a9114174727c8bad",
+  "name": "半熟芝士蛋糕",
+  "ingredients": [
+    {
+      "name": "芝士",
+      "quantity": 200,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "牛奶",
+      "quantity": 100,
+      "unit": "毫升",
+      "type": "调味品"
+    },
+    {
+      "name": "玉米淀粉",
+      "quantity": 20,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "低筋面粉",
+      "quantity": 25,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "黄油",
+      "quantity": 60,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "蛋黄",
+      "quantity": 75,
+      "unit": "克",
+      "type": "荤菜"
+    },
+    {
+      "name": "细砂糖",
+      "quantity": 110,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "蛋白",
+      "quantity": 105,
+      "unit": "克",
+      "type": "荤菜"
+    }
+  ],
+  "steps": [
+    {
+      "id": 0,
+      "name": "预热烤箱",
+      "duration_min": 5,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 3,
+          "duration": 5,
+          "temp_c": 180,
+          "heat_level": 2,
+          "mode_detail": "上下火"
+        }
+      ],
+      "predecessors": []
+    },
+    {
+      "id": 1,
+      "name": "加热牛奶和黄油",
+      "duration_min": 2,
+      "needs_human": true,
+      "resources": [
+        {
+          "machine_id": 1,
+          "duration": 2,
+          "temp_c": 0,
+          "heat_level": 1,
+          "mode_detail": "小火"
+        }
+      ],
+      "predecessors": [
+        0
+      ]
+    },
+    {
+      "id": 2,
+      "name": "融化芝士",
+      "duration_min": 3,
+      "needs_human": true,
+      "resources": [
+        {
+          "machine_id": 1,
+          "duration": 3,
+          "temp_c": 0,
+          "heat_level": 1,
+          "mode_detail": "小火"
+        }
+      ],
+      "predecessors": [
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "name": "混合玉米淀粉、低筋面粉和蛋黄",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        2
+      ]
+    },
+    {
+      "id": 4,
+      "name": "打发蛋白",
+      "duration_min": 3,
+      "needs_human": true,
+      "resources": [
+        {
+          "machine_id": 7,
+          "duration": 3,
+          "temp_c": 0,
+          "heat_level": 0,
+          "mode_detail": "none"
+        }
+      ],
+      "predecessors": [
+        3
+      ]
+    },
+    {
+      "id": 5,
+      "name": "混合蛋白和蛋黄油",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        4
+      ]
+    },
+    {
+      "id": 6,
+      "name": "注入模具",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        5
+      ]
+    },
+    {
+      "id": 7,
+      "name": "烘烤蛋糕",
+      "duration_min": 35,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 3,
+          "duration": 35,
+          "temp_c": 180,
+          "heat_level": 2,
+          "mode_detail": "上下火"
+        }
+      ],
+      "predecessors": [
+        6
+      ]
+    },
+    {
+      "id": 8,
+      "name": "取出蛋糕",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        7
+      ]
+    }
+  ]
+}

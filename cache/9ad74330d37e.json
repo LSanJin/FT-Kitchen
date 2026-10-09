@@ -1,0 +1,419 @@
+{
+  "recipe_id": "66dea6480d586d528ee9dd7c",
+  "name": "烹香酷炒汇",
+  "ingredients": [
+    {
+      "name": "火腿肠",
+      "quantity": 1,
+      "unit": "根",
+      "type": "荤菜"
+    },
+    {
+      "name": "胡萝卜",
+      "quantity": 40,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "鸡蛋黄",
+      "quantity": 2,
+      "unit": "个",
+      "type": "荤菜"
+    },
+    {
+      "name": "肥牛卷",
+      "quantity": 200,
+      "unit": "克",
+      "type": "荤菜"
+    },
+    {
+      "name": "金针菇",
+      "quantity": 150,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "莴笋",
+      "quantity": 150,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "小米椒",
+      "quantity": 3,
+      "unit": "个",
+      "type": "调味品"
+    },
+    {
+      "name": "对虾",
+      "quantity": 300,
+      "unit": "克",
+      "type": "荤菜"
+    },
+    {
+      "name": "芹菜",
+      "quantity": 40,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "小葱",
+      "quantity": 20,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "洋葱",
+      "quantity": 30,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "姜丝",
+      "quantity": 10,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "大蒜末",
+      "quantity": 15,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "红椒",
+      "quantity": 40,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "酸汤肥牛调料",
+      "quantity": 1,
+      "unit": "袋",
+      "type": "调味品"
+    },
+    {
+      "name": "生抽",
+      "quantity": 35,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "盐",
+      "quantity": 7,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "食用油",
+      "quantity": 80,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "黑胡椒碎",
+      "quantity": 0,
+      "unit": "适量",
+      "type": "调味品"
+    },
+    {
+      "name": "纯净水",
+      "quantity": 370,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "豆瓣酱",
+      "quantity": 20,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "白糖",
+      "quantity": 4,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "白酒",
+      "quantity": 3,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "蚝油",
+      "quantity": 15,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "孜然粉",
+      "quantity": 2,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "辣椒粉",
+      "quantity": 1,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "熟米饭",
+      "quantity": 400,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "五花肉",
+      "quantity": 50,
+      "unit": "克",
+      "type": "荤菜"
+    },
+    {
+      "name": "豆腐",
+      "quantity": 100,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "大白菜",
+      "quantity": 120,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "土豆",
+      "quantity": 250,
+      "unit": "克",
+      "type": "素菜"
+    }
+  ],
+  "steps": [
+    {
+      "id": 0,
+      "name": "切火腿肠和胡萝卜丁",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 1,
+      "name": "搅拌黄金炒饭",
+      "duration_min": 2,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        0
+      ]
+    },
+    {
+      "id": 2,
+      "name": "冲烫肥牛卷",
+      "duration_min": 2,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 3,
+      "name": "处理金针菇和莴笋",
+      "duration_min": 2,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 4,
+      "name": "准备酸汤肥牛",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        3
+      ]
+    },
+    {
+      "id": 5,
+      "name": "处理对虾",
+      "duration_min": 2,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 6,
+      "name": "切芹菜和洋葱",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 7,
+      "name": "腌制对虾",
+      "duration_min": 10,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        5,
+        6
+      ]
+    },
+    {
+      "id": 8,
+      "name": "准备香辣虾",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        7
+      ]
+    },
+    {
+      "id": 9,
+      "name": "处理五花肉",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 10,
+      "name": "处理豆腐和大白菜",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 11,
+      "name": "调制料汁",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        10
+      ]
+    },
+    {
+      "id": 12,
+      "name": "准备白菜炖豆腐",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        9,
+        11
+      ]
+    },
+    {
+      "id": 13,
+      "name": "处理土豆",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 14,
+      "name": "拌制家常土豆片",
+      "duration_min": 2,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        13
+      ]
+    },
+    {
+      "id": 15,
+      "name": "切小葱和红椒",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 16,
+      "name": "预热烤箱",
+      "duration_min": 5,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 3,
+          "duration": 5,
+          "temp_c": 180,
+          "heat_level": 2,
+          "mode_detail": "上下火"
+        }
+      ],
+      "predecessors": []
+    },
+    {
+      "id": 17,
+      "name": "放入黄金炒饭和香辣虾",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        1,
+        8,
+        16
+      ]
+    },
+    {
+      "id": 18,
+      "name": "放入酸汤肥牛、白菜炖豆腐和家常土豆片",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        4,
+        12,
+        14
+      ]
+    },
+    {
+      "id": 19,
+      "name": "取出菜品",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        17,
+        18
+      ]
+    },
+    {
+      "id": 20,
+      "name": "翻拌土豆片并加入小葱段和红椒丝",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        19
+      ]
+    },
+    {
+      "id": 21,
+      "name": "翻拌黄金炒饭",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        19
+      ]
+    },
+    {
+      "id": 22,
+      "name": "盖上锡箔纸",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        21
+      ]
+    }
+  ]
+}

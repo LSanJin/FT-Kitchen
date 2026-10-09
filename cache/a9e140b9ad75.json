@@ -1,0 +1,139 @@
+{
+  "recipe_id": "6528fac845256c3ad7c26313",
+  "name": "椰汁红豆砵仔糕",
+  "ingredients": [
+    {
+      "name": "粘米粉",
+      "quantity": 25,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "木薯粉",
+      "quantity": 75,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "糖",
+      "quantity": 70,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "水",
+      "quantity": 150,
+      "unit": "毫升",
+      "type": "调味品"
+    },
+    {
+      "name": "椰浆",
+      "quantity": 150,
+      "unit": "毫升",
+      "type": "调味品"
+    },
+    {
+      "name": "蜜红豆",
+      "quantity": 20,
+      "unit": "克",
+      "type": "素菜"
+    }
+  ],
+  "steps": [
+    {
+      "id": 0,
+      "name": "食材准备",
+      "duration_min": 5,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 1,
+      "name": "混合椰浆和水",
+      "duration_min": 2,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        0
+      ]
+    },
+    {
+      "id": 2,
+      "name": "混合木薯粉和粘米粉",
+      "duration_min": 2,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        0
+      ]
+    },
+    {
+      "id": 3,
+      "name": "调制粉浆",
+      "duration_min": 3,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": 4,
+      "name": "煮沸椰浆糖水",
+      "duration_min": 5,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 1,
+          "duration": 5,
+          "temp_c": 100,
+          "heat_level": 4,
+          "mode_detail": "大火"
+        }
+      ],
+      "predecessors": [
+        3
+      ]
+    },
+    {
+      "id": 5,
+      "name": "烫熟粉浆",
+      "duration_min": 3,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        4
+      ]
+    },
+    {
+      "id": 6,
+      "name": "装模",
+      "duration_min": 2,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        5
+      ]
+    },
+    {
+      "id": 7,
+      "name": "烹饪",
+      "duration_min": 15,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 6,
+          "duration": 15,
+          "temp_c": 100,
+          "heat_level": 2,
+          "mode_detail": "普通蒸"
+        }
+      ],
+      "predecessors": [
+        6
+      ]
+    }
+  ]
+}

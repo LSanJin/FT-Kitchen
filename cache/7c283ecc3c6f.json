@@ -1,0 +1,194 @@
+{
+  "recipe_id": "5c860d6298d5bc7e184a907c",
+  "name": "雪媚娘",
+  "ingredients": [
+    {
+      "name": "糯米粉",
+      "quantity": 30,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "糯米粉",
+      "quantity": 100,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "鹰粟粉",
+      "quantity": 30,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "白砂糖",
+      "quantity": 50,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "牛奶",
+      "quantity": 170,
+      "unit": "毫升",
+      "type": "调味品"
+    },
+    {
+      "name": "黄油",
+      "quantity": 20,
+      "unit": "克",
+      "type": "荤菜"
+    },
+    {
+      "name": "淡奶油",
+      "quantity": 170,
+      "unit": "毫升",
+      "type": "荤菜"
+    },
+    {
+      "name": "细砂糖",
+      "quantity": 17,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "大芒果",
+      "quantity": 1,
+      "unit": "个",
+      "type": "素菜"
+    }
+  ],
+  "steps": [
+    {
+      "id": 0,
+      "name": "炒熟糯米粉_准备",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 1,
+      "name": "炒熟糯米粉_等待",
+      "duration_min": 3,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 1,
+          "duration": 3,
+          "temp_c": 0,
+          "heat_level": 0,
+          "mode_detail": "none"
+        }
+      ],
+      "predecessors": [
+        0
+      ]
+    },
+    {
+      "id": 2,
+      "name": "混合粉浆",
+      "duration_min": 2,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "name": "蒸粉浆",
+      "duration_min": 8,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 2,
+          "duration": 8,
+          "temp_c": 100,
+          "heat_level": 2,
+          "mode_detail": "普通蒸"
+        }
+      ],
+      "predecessors": [
+        2
+      ]
+    },
+    {
+      "id": 4,
+      "name": "加入黄油揉面",
+      "duration_min": 3,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        3
+      ]
+    },
+    {
+      "id": 5,
+      "name": "冷藏面团_准备",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        4
+      ]
+    },
+    {
+      "id": 6,
+      "name": "冷藏面团_等待",
+      "duration_min": 15,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 4,
+          "duration": 15,
+          "temp_c": 4,
+          "heat_level": 0,
+          "mode_detail": "冷藏"
+        }
+      ],
+      "predecessors": [
+        5
+      ]
+    },
+    {
+      "id": 7,
+      "name": "处理芒果",
+      "duration_min": 2,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        6
+      ]
+    },
+    {
+      "id": 8,
+      "name": "打发淡奶油",
+      "duration_min": 3,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        7
+      ]
+    },
+    {
+      "id": 9,
+      "name": "擀面皮",
+      "duration_min": 2,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        6
+      ]
+    },
+    {
+      "id": 10,
+      "name": "包雪媚娘",
+      "duration_min": 3,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        9
+      ]
+    }
+  ]
+}

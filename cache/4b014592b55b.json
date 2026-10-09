@@ -1,0 +1,152 @@
+{
+  "recipe_id": "5cc7eb394a21a4301960af00",
+  "name": "银鱼蒸蛋",
+  "ingredients": [
+    {
+      "name": "银鱼干",
+      "quantity": 15,
+      "unit": "克",
+      "type": "荤菜"
+    },
+    {
+      "name": "鸡蛋",
+      "quantity": 3,
+      "unit": "个",
+      "type": "荤菜"
+    },
+    {
+      "name": "小葱",
+      "quantity": 1,
+      "unit": "根",
+      "type": "素菜"
+    },
+    {
+      "name": "生姜",
+      "quantity": 1,
+      "unit": "片",
+      "type": "素菜"
+    },
+    {
+      "name": "盐",
+      "quantity": 0.25,
+      "unit": "茶匙",
+      "type": "调味品"
+    },
+    {
+      "name": "白砂糖",
+      "quantity": 0.5,
+      "unit": "茶匙",
+      "type": "调味品"
+    },
+    {
+      "name": "美味鲜",
+      "quantity": 1,
+      "unit": "茶匙",
+      "type": "调味品"
+    },
+    {
+      "name": "水",
+      "quantity": 360,
+      "unit": "克",
+      "type": "其他"
+    },
+    {
+      "name": "芝麻油",
+      "quantity": 2,
+      "unit": "滴",
+      "type": "调味品"
+    }
+  ],
+  "steps": [
+    {
+      "id": 0,
+      "name": "预热蒸箱",
+      "duration_min": 4,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 2,
+          "duration": 4,
+          "temp_c": 100,
+          "heat_level": 2,
+          "mode_detail": "普通蒸"
+        }
+      ],
+      "predecessors": []
+    },
+    {
+      "id": 1,
+      "name": "银鱼干泡发_准备",
+      "duration_min": 3,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 2,
+      "name": "银鱼干泡发_等待",
+      "duration_min": 240,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 8,
+          "duration": 240,
+          "temp_c": 0,
+          "heat_level": 0,
+          "mode_detail": "none"
+        }
+      ],
+      "predecessors": [
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "name": "打鸡蛋",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        2
+      ]
+    },
+    {
+      "id": 4,
+      "name": "混合食材",
+      "duration_min": 2,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        3
+      ]
+    },
+    {
+      "id": 5,
+      "name": "蒸银鱼蒸蛋",
+      "duration_min": 8,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 2,
+          "duration": 8,
+          "temp_c": 100,
+          "heat_level": 2,
+          "mode_detail": "普通蒸"
+        }
+      ],
+      "predecessors": [
+        4
+      ]
+    },
+    {
+      "id": 6,
+      "name": "添加配料",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        5
+      ]
+    }
+  ]
+}

@@ -1,0 +1,316 @@
+{
+  "recipe_id": "5cc7e0404a21a4301960aef1",
+  "name": "糯米烧麦",
+  "ingredients": [
+    {
+      "name": "糯米",
+      "quantity": 400,
+      "unit": "g",
+      "type": "素菜"
+    },
+    {
+      "name": "五花肉",
+      "quantity": 100,
+      "unit": "g",
+      "type": "荤菜"
+    },
+    {
+      "name": "饺子皮",
+      "quantity": 40,
+      "unit": "张",
+      "type": "素菜"
+    },
+    {
+      "name": "松子",
+      "quantity": 20,
+      "unit": "g",
+      "type": "素菜"
+    },
+    {
+      "name": "干香菇",
+      "quantity": 10,
+      "unit": "g",
+      "type": "素菜"
+    },
+    {
+      "name": "水煮笋",
+      "quantity": 50,
+      "unit": "g",
+      "type": "素菜"
+    },
+    {
+      "name": "食用油",
+      "quantity": 3,
+      "unit": "T",
+      "type": "调味品"
+    },
+    {
+      "name": "香葱",
+      "quantity": 5,
+      "unit": "g",
+      "type": "调味品"
+    },
+    {
+      "name": "生姜",
+      "quantity": 5,
+      "unit": "g",
+      "type": "调味品"
+    },
+    {
+      "name": "料酒",
+      "quantity": 2,
+      "unit": "T",
+      "type": "调味品"
+    },
+    {
+      "name": "白糖",
+      "quantity": 1,
+      "unit": "T",
+      "type": "调味品"
+    },
+    {
+      "name": "老抽",
+      "quantity": 10,
+      "unit": "g",
+      "type": "调味品"
+    },
+    {
+      "name": "生抽",
+      "quantity": 10,
+      "unit": "g",
+      "type": "调味品"
+    },
+    {
+      "name": "香油",
+      "quantity": 0.5,
+      "unit": "t",
+      "type": "调味品"
+    },
+    {
+      "name": "肉汤",
+      "quantity": 50,
+      "unit": "g",
+      "type": "调味品"
+    },
+    {
+      "name": "味精",
+      "quantity": 0.5,
+      "unit": "t",
+      "type": "调味品"
+    }
+  ],
+  "steps": [
+    {
+      "id": 0,
+      "name": "浸泡糯米_准备",
+      "duration_min": 3,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 1,
+      "name": "浸泡糯米_等待",
+      "duration_min": 240,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 8,
+          "duration": 240,
+          "temp_c": 0,
+          "heat_level": 0,
+          "mode_detail": "none"
+        }
+      ],
+      "predecessors": [
+        0
+      ]
+    },
+    {
+      "id": 2,
+      "name": "蒸糯米",
+      "duration_min": 40,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 2,
+          "duration": 40,
+          "temp_c": 100,
+          "heat_level": 2,
+          "mode_detail": "普通蒸"
+        }
+      ],
+      "predecessors": [
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "name": "煮五花肉和笋",
+      "duration_min": 30,
+      "needs_human": true,
+      "resources": [
+        {
+          "machine_id": 1,
+          "duration": 30,
+          "temp_c": 0,
+          "heat_level": 0,
+          "mode_detail": "大火"
+        }
+      ],
+      "predecessors": [
+        2
+      ]
+    },
+    {
+      "id": 4,
+      "name": "切肉丁和笋丁",
+      "duration_min": 5,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        3
+      ]
+    },
+    {
+      "id": 5,
+      "name": "煸炒肉丁",
+      "duration_min": 5,
+      "needs_human": true,
+      "resources": [
+        {
+          "machine_id": 1,
+          "duration": 5,
+          "temp_c": 0,
+          "heat_level": 0,
+          "mode_detail": "中火"
+        }
+      ],
+      "predecessors": [
+        4
+      ]
+    },
+    {
+      "id": 6,
+      "name": "炒香葱姜末",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [
+        {
+          "machine_id": 1,
+          "duration": 1,
+          "temp_c": 0,
+          "heat_level": 0,
+          "mode_detail": "小火"
+        }
+      ],
+      "predecessors": [
+        5
+      ]
+    },
+    {
+      "id": 7,
+      "name": "炖肉",
+      "duration_min": 10,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 1,
+          "duration": 10,
+          "temp_c": 0,
+          "heat_level": 0,
+          "mode_detail": "小火"
+        }
+      ],
+      "predecessors": [
+        6
+      ]
+    },
+    {
+      "id": 8,
+      "name": "拌糯米饭",
+      "duration_min": 5,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        7
+      ]
+    },
+    {
+      "id": 9,
+      "name": "拌入猪油和松子",
+      "duration_min": 2,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        8
+      ]
+    },
+    {
+      "id": 10,
+      "name": "拌入香油冷却",
+      "duration_min": 10,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        9
+      ]
+    },
+    {
+      "id": 11,
+      "name": "擀饺子皮",
+      "duration_min": 2,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        10
+      ]
+    },
+    {
+      "id": 12,
+      "name": "包糯米烧麦",
+      "duration_min": 10,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        11
+      ]
+    },
+    {
+      "id": 13,
+      "name": "预热蒸箱",
+      "duration_min": 4,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 2,
+          "duration": 4,
+          "temp_c": 100,
+          "heat_level": 2,
+          "mode_detail": "普通蒸"
+        }
+      ],
+      "predecessors": [
+        12
+      ]
+    },
+    {
+      "id": 14,
+      "name": "蒸糯米烧麦",
+      "duration_min": 30,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 2,
+          "duration": 30,
+          "temp_c": 100,
+          "heat_level": 2,
+          "mode_detail": "普通蒸"
+        }
+      ],
+      "predecessors": [
+        13
+      ]
+    }
+  ]
+}

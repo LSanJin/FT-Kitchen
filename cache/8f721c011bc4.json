@@ -1,0 +1,130 @@
+{
+  "recipe_id": "65781f17c458a177d8438652",
+  "name": "巴斯克蛋糕",
+  "ingredients": [
+    {
+      "name": "奶油奶酪",
+      "quantity": 350,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "鸡蛋",
+      "quantity": 4,
+      "unit": "个",
+      "type": "荤菜"
+    },
+    {
+      "name": "淡奶油",
+      "quantity": 180,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "玉米淀粉",
+      "quantity": 12,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "细砂糖",
+      "quantity": 80,
+      "unit": "克",
+      "type": "调味品"
+    }
+  ],
+  "steps": [
+    {
+      "id": 0,
+      "name": "隔水融化奶油奶酪",
+      "duration_min": 5,
+      "needs_human": true,
+      "resources": [
+        {
+          "machine_id": 1,
+          "duration": 5,
+          "temp_c": 0,
+          "heat_level": 0,
+          "mode_detail": "none"
+        }
+      ],
+      "predecessors": []
+    },
+    {
+      "id": 1,
+      "name": "加入细砂糖搅打",
+      "duration_min": 3,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        0
+      ]
+    },
+    {
+      "id": 2,
+      "name": "加入鸡蛋搅打",
+      "duration_min": 3,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "name": "加入淡奶油和玉米淀粉混合",
+      "duration_min": 2,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        2
+      ]
+    },
+    {
+      "id": 4,
+      "name": "倒入模具",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        3
+      ]
+    },
+    {
+      "id": 5,
+      "name": "开始烹饪",
+      "duration_min": 0,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 3,
+          "duration": 0,
+          "temp_c": 0,
+          "heat_level": 0,
+          "mode_detail": "none"
+        }
+      ],
+      "predecessors": [
+        4
+      ]
+    },
+    {
+      "id": 6,
+      "name": "冷藏等待",
+      "duration_min": 120,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 4,
+          "duration": 120,
+          "temp_c": 4,
+          "heat_level": 0,
+          "mode_detail": "冷藏"
+        }
+      ],
+      "predecessors": [
+        5
+      ]
+    }
+  ]
+}

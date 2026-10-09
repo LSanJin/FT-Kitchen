@@ -1,0 +1,268 @@
+{
+  "recipe_id": "5cc5508e01ea5c2931c919f5",
+  "name": "黑森林蛋糕",
+  "ingredients": [
+    {
+      "name": "鸡蛋清",
+      "quantity": 2,
+      "unit": "个",
+      "type": "荤菜"
+    },
+    {
+      "name": "细砂糖",
+      "quantity": 32,
+      "unit": "g",
+      "type": "调味品"
+    },
+    {
+      "name": "柠檬汁",
+      "quantity": 6,
+      "unit": "滴",
+      "type": "调味品"
+    },
+    {
+      "name": "低筋面粉",
+      "quantity": 35,
+      "unit": "g",
+      "type": "素菜"
+    },
+    {
+      "name": "可可粉",
+      "quantity": 10,
+      "unit": "g",
+      "type": "素菜"
+    },
+    {
+      "name": "玉米淀粉",
+      "quantity": 6,
+      "unit": "g",
+      "type": "素菜"
+    },
+    {
+      "name": "鸡蛋黄",
+      "quantity": 2,
+      "unit": "个",
+      "type": "荤菜"
+    },
+    {
+      "name": "牛奶",
+      "quantity": 32,
+      "unit": "g",
+      "type": "荤菜"
+    },
+    {
+      "name": "朗姆酒",
+      "quantity": 4,
+      "unit": "g",
+      "type": "调味品"
+    },
+    {
+      "name": "盐",
+      "quantity": 0.5,
+      "unit": "g",
+      "type": "调味品"
+    },
+    {
+      "name": "香草精",
+      "quantity": 2,
+      "unit": "滴",
+      "type": "调味品"
+    },
+    {
+      "name": "玉米油",
+      "quantity": 20,
+      "unit": "g",
+      "type": "调味品"
+    },
+    {
+      "name": "淡奶油",
+      "quantity": 300,
+      "unit": "g",
+      "type": "荤菜"
+    },
+    {
+      "name": "黑樱桃",
+      "quantity": 15,
+      "unit": "颗",
+      "type": "素菜"
+    },
+    {
+      "name": "红樱桃",
+      "quantity": 6,
+      "unit": "颗",
+      "type": "素菜"
+    },
+    {
+      "name": "樱桃酒",
+      "quantity": 10,
+      "unit": "g",
+      "type": "调味品"
+    },
+    {
+      "name": "巧克力粉",
+      "quantity": 20,
+      "unit": "g",
+      "type": "素菜"
+    },
+    {
+      "name": "巧克力碎片",
+      "quantity": 20,
+      "unit": "g",
+      "type": "素菜"
+    }
+  ],
+  "steps": [
+    {
+      "id": 0,
+      "name": "准备材料",
+      "duration_min": 5,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 1,
+      "name": "混合粉类",
+      "duration_min": 2,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        0
+      ]
+    },
+    {
+      "id": 2,
+      "name": "制作蛋黄糊",
+      "duration_min": 3,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        0
+      ]
+    },
+    {
+      "id": 3,
+      "name": "打发蛋白",
+      "duration_min": 10,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        0
+      ]
+    },
+    {
+      "id": 4,
+      "name": "混合面糊",
+      "duration_min": 5,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        3
+      ]
+    },
+    {
+      "id": 5,
+      "name": "预热烤箱",
+      "duration_min": 5,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 3,
+          "duration": 5,
+          "temp_c": 170,
+          "heat_level": 2,
+          "mode_detail": "上下火"
+        }
+      ],
+      "predecessors": [
+        4
+      ]
+    },
+    {
+      "id": 6,
+      "name": "烘烤蛋糕",
+      "duration_min": 30,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 3,
+          "duration": 30,
+          "temp_c": 170,
+          "heat_level": 2,
+          "mode_detail": "上下火"
+        }
+      ],
+      "predecessors": [
+        5
+      ]
+    },
+    {
+      "id": 7,
+      "name": "冷却蛋糕",
+      "duration_min": 15,
+      "needs_human": false,
+      "resources": [],
+      "predecessors": [
+        6
+      ]
+    },
+    {
+      "id": 8,
+      "name": "切分蛋糕",
+      "duration_min": 2,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        7
+      ]
+    },
+    {
+      "id": 9,
+      "name": "打发奶油",
+      "duration_min": 5,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        8
+      ]
+    },
+    {
+      "id": 10,
+      "name": "组装蛋糕",
+      "duration_min": 10,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        9
+      ]
+    },
+    {
+      "id": 11,
+      "name": "装饰蛋糕",
+      "duration_min": 5,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        10
+      ]
+    },
+    {
+      "id": 12,
+      "name": "冷藏蛋糕",
+      "duration_min": 60,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 4,
+          "duration": 60,
+          "temp_c": 4,
+          "heat_level": 0,
+          "mode_detail": "冷藏"
+        }
+      ],
+      "predecessors": [
+        11
+      ]
+    }
+  ]
+}

@@ -1,0 +1,250 @@
+{
+  "recipe_id": "5caf2ddbe78bfc455f2d5c96",
+  "name": "糖霜饼干",
+  "ingredients": [
+    {
+      "name": "低筋面粉",
+      "quantity": 110,
+      "unit": "g",
+      "type": "素菜"
+    },
+    {
+      "name": "细杏仁粉",
+      "quantity": 15,
+      "unit": "g",
+      "type": "素菜"
+    },
+    {
+      "name": "黄油",
+      "quantity": 60,
+      "unit": "g",
+      "type": "荤菜"
+    },
+    {
+      "name": "细砂糖",
+      "quantity": 35,
+      "unit": "g",
+      "type": "调味品"
+    },
+    {
+      "name": "牛奶",
+      "quantity": 15,
+      "unit": "g",
+      "type": "调味品"
+    },
+    {
+      "name": "蛋白粉",
+      "quantity": 5,
+      "unit": "g",
+      "type": "调味品"
+    },
+    {
+      "name": "糖粉",
+      "quantity": 150,
+      "unit": "g",
+      "type": "调味品"
+    },
+    {
+      "name": "凉开水",
+      "quantity": 25,
+      "unit": "g",
+      "type": "调味品"
+    },
+    {
+      "name": "水溶性食用色素",
+      "quantity": 0,
+      "unit": "适量",
+      "type": "调味品"
+    }
+  ],
+  "steps": [
+    {
+      "id": 0,
+      "name": "黄油软化",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 1,
+      "name": "打发黄油",
+      "duration_min": 3,
+      "needs_human": true,
+      "resources": [
+        {
+          "machine_id": 1,
+          "duration": 3,
+          "temp_c": 0,
+          "heat_level": 0,
+          "mode_detail": "none"
+        }
+      ],
+      "predecessors": [
+        0
+      ]
+    },
+    {
+      "id": 2,
+      "name": "加入牛奶",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "name": "搅拌均匀",
+      "duration_min": 2,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        2
+      ]
+    },
+    {
+      "id": 4,
+      "name": "筛入面粉",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        3
+      ]
+    },
+    {
+      "id": 5,
+      "name": "混合面团",
+      "duration_min": 2,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        4
+      ]
+    },
+    {
+      "id": 6,
+      "name": "冷冻面片",
+      "duration_min": 30,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 4,
+          "duration": 30,
+          "temp_c": -18,
+          "heat_level": 0,
+          "mode_detail": "冷冻"
+        }
+      ],
+      "predecessors": [
+        5
+      ]
+    },
+    {
+      "id": 7,
+      "name": "刻制饼干",
+      "duration_min": 5,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        6
+      ]
+    },
+    {
+      "id": 8,
+      "name": "预热烤箱",
+      "duration_min": 5,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 3,
+          "duration": 5,
+          "temp_c": 180,
+          "heat_level": 2,
+          "mode_detail": "上下火"
+        }
+      ],
+      "predecessors": [
+        7
+      ]
+    },
+    {
+      "id": 9,
+      "name": "烘烤饼干",
+      "duration_min": 15,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 3,
+          "duration": 15,
+          "temp_c": 180,
+          "heat_level": 2,
+          "mode_detail": "上下火"
+        }
+      ],
+      "predecessors": [
+        8
+      ]
+    },
+    {
+      "id": 10,
+      "name": "准备糖霜",
+      "duration_min": 2,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        9
+      ]
+    },
+    {
+      "id": 11,
+      "name": "调制糖霜",
+      "duration_min": 2,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        10
+      ]
+    },
+    {
+      "id": 12,
+      "name": "添加色素",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        11
+      ]
+    },
+    {
+      "id": 13,
+      "name": "裱花装饰",
+      "duration_min": 5,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        12
+      ]
+    },
+    {
+      "id": 14,
+      "name": "等待糖霜干燥",
+      "duration_min": 60,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 8,
+          "duration": 60,
+          "temp_c": 0,
+          "heat_level": 0,
+          "mode_detail": "none"
+        }
+      ],
+      "predecessors": [
+        13
+      ]
+    }
+  ]
+}

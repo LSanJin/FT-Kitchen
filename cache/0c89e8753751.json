@@ -1,0 +1,119 @@
+{
+  "recipe_id": "5c8762bd98d5bc7e184a917c",
+  "name": "烤鱿鱼干",
+  "ingredients": [
+    {
+      "name": "干鱿鱼",
+      "quantity": 1,
+      "unit": "条",
+      "type": "荤菜"
+    },
+    {
+      "name": "生抽",
+      "quantity": 5,
+      "unit": "毫升",
+      "type": "调味品"
+    },
+    {
+      "name": "芥末",
+      "quantity": 5,
+      "unit": "克",
+      "type": "调味品"
+    }
+  ],
+  "steps": [
+    {
+      "id": 0,
+      "name": "预热烤箱",
+      "duration_min": 5,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 3,
+          "duration": 5,
+          "temp_c": 240,
+          "heat_level": 2,
+          "mode_detail": "完全烧烤"
+        }
+      ],
+      "predecessors": []
+    },
+    {
+      "id": 1,
+      "name": "撕皮胶板",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 2,
+      "name": "穿串",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "name": "准备烤盘",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        2
+      ]
+    },
+    {
+      "id": 4,
+      "name": "烤鱿鱼干",
+      "duration_min": 1,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 3,
+          "duration": 1,
+          "temp_c": 240,
+          "heat_level": 2,
+          "mode_detail": "完全烧烤"
+        }
+      ],
+      "predecessors": [
+        0,
+        3
+      ]
+    },
+    {
+      "id": 5,
+      "name": "装盘",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        4
+      ]
+    },
+    {
+      "id": 6,
+      "name": "撕成细丝",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        5
+      ]
+    },
+    {
+      "id": 7,
+      "name": "摆盘",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        6
+      ]
+    }
+  ]
+}

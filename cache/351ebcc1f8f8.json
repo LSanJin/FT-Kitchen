@@ -1,0 +1,110 @@
+{
+  "recipe_id": "5e4f4107d8dcd921c6735f7d",
+  "name": "披萨面团",
+  "ingredients": [
+    {
+      "name": "高筋面粉",
+      "quantity": 400,
+      "unit": "g",
+      "type": "素菜"
+    },
+    {
+      "name": "水",
+      "quantity": 220,
+      "unit": "g",
+      "type": "调味品"
+    },
+    {
+      "name": "橄榄油",
+      "quantity": 5,
+      "unit": "g",
+      "type": "调味品"
+    },
+    {
+      "name": "酵母",
+      "quantity": 1,
+      "unit": "大勺",
+      "type": "调味品"
+    },
+    {
+      "name": "细砂糖",
+      "quantity": 1,
+      "unit": "大勺",
+      "type": "调味品"
+    },
+    {
+      "name": "盐",
+      "quantity": 2,
+      "unit": "小勺",
+      "type": "调味品"
+    }
+  ],
+  "steps": [
+    {
+      "id": 0,
+      "name": "静置发酵_准备",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 1,
+      "name": "静置发酵_等待",
+      "duration_min": 60,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 8,
+          "duration": 60,
+          "temp_c": 0,
+          "heat_level": 0,
+          "mode_detail": "none"
+        }
+      ],
+      "predecessors": [
+        0
+      ]
+    },
+    {
+      "id": 2,
+      "name": "分割面团",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "name": "擀制面团",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        2
+      ]
+    },
+    {
+      "id": 4,
+      "name": "按压面团",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        3
+      ]
+    },
+    {
+      "id": 5,
+      "name": "插孔",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        4
+      ]
+    }
+  ]
+}

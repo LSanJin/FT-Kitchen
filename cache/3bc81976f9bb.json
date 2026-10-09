@@ -1,0 +1,174 @@
+{
+  "recipe_id": "5fe1975b5f8f38795ea6fe81",
+  "name": "双椒鳙鱼头（台式）",
+  "ingredients": [
+    {
+      "name": "鳙鱼头",
+      "quantity": 1,
+      "unit": "个",
+      "type": "荤菜"
+    },
+    {
+      "name": "大葱",
+      "quantity": 2,
+      "unit": "段",
+      "type": "调味品"
+    },
+    {
+      "name": "生姜",
+      "quantity": 2,
+      "unit": "片",
+      "type": "调味品"
+    },
+    {
+      "name": "盐",
+      "quantity": 0.5,
+      "unit": "茶匙",
+      "type": "调味品"
+    },
+    {
+      "name": "料酒",
+      "quantity": 2,
+      "unit": "汤匙",
+      "type": "调味品"
+    },
+    {
+      "name": "食用油",
+      "quantity": 2,
+      "unit": "汤匙",
+      "type": "调味品"
+    },
+    {
+      "name": "蒜",
+      "quantity": 2,
+      "unit": "瓣",
+      "type": "调味品"
+    },
+    {
+      "name": "大蒜叶",
+      "quantity": 1,
+      "unit": "根",
+      "type": "调味品"
+    },
+    {
+      "name": "豆豉",
+      "quantity": 2,
+      "unit": "汤匙",
+      "type": "调味品"
+    },
+    {
+      "name": "青剁椒",
+      "quantity": 4,
+      "unit": "汤匙",
+      "type": "调味品"
+    },
+    {
+      "name": "红剁椒",
+      "quantity": 4,
+      "unit": "汤匙",
+      "type": "调味品"
+    },
+    {
+      "name": "水",
+      "quantity": 2,
+      "unit": "汤匙",
+      "type": "调味品"
+    },
+    {
+      "name": "淀粉水",
+      "quantity": 1,
+      "unit": "汤匙",
+      "type": "调味品"
+    },
+    {
+      "name": "辣椒油",
+      "quantity": 2,
+      "unit": "汤匙",
+      "type": "调味品"
+    }
+  ],
+  "steps": [
+    {
+      "id": 0,
+      "name": "处理鳙鱼头",
+      "duration_min": 5,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 1,
+      "name": "腌制鳙鱼头",
+      "duration_min": 10,
+      "needs_human": false,
+      "resources": [],
+      "predecessors": [
+        0
+      ]
+    },
+    {
+      "id": 2,
+      "name": "准备配料",
+      "duration_min": 2,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "name": "炒制酱料",
+      "duration_min": 8,
+      "needs_human": true,
+      "resources": [
+        {
+          "machine_id": 1,
+          "duration": 8,
+          "temp_c": 180,
+          "heat_level": 2,
+          "mode_detail": "大火"
+        }
+      ],
+      "predecessors": [
+        2
+      ]
+    },
+    {
+      "id": 4,
+      "name": "蒸鳙鱼头",
+      "duration_min": 30,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 2,
+          "duration": 30,
+          "temp_c": 100,
+          "heat_level": 2,
+          "mode_detail": "普通蒸"
+        }
+      ],
+      "predecessors": [
+        3
+      ]
+    },
+    {
+      "id": 5,
+      "name": "淋热油",
+      "duration_min": 3,
+      "needs_human": true,
+      "resources": [
+        {
+          "machine_id": 1,
+          "duration": 3,
+          "temp_c": 200,
+          "heat_level": 2,
+          "mode_detail": "大火"
+        }
+      ],
+      "predecessors": [
+        4
+      ]
+    }
+  ]
+}

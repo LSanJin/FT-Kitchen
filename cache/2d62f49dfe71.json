@@ -1,0 +1,124 @@
+{
+  "recipe_id": "65433d6a45256c3ad7c270ab",
+  "name": "手工鸡蛋豆腐",
+  "ingredients": [
+    {
+      "name": "鸡蛋",
+      "quantity": 3,
+      "unit": "个",
+      "type": "荤菜"
+    },
+    {
+      "name": "淡豆浆",
+      "quantity": 150,
+      "unit": "毫升",
+      "type": "素菜"
+    }
+  ],
+  "steps": [
+    {
+      "id": 0,
+      "name": "食材准备_准备",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 1,
+      "name": "食材准备_等待",
+      "duration_min": 0,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 8,
+          "duration": 0,
+          "temp_c": 0,
+          "heat_level": 0,
+          "mode_detail": "none"
+        }
+      ],
+      "predecessors": [
+        0
+      ]
+    },
+    {
+      "id": 2,
+      "name": "取一浅口碗，垫上一层保鮮膜",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "name": "鸡蛋打散过筛待用",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        2
+      ]
+    },
+    {
+      "id": 4,
+      "name": "将豆浆与蛋液混合拌勻过筛",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        3
+      ]
+    },
+    {
+      "id": 5,
+      "name": "倒入碗中，再用保鲜膜将容器封住，用牙签扎几个小孔",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        4
+      ]
+    },
+    {
+      "id": 6,
+      "name": "放入方太智能烹饪设备",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        5
+      ]
+    },
+    {
+      "id": 7,
+      "name": "开启电源，取出水箱加满水",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        6
+      ]
+    },
+    {
+      "id": 8,
+      "name": "选择“开始烹饪”按键，按屏幕提示操作",
+      "duration_min": 0,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 1,
+          "duration": 0,
+          "temp_c": 0,
+          "heat_level": 0,
+          "mode_detail": "none"
+        }
+      ],
+      "predecessors": [
+        7
+      ]
+    }
+  ]
+}

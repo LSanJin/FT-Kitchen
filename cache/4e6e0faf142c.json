@@ -1,0 +1,250 @@
+{
+  "recipe_id": "65f7f4ee85eb6c79dfb992ff",
+  "name": "皂角银耳羹",
+  "ingredients": [
+    {
+      "name": "干银耳",
+      "quantity": 30,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "干桃胶",
+      "quantity": 30,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "干皂角米",
+      "quantity": 15,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "干雪燕",
+      "quantity": 5,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "冰糖",
+      "quantity": 50,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "水",
+      "quantity": 1200,
+      "unit": "克",
+      "type": "其他"
+    },
+    {
+      "name": "枸杞",
+      "quantity": 20,
+      "unit": "粒",
+      "type": "素菜"
+    },
+    {
+      "name": "干红枣",
+      "quantity": 10,
+      "unit": "个",
+      "type": "素菜"
+    }
+  ],
+  "steps": [
+    {
+      "id": 0,
+      "name": "泡发干桃胶_准备",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 1,
+      "name": "泡发干桃胶_等待",
+      "duration_min": 1440,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 8,
+          "duration": 1440,
+          "temp_c": 0,
+          "heat_level": 0,
+          "mode_detail": "none"
+        }
+      ],
+      "predecessors": [
+        0
+      ]
+    },
+    {
+      "id": 2,
+      "name": "泡发干雪燕_准备",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 3,
+      "name": "泡发干雪燕_等待",
+      "duration_min": 1440,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 8,
+          "duration": 1440,
+          "temp_c": 0,
+          "heat_level": 0,
+          "mode_detail": "none"
+        }
+      ],
+      "predecessors": [
+        2
+      ]
+    },
+    {
+      "id": 4,
+      "name": "泡发干皂角米_准备",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 5,
+      "name": "泡发干皂角米_等待",
+      "duration_min": 1440,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 8,
+          "duration": 1440,
+          "temp_c": 0,
+          "heat_level": 0,
+          "mode_detail": "none"
+        }
+      ],
+      "predecessors": [
+        4
+      ]
+    },
+    {
+      "id": 6,
+      "name": "泡发干银耳_准备",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 7,
+      "name": "泡发干银耳_等待",
+      "duration_min": 240,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 8,
+          "duration": 240,
+          "temp_c": 0,
+          "heat_level": 0,
+          "mode_detail": "none"
+        }
+      ],
+      "predecessors": [
+        6
+      ]
+    },
+    {
+      "id": 8,
+      "name": "剪切干银耳",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        7
+      ]
+    },
+    {
+      "id": 9,
+      "name": "清洗红枣",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 10,
+      "name": "泡发枸杞_准备",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 11,
+      "name": "泡发枸杞_等待",
+      "duration_min": 15,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 8,
+          "duration": 15,
+          "temp_c": 0,
+          "heat_level": 0,
+          "mode_detail": "none"
+        }
+      ],
+      "predecessors": [
+        10
+      ]
+    },
+    {
+      "id": 12,
+      "name": "预热蒸烤箱",
+      "duration_min": 5,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 2,
+          "duration": 5,
+          "temp_c": 100,
+          "heat_level": 2,
+          "mode_detail": "普通蒸"
+        }
+      ],
+      "predecessors": [
+        11
+      ]
+    },
+    {
+      "id": 13,
+      "name": "蒸煮银耳羹",
+      "duration_min": 80,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 2,
+          "duration": 80,
+          "temp_c": 100,
+          "heat_level": 2,
+          "mode_detail": "普通蒸"
+        }
+      ],
+      "predecessors": [
+        12
+      ]
+    },
+    {
+      "id": 14,
+      "name": "添加枸杞",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        13
+      ]
+    }
+  ]
+}

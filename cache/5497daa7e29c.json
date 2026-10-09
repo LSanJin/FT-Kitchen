@@ -1,0 +1,189 @@
+{
+  "recipe_id": "6528fa4745256c3ad7c25d61",
+  "name": "紫甘蓝沙拉",
+  "ingredients": [
+    {
+      "name": "紫甘蓝",
+      "quantity": 300,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "芝麻菜",
+      "quantity": 50,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "火腿",
+      "quantity": 30,
+      "unit": "克",
+      "type": "荤菜"
+    },
+    {
+      "name": "三色藜麦",
+      "quantity": 30,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "油醋汁蘸料",
+      "quantity": 30,
+      "unit": "毫升",
+      "type": "调味品"
+    },
+    {
+      "name": "黑胡椒",
+      "quantity": 2,
+      "unit": "克",
+      "type": "调味品"
+    }
+  ],
+  "steps": [
+    {
+      "id": 0,
+      "name": "食材准备",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 1,
+      "name": "羽衣甘蓝洗净去茎留叶",
+      "duration_min": 2,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        0
+      ]
+    },
+    {
+      "id": 2,
+      "name": "芝麻菜洗净",
+      "duration_min": 2,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        0
+      ]
+    },
+    {
+      "id": 3,
+      "name": "羽衣甘蓝和芝麻菜均撕碎备用",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": 4,
+      "name": "三色藜麦加入30毫升水",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        3
+      ]
+    },
+    {
+      "id": 5,
+      "name": "预热蒸箱",
+      "duration_min": 4,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 2,
+          "duration": 4,
+          "temp_c": 100,
+          "heat_level": 2,
+          "mode_detail": "普通蒸"
+        }
+      ],
+      "predecessors": [
+        4
+      ]
+    },
+    {
+      "id": 6,
+      "name": "将三色藜麦放入方太智能烹饪设备",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        5
+      ]
+    },
+    {
+      "id": 7,
+      "name": "开启电源，取出水箱加满水",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        6
+      ]
+    },
+    {
+      "id": 8,
+      "name": "选择“开始烹饪”按键",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        7
+      ]
+    },
+    {
+      "id": 9,
+      "name": "蒸熟的藜麦，取出放凉备用",
+      "duration_min": 8,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 2,
+          "duration": 8,
+          "temp_c": 100,
+          "heat_level": 2,
+          "mode_detail": "普通蒸"
+        }
+      ],
+      "predecessors": [
+        8
+      ]
+    },
+    {
+      "id": 10,
+      "name": "将火腿、藜麦、羽衣甘蓝、芝麻菜放入碗里",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        9
+      ]
+    },
+    {
+      "id": 11,
+      "name": "加入油醋汁搅拌均匀",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        10
+      ]
+    },
+    {
+      "id": 12,
+      "name": "撒上黑胡椒即可",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        11
+      ]
+    }
+  ]
+}

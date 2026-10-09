@@ -1,0 +1,287 @@
+{
+  "recipe_id": "5d54ecfea9114174727c8b5b",
+  "name": "红枣酥饼",
+  "ingredients": [
+    {
+      "name": "中筋面粉",
+      "quantity": 600,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "糖粉",
+      "quantity": 60,
+      "unit": "克",
+      "type": "调味品"
+    },
+    {
+      "name": "猪油",
+      "quantity": 240,
+      "unit": "克",
+      "type": "荤菜"
+    },
+    {
+      "name": "清水",
+      "quantity": 260,
+      "unit": "毫升",
+      "type": "调味品"
+    },
+    {
+      "name": "低筋面粉",
+      "quantity": 340,
+      "unit": "克",
+      "type": "素菜"
+    },
+    {
+      "name": "红枣碎馅",
+      "quantity": 20,
+      "unit": "克",
+      "type": "素菜"
+    }
+  ],
+  "steps": [
+    {
+      "id": 0,
+      "name": "混合A料",
+      "duration_min": 3,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 1,
+      "name": "揉面",
+      "duration_min": 5,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        0
+      ]
+    },
+    {
+      "id": 2,
+      "name": "制作油皮",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "name": "混合B料",
+      "duration_min": 3,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": []
+    },
+    {
+      "id": 4,
+      "name": "揉面",
+      "duration_min": 5,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        3
+      ]
+    },
+    {
+      "id": 5,
+      "name": "制作油酥",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        4
+      ]
+    },
+    {
+      "id": 6,
+      "name": "分切油皮",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        2
+      ]
+    },
+    {
+      "id": 7,
+      "name": "分切油酥",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        5
+      ]
+    },
+    {
+      "id": 8,
+      "name": "压扁油皮",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        6
+      ]
+    },
+    {
+      "id": 9,
+      "name": "包油酥",
+      "duration_min": 2,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        8,
+        7
+      ]
+    },
+    {
+      "id": 10,
+      "name": "卷起",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        9
+      ]
+    },
+    {
+      "id": 11,
+      "name": "擀制成椭圆",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        10
+      ]
+    },
+    {
+      "id": 12,
+      "name": "卷起",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        11
+      ]
+    },
+    {
+      "id": 13,
+      "name": "擀平",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        12
+      ]
+    },
+    {
+      "id": 14,
+      "name": "卷起",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        13
+      ]
+    },
+    {
+      "id": 15,
+      "name": "按压接口",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        14
+      ]
+    },
+    {
+      "id": 16,
+      "name": "对折",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        15
+      ]
+    },
+    {
+      "id": 17,
+      "name": "擀成圆形",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        16
+      ]
+    },
+    {
+      "id": 18,
+      "name": "包入枣馅",
+      "duration_min": 2,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        17
+      ]
+    },
+    {
+      "id": 19,
+      "name": "放入烤盘",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        18
+      ]
+    },
+    {
+      "id": 20,
+      "name": "压扁",
+      "duration_min": 1,
+      "needs_human": true,
+      "resources": [],
+      "predecessors": [
+        19
+      ]
+    },
+    {
+      "id": 21,
+      "name": "预热烤箱",
+      "duration_min": 5,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 3,
+          "duration": 5,
+          "temp_c": 180,
+          "heat_level": 2,
+          "mode_detail": "上下火"
+        }
+      ],
+      "predecessors": [
+        20
+      ]
+    },
+    {
+      "id": 22,
+      "name": "烘烤",
+      "duration_min": 17,
+      "needs_human": false,
+      "resources": [
+        {
+          "machine_id": 3,
+          "duration": 17,
+          "temp_c": 180,
+          "heat_level": 2,
+          "mode_detail": "上下火"
+        }
+      ],
+      "predecessors": [
+        21
+      ]
+    }
+  ]
+}
